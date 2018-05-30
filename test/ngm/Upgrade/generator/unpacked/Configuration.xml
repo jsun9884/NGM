@@ -1,0 +1,54 @@
+<Device name="msp430" type="msp430">
+    <Parameter name="HRFrequency">5</Parameter>
+    <Parameter name="HRHistoryMin">2</Parameter>
+    <Parameter name="DevStatisticsEnabled">1</Parameter>
+    <HRData>
+        <HRParameter name="timestamp" type="QWord" defaultValue="0" />
+        <HRParameter name="voltage" type="Float" defaultValue="0.1" thresholdLow="200" thresholdHigh="230" statisticsEnabled="1"/>
+        <HRParameter name="current" type="Float" defaultValue="0.2" thresholdLow="0" thresholdHigh="100" statisticsEnabled="1"/>
+        <HRParameter name="active_power" type="Float" defaultValue="0.3" thresholdLow="0" thresholdHigh="100" statisticsEnabled="1"/>
+        <HRParameter name="reactive_power" type="Float" defaultValue="0.4" thresholdLow="0" thresholdHigh="100" statisticsEnabled="1"/>
+        <HRParameter name="apparent_power" type="Float" defaultValue="0.5" thresholdLow="0" thresholdHigh="100" statisticsEnabled="1"/>
+        <HRParameter name="power_factor" type="Float" defaultValue="0.6" thresholdLow="0" thresholdHigh="100" />
+        <HRParameter name="frequency" type="Float" defaultValue="0.7" thresholdLow="48" thresholdHigh="52" />
+    </HRData>
+</Device>
+<Device name="gps" type="gps">
+    <Parameter name="HRFrequency">5</Parameter>
+    <Parameter name="HRHistoryMin">4</Parameter>
+    <Parameter name="DevStatisticsEnabled">1</Parameter>
+    <HRData>
+        <HRParameter name="timestamp" type="QWord" defaultValue="0" statisticsEnabled="0"/>
+        <HRParameter name="latitude" type="Double" defaultValue="108" thresholdLow="20" thresholdHigh="200" statisticsEnabled="1"/>
+        <HRParameter name="longitude" type="Double" defaultValue="0" thresholdLow="10.1" thresholdHigh="30" statisticsEnabled="1"/>
+    </HRData>
+</Device>
+<Device name="obAcc" type="accelerometer" devPath="/dev/spidev0.0">
+    <HRData>
+        <HRParameter name="X" type="Float" defaultValue="0.0" />
+        <HRParameter name="Y" type="Float" defaultValue="0.0" />
+        <HRParameter name="Z" type="Float" defaultValue="0.0" />
+    </HRData>
+</Device>
+<Device name="extAcc" type="accelerometer" devPath="/dev/spidev2.0">
+    <HRData>
+        <HRParameter name="X" type="Float" defaultValue="0.0" />
+        <HRParameter name="Y" type="Float" defaultValue="0.0" />
+        <HRParameter name="Z" type="Float" defaultValue="0.0" />
+    </HRData>
+</Device>
+<Device name="temperature" type="temperature">
+    <HRData>
+        <HRParameter name="temperature" type="Float" defaultValue="0.0" />
+    </HRData>
+</Device>
+<Device name="cpuTemp" type="cpu_temp">
+    <HRData>
+        <HRParameter name="temperature" type="Float" defaultValue="0.0" />
+    </HRData>
+</Device>
+<Device name="general" type="general">
+    <Parameter name="RegularMsgTransmissionRate">5</Parameter>
+    <Parameter name="AutoHrEnabled">0</Parameter>
+    <Parameter name="DevStatisticsEnabled">0</Parameter>
+</Device>

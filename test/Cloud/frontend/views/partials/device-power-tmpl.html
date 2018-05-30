@@ -1,0 +1,36 @@
+<div class="widget-group" layout="row" layout-wrap style="height: 100%">
+
+    <panel-power-data-widget
+            card="card"
+            card-name="power"
+            flex="40"
+    ></panel-power-data-widget>
+
+    <div layout="column" flex="60">
+        <div layout="row" flex="60">
+            <line-chart-widget flex layout-column layout="column"
+                               sensors-names="['PowerMeter']"
+                               labels="['Phase A', 'Phase B', 'Phase C']"
+                               border-colors="['#e61510', '#0d74ce', '#08860e']"
+                               empty-title="Please, select a parameter from the Power meter widget"
+            ></line-chart-widget>
+        </div>
+        <div layout="row" flex="40">
+            <div layout="column" flex="50">
+                <panel-power-lag-lead-widget flex layout-column layout="column"
+                                             card="card"
+                                             card-name="powerLagLead"
+                                             source-prefix=""
+                ></panel-power-lag-lead-widget>
+            </div>
+            <div layout="column" flex="50">
+                <panel-power-lag-lead-widget flex layout-column layout="column"
+                                             card="card"
+                                             card-name="energyLagLead"
+                                             source-prefix="consumed_"
+                ></panel-power-lag-lead-widget>
+            </div>
+        </div>
+    </div>
+
+</div>

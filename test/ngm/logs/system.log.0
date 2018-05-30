@@ -1,0 +1,1755 @@
+2017-03-20 16:26:19.617 []: *** Starting NGM v. 0.9.12 ***
+2017-03-20 16:26:19.617 [AwsClient]: 
+AWS IoT SDK Version 2.1.0-
+2017-03-20 16:26:19.617 [CloudMgr]: Creating CloudManager...
+2017-03-20 16:26:19.617 [CloudMgr]: std::atomic<ShadowState> is lock free!!!
+2017-03-20 16:26:19.617 [I2c] Error: I2C: open </dev/i2c-0> failed...
+2017-03-20 16:26:19.617 [Leds]: Leds initializing...
+2017-03-20 16:26:19.617 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:22.304 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:22.304 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:22.304 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:22.305 [CloudMgr]: -- preInit
+2017-03-20 16:26:22.305 []: Loading configuration for msp430(PowerMeter)
+2017-03-20 16:26:22.305 [CloudMgr]: -- initialize
+2017-03-20 16:26:22.305 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:26:22.305 []: Loading parameter: name = HRFrequency, type = QWord, value = 2, defaultValue = 1
+2017-03-20 16:26:22.305 []: Loading parameter: name = HRHistoryMin, type = QWord, value = 2, defaultValue = 1
+2017-03-20 16:26:22.305 []: Loading parameter: name = DevStatisticsEnabled, type = Bool, value = true, defaultValue = false
+2017-03-20 16:26:22.305 []: Loading HR parameter: name = timestamp, type = QWord, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.305 [Device]: voltage1: thresholdHigh = 230
+2017-03-20 16:26:22.305 [Device]: voltage1: thresholdLow = 200
+2017-03-20 16:26:22.305 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.305 []: Loading HR parameter: name = voltage1, type = Float, defaultValue = 0.1, statisticsEnabled = true
+2017-03-20 16:26:22.305 [Device]: current1: thresholdHigh = 100
+2017-03-20 16:26:22.305 [Device]: current1: thresholdLow = 0
+2017-03-20 16:26:22.305 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.305 [Device]: active_power1: thresholdHigh = 100
+2017-03-20 16:26:22.305 []: Loading HR parameter: name = current1, type = Float, defaultValue = 0.2, statisticsEnabled = true
+2017-03-20 16:26:22.305 [Device]: active_power1: thresholdLow = 0
+2017-03-20 16:26:22.305 []: Loading HR parameter: name = active_power1, type = Float, defaultValue = 0.3, statisticsEnabled = true
+2017-03-20 16:26:22.305 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.305 [Device]: reactive_power1: thresholdHigh = 100
+2017-03-20 16:26:22.305 [Device]: reactive_power1: thresholdLow = 0
+2017-03-20 16:26:22.305 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.305 []: Loading HR parameter: name = reactive_power1, type = Float, defaultValue = 0.4, statisticsEnabled = true
+2017-03-20 16:26:22.305 [Device]: apparent_power1: thresholdHigh = 100
+2017-03-20 16:26:22.305 [Device]: apparent_power1: thresholdLow = 0
+2017-03-20 16:26:22.305 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.305 [Device]: power_factor1: thresholdHigh = 100
+2017-03-20 16:26:22.305 [Device]: power_factor1: thresholdLow = 0
+2017-03-20 16:26:22.305 []: Loading HR parameter: name = apparent_power1, type = Float, defaultValue = 0.5, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: frequency1: thresholdHigh = 65
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = power_factor1, type = Float, defaultValue = 0.6, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: frequency1: thresholdLow = 45
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = frequency1, type = Float, defaultValue = 0.7, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: voltage2: thresholdHigh = 230
+2017-03-20 16:26:22.306 [Device]: voltage2: thresholdLow = 200
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: current2: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: current2: thresholdLow = 0
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = voltage2, type = Float, defaultValue = 0.1, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: active_power2: thresholdHigh = 100
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = current2, type = Float, defaultValue = 0.2, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: active_power2: thresholdLow = 0
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = active_power2, type = Float, defaultValue = 0.3, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: reactive_power2: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: reactive_power2: thresholdLow = 0
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: apparent_power2: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: apparent_power2: thresholdLow = 0
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = reactive_power2, type = Float, defaultValue = 0.4, statisticsEnabled = true
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = apparent_power2, type = Float, defaultValue = 0.5, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: power_factor2: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: power_factor2: thresholdLow = 0
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = power_factor2, type = Float, defaultValue = 0.6, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: frequency2: thresholdHigh = 65
+2017-03-20 16:26:22.306 [Device]: frequency2: thresholdLow = 45
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = frequency2, type = Float, defaultValue = 0.7, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: voltage3: thresholdHigh = 230
+2017-03-20 16:26:22.306 [Device]: voltage3: thresholdLow = 200
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = voltage3, type = Float, defaultValue = 0.1, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: current3: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: current3: thresholdLow = 0
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = current3, type = Float, defaultValue = 0.2, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: active_power3: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: active_power3: thresholdLow = 0
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = active_power3, type = Float, defaultValue = 0.3, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: reactive_power3: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: reactive_power3: thresholdLow = 0
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = reactive_power3, type = Float, defaultValue = 0.4, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: apparent_power3: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: apparent_power3: thresholdLow = 0
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = true
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = apparent_power3, type = Float, defaultValue = 0.5, statisticsEnabled = true
+2017-03-20 16:26:22.306 [Device]: power_factor3: thresholdHigh = 100
+2017-03-20 16:26:22.306 [Device]: power_factor3: thresholdLow = 0
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = power_factor3, type = Float, defaultValue = 0.6, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: frequency3: thresholdHigh = 65
+2017-03-20 16:26:22.306 [Device]: frequency3: thresholdLow = 45
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = frequency3, type = Float, defaultValue = 0.7, statisticsEnabled = false
+2017-03-20 16:26:22.306 [CloudMgr]: -- addDevice
+2017-03-20 16:26:22.306 [CloudMgr]: -- ApplyParams
+2017-03-20 16:26:22.306 [Device]: PowerMeter: HRFrequency = 2
+2017-03-20 16:26:22.306 [Device]: PowerMeter: HRHistoryMin = 2
+2017-03-20 16:26:22.306 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:26:22.306 [HRData]: setRecordsBufferSize: 240
+2017-03-20 16:26:22.306 [HRData]: HRBufferSize: 42240, RecordSize: 176
+2017-03-20 16:26:22.306 [Device]: PowerMeter: DevStatisticsEnabled = true
+2017-03-20 16:26:22.306 [CloudMgr]: -- Done
+2017-03-20 16:26:22.306 []: Loading configuration for gps(GPS)
+2017-03-20 16:26:22.306 [CloudMgr]: -- preInit
+2017-03-20 16:26:22.306 [CloudMgr]: -- initialize
+2017-03-20 16:26:22.306 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:26:22.306 []: Loading parameter: name = HRFrequency, type = QWord, value = 1, defaultValue = 1
+2017-03-20 16:26:22.306 []: Loading parameter: name = HRHistoryMin, type = QWord, value = 1, defaultValue = 1
+2017-03-20 16:26:22.306 []: Loading parameter: name = DevStatisticsEnabled, type = Bool, value = false, defaultValue = false
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = false
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = timestamp, type = QWord, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = false
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = latitude, type = Double, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = false
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = longitude, type = Double, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = false
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = altitude, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.306 [Device]: statisticsEnabled = false
+2017-03-20 16:26:22.306 []: Loading HR parameter: name = satelliteNumber, type = Word, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 [Device]: statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = time, type = QWord, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- addDevice
+2017-03-20 16:26:22.307 [CloudMgr]: -- ApplyParams
+2017-03-20 16:26:22.307 [Device]: GPS: HRFrequency = 1
+2017-03-20 16:26:22.307 [Device]: GPS: HRHistoryMin = 1
+2017-03-20 16:26:22.307 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:26:22.307 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:26:22.307 [HRData]: HRBufferSize: 2280, RecordSize: 38
+2017-03-20 16:26:22.307 [Device]: GPS: DevStatisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- Done
+2017-03-20 16:26:22.307 []: Loading configuration for accelerometer(AccCore)
+2017-03-20 16:26:22.307 [CloudMgr]: -- preInit
+2017-03-20 16:26:22.307 [CloudMgr]: -- initialize
+2017-03-20 16:26:22.307 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = accX, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = accY, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = accZ, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = gyroX, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = gyroY, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = gyroZ, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- addDevice
+2017-03-20 16:26:22.307 [CloudMgr]: -- ApplyParams
+2017-03-20 16:26:22.307 [Device]: AccCore: HRFrequency = 1
+2017-03-20 16:26:22.307 [Device]: AccCore: HRHistoryMin = 1
+2017-03-20 16:26:22.307 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:26:22.307 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:26:22.307 [HRData]: HRBufferSize: 1920, RecordSize: 32
+2017-03-20 16:26:22.307 [Device]: AccCore: DevStatisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- Done
+2017-03-20 16:26:22.307 []: Loading configuration for accelerometer_inverted(AccPCB)
+2017-03-20 16:26:22.307 [CloudMgr]: -- preInit
+2017-03-20 16:26:22.307 [CloudMgr]: -- initialize
+2017-03-20 16:26:22.307 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = accX, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = accY, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = accZ, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = gyroX, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = gyroY, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = gyroZ, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- addDevice
+2017-03-20 16:26:22.307 [CloudMgr]: -- ApplyParams
+2017-03-20 16:26:22.307 [Device]: AccPCB: HRFrequency = 1
+2017-03-20 16:26:22.307 [Device]: AccPCB: HRHistoryMin = 1
+2017-03-20 16:26:22.307 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:26:22.307 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:26:22.307 [HRData]: HRBufferSize: 1920, RecordSize: 32
+2017-03-20 16:26:22.307 [Device]: AccPCB: DevStatisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- Done
+2017-03-20 16:26:22.307 []: Loading configuration for temperature(TempPCB)
+2017-03-20 16:26:22.307 [CloudMgr]: -- preInit
+2017-03-20 16:26:22.307 [CloudMgr]: -- initialize
+2017-03-20 16:26:22.307 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = temperature, type = Float, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- addDevice
+2017-03-20 16:26:22.307 [CloudMgr]: -- ApplyParams
+2017-03-20 16:26:22.307 [Device]: TempPCB: HRFrequency = 1
+2017-03-20 16:26:22.307 [Device]: TempPCB: HRHistoryMin = 1
+2017-03-20 16:26:22.307 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:26:22.307 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:26:22.307 [HRData]: HRBufferSize: 960, RecordSize: 16
+2017-03-20 16:26:22.307 [Device]: TempPCB: DevStatisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- Done
+2017-03-20 16:26:22.307 []: Loading configuration for cpu_temp(TempCPU)
+2017-03-20 16:26:22.307 [CloudMgr]: -- preInit
+2017-03-20 16:26:22.307 [CloudMgr]: -- initialize
+2017-03-20 16:26:22.307 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = temperature, type = Float, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- addDevice
+2017-03-20 16:26:22.307 [CloudMgr]: -- ApplyParams
+2017-03-20 16:26:22.307 [Device]: TempCPU: HRFrequency = 1
+2017-03-20 16:26:22.307 [Device]: TempCPU: HRHistoryMin = 1
+2017-03-20 16:26:22.307 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:26:22.307 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:26:22.307 [HRData]: HRBufferSize: 960, RecordSize: 16
+2017-03-20 16:26:22.307 [Device]: TempCPU: DevStatisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- Done
+2017-03-20 16:26:22.307 []: Loading configuration for disclosing_sensor(TamperSwitch)
+2017-03-20 16:26:22.307 [CloudMgr]: -- preInit
+2017-03-20 16:26:22.307 [CloudMgr]: -- initialize
+2017-03-20 16:26:22.307 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:26:22.307 []: Loading HR parameter: name = closed, type = Bool, defaultValue = true, statisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- addDevice
+2017-03-20 16:26:22.307 [CloudMgr]: -- ApplyParams
+2017-03-20 16:26:22.307 [Device]: TamperSwitch: HRFrequency = 1
+2017-03-20 16:26:22.307 [Device]: TamperSwitch: HRHistoryMin = 1
+2017-03-20 16:26:22.307 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:26:22.307 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:26:22.307 [HRData]: HRBufferSize: 540, RecordSize: 9
+2017-03-20 16:26:22.307 [Device]: TamperSwitch: DevStatisticsEnabled = false
+2017-03-20 16:26:22.307 [CloudMgr]: -- Done
+2017-03-20 16:26:22.307 []: Loading configuration for general(General)
+2017-03-20 16:26:22.307 [CloudMgr]: -- preInit
+2017-03-20 16:26:22.307 [CloudMgr]: -- initialize
+2017-03-20 16:26:22.308 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:26:22.308 []: Loading parameter: name = RegularMsgTransmissionRate, type = QWord, value = 1, defaultValue = 5
+2017-03-20 16:26:22.308 []: Loading parameter: name = AutoHrEnabled, type = Bool, value = false, defaultValue = false
+2017-03-20 16:26:22.308 []: Loading parameter: name = DeviceID, type = String, value = NGM-SIMDEV-02, defaultValue = DEV_ID
+2017-03-20 16:26:22.308 [CloudMgr]: -- addDevice
+2017-03-20 16:26:22.308 [CloudMgr]: -- ApplyParams
+2017-03-20 16:26:22.308 [Device]: General: HRFrequency = 1
+2017-03-20 16:26:22.308 [Device]: General: HRHistoryMin = 1
+2017-03-20 16:26:22.308 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:26:22.308 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:26:22.308 [HRData]: HRBufferSize: 480, RecordSize: 8
+2017-03-20 16:26:22.308 [Device]: General: DevStatisticsEnabled = false
+2017-03-20 16:26:22.308 [Device]: General: RegularMsgTransmissionRate = 1
+2017-03-20 16:26:22.308 [Device]: General: AutoHrEnabled = false
+2017-03-20 16:26:22.308 [Device]: General: DeviceID = NGM-SIMDEV-02
+2017-03-20 16:26:22.308 [Device]: General: MqttHost = A7RDHYR0RGGZ.iot.us-west-2.amazonaws.com
+2017-03-20 16:26:22.308 [Device]: General: MqttPort = 8883
+2017-03-20 16:26:22.308 [CloudMgr]: -- Done
+2017-03-20 16:26:22.308 [HRStat]: Statistics thread for <PowerMeter> is started!
+2017-03-20 16:26:22.308 [Device]: Device PowerMeter started!
+2017-03-20 16:26:22.308 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:22.308 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:22.308 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:22.308 [Device]: Device GPS started!
+2017-03-20 16:26:22.308 [Device]: Connecting to <GPS>
+2017-03-20 16:26:22.308 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:22.308 [Device]: Device AccCore started!
+2017-03-20 16:26:22.308 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:22.308 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:22.308 [Device]: Device AccPCB started!
+2017-03-20 16:26:22.308 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:22.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:22.309 [Device]: Device TempPCB started!
+2017-03-20 16:26:22.309 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:22.309 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:22.309 [Device]: Device TempCPU started!
+2017-03-20 16:26:22.309 [Device]: Connecting to <TempCPU>
+2017-03-20 16:26:22.309 [Device]: Starting reading data loop for TempCPU
+2017-03-20 16:26:22.309 [Device]: Device TamperSwitch started!
+2017-03-20 16:26:22.309 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:22.309 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:22.309 [Device]: Device General started!
+2017-03-20 16:26:22.309 [Device]: Connecting to <General>
+2017-03-20 16:26:22.309 [Device]: Starting reading data loop for General
+2017-03-20 16:26:22.309 [CloudMgr]: Shadow Loop started!
+2017-03-20 16:26:22.309 [AwsShadow]: Shadow Init
+2017-03-20 16:26:22.309 [AwsShadow]: Shadow Connect
+2017-03-20 16:26:22.325 [CloudMgr]: Events Loop started!
+2017-03-20 16:26:22.335 [CloudMgr]: Commands Thread Started...
+2017-03-20 16:26:22.625 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:23.625 [CloudMgr]: AWS Client connecting....
+2017-03-20 16:26:23.626 [AwsClient]: Connecting...
+2017-03-20 16:26:24.308 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:24.308 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:24.308 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:24.308 [Device]: Connecting to <GPS>
+2017-03-20 16:26:24.308 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:24.308 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:24.308 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:24.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:24.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:24.309 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:24.309 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:24.309 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:24.309 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:24.562 [CloudMgr]: register_delta PowerMeter successful!
+2017-03-20 16:26:24.562 [CloudMgr]: register_delta GPS successful!
+2017-03-20 16:26:24.562 [CloudMgr]: register_delta AccCore successful!
+2017-03-20 16:26:24.562 [CloudMgr]: register_delta AccPCB successful!
+2017-03-20 16:26:24.562 [CloudMgr]: register_delta TempPCB successful!
+2017-03-20 16:26:24.562 [CloudMgr]: register_delta TempCPU successful!
+2017-03-20 16:26:24.562 [CloudMgr]: register_delta TamperSwitch successful!
+2017-03-20 16:26:24.562 [CloudMgr]: register_delta General successful!
+2017-03-20 16:26:25.171 [CloudMgr]: AWS Client is connected!!!
+2017-03-20 16:26:25.472 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:26.308 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:26.308 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:26.308 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:26.308 [Device]: Connecting to <GPS>
+2017-03-20 16:26:26.309 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:26.309 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:26.309 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:26.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:26.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:26.309 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:26.309 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:26.309 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:26.309 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:26.685 [CloudMgr]: Subscribing to "iot/device/NGM-SIMDEV-02/command":32
+2017-03-20 16:26:26.685 []: AWS Client is connected!!!
+2017-03-20 16:26:26.685 [AwsClient] Error: Error publishing: "iot/device/NGM-SIMDEV-02/msgType/status/fmt/json"
+2017-03-20 16:26:26.685 [AwsClient] Error: Error publishing: "iot/device/NGM-SIMDEV-02/msgType/regular/fmt/json"
+2017-03-20 16:26:27.190 [CloudMgr]: delete shadow
+2017-03-20 16:26:27.192 [CloudMgr]: Upgrade shadow: {"state":{"reported":{"AccCore":{"DevStatisticsEnabled":false,"HRFrequency":1,"HRHistoryMin":1,"HrData":{"accX":{"defaultValue":0},"accY":{"defaultValue":0},"accZ":{"defaultValue":0},"gyroX":{"defaultValue":0},"gyroY":{"defaultValue":0},"gyroZ":{"defaultValue":0},"timestamp":{"defaultValue":0}}},"AccPCB":{"DevStatisticsEnabled":false,"HRFrequency":1,"HRHistoryMin":1,"HrData":{"accX":{"defaultValue":0},"accY":{"defaultValue":0},"accZ":{"defaultValue":0},"gyroX":{"defaultValue":0},"gyroY":{"defaultValue":0},"gyroZ":{"defaultValue":0},"timestamp":{"defaultValue":0}}},"GPS":{"DevStatisticsEnabled":false,"HRFrequency":1,"HRHistoryMin":1,"HrData":{"altitude":{"defaultValue":0},"latitude":{"defaultValue":0},"longitude":{"defaultValue":0},"satelliteNumber":{"defaultValue":0},"time":{"defaultValue":0},"timestamp":{"defaultValue":0}}},"General":{"AutoHrEnabled":false,"DevStatisticsEnabled":false,"DeviceID":"NGM-SIMDEV-02","HRFrequency":1,"HRHistoryMin":1,"HrData":{"timestamp":{"defaultValue":0}},"MqttHost":"A7RDHYR0RGGZ.iot.us-west-2.amazonaws.com","MqttPort":8883,"RegularMsgTransmissionRate":1},"PowerMeter":{"DevStatisticsEnabled":true,"HRFrequency":2,"HRHistoryMin":2,"HrData":{"active_power1":{"defaultValue":0.3,"thresholdHigh":100.0,"thresholdLow":0},"active_power2":{"defaultValue":0.3,"thresholdHigh":100.0,"thresholdLow":0},"active_power3":{"defaultValue":0.3,"thresholdHigh":100.0,"thresholdLow":0},"apparent_power1":{"defaultValue":0.5,"thresholdHigh":100.0,"thresholdLow":0},"apparent_power2":{"defaultValue":0.5,"thresholdHigh":100.0,"thresholdLow":0},"apparent_power3":{"defaultValue":0.5,"thresholdHigh":100.0,"thresholdLow":0},"current1":{"defaultValue":0.2,"thresholdHigh":100.0,"thresholdLow":0},"current2":{"defaultValue":0.2,"thresholdHigh":100.0,"thresholdLow":0},"current3":{"defaultValue":0.2,"thresholdHigh":100.0,"thresholdLow":0},"frequency1":{"defaultValue":0.7,"thresholdHigh":65.0,"thresholdLow":45.0},"frequency2":{"defaultValue":0.7,"thresholdHigh":65.0,"thresholdLow":45.0},"frequency3":{"defaultValue":0.7,"thresholdHigh":65.0,"thresholdLow":45.0},"power_factor1":{"defaultValue":0.6,"thresholdHigh":100.0,"thresholdLow":0},"power_factor2":{"defaultValue":0.6,"thresholdHigh":100.0,"thresholdLow":0},"power_factor3":{"defaultValue":0.6,"thresholdHigh":100.0,"thresholdLow":0},"reactive_power1":{"defaultValue":0.4,"thresholdHigh":100.0,"thresholdLow":0},"reactive_power2":{"defaultValue":0.4,"thresholdHigh":100.0,"thresholdLow":0},"reactive_power3":{"defaultValue":0.4,"thresholdHigh":100.0,"thresholdLow":0},"timestamp":{"defaultValue":0},"voltage1":{"defaultValue":0.1,"thresholdHigh":230.0,"thresholdLow":200.0},"voltage2":{"defaultValue":0.1,"thresholdHigh":230.0,"thresholdLow":200.0},"voltage3":{"defaultValue":0.1,"thresholdHigh":230.0,"thresholdLow":200.0}}},"TamperSwitch":{"DevStatisticsEnabled":false,"HRFrequency":1,"HRHistoryMin":1,"HrData":{"closed":{"defaultValue":true},"timestamp":{"defaultValue":0}}},"TempCPU":{"DevStatisticsEnabled":false,"HRFrequency":1,"HRHistoryMin":1,"HrData":{"temperature":{"defaultValue":0},"timestamp":{"defaultValue":0}}},"TempPCB":{"DevStatisticsEnabled":false,"HRFrequency":1,"HRHistoryMin":1,"HrData":{"temperature":{"defaultValue":0},"timestamp":{"defaultValue":0}}}}}}
+2017-03-20 16:26:27.192 [CloudMgr]: update shadow success!
+2017-03-20 16:26:27.192 []: AWS Shadow is connected!
+2017-03-20 16:26:27.222 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:27.431 [CloudMgr]: Cloud: Shadow Action callback, status: 2
+2017-03-20 16:26:27.431 [CloudMgr]: json: {"version":43,"timestamp":1490019987,"clientToken":"NGM-SIMDEV-02-Shadow-0"}
+2017-03-20 16:26:28.308 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:28.309 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:28.309 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:28.309 [Device]: Connecting to <GPS>
+2017-03-20 16:26:28.309 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:28.309 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:28.309 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:28.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:28.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:28.309 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:28.309 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:28.309 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:28.309 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:29.240 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:30.309 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:30.309 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:30.309 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:30.309 [Device]: Connecting to <GPS>
+2017-03-20 16:26:30.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:30.309 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:30.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:30.309 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:30.309 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:30.309 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:30.309 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:30.309 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:30.309 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:31.259 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:32.309 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:32.309 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:32.309 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:32.309 [Device]: Connecting to <GPS>
+2017-03-20 16:26:32.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:32.309 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:32.309 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:32.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:32.309 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:32.309 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:32.309 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:32.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:32.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:33.278 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:34.309 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:34.309 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:34.309 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:34.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:34.309 [Device]: Connecting to <GPS>
+2017-03-20 16:26:34.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:34.309 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:34.309 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:34.309 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:34.309 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:34.309 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:34.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:34.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:35.296 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:36.309 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:36.309 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:36.309 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:36.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:36.309 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:36.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:36.309 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:36.309 [Device]: Connecting to <GPS>
+2017-03-20 16:26:36.309 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:36.310 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:36.310 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:36.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:36.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:37.317 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:38.309 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:38.309 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:38.309 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:38.309 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:38.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:38.309 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:38.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:38.309 [Device]: Connecting to <GPS>
+2017-03-20 16:26:38.309 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:38.310 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:38.310 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:38.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:38.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:38.831 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:40.309 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:40.309 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:40.309 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:40.309 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:40.309 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:40.309 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:40.309 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:40.310 [Device]: Connecting to <GPS>
+2017-03-20 16:26:40.310 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:40.310 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:40.310 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:40.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:40.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:40.344 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:42.310 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:42.310 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:42.310 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:42.310 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:42.310 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:42.310 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:42.310 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:42.310 [Device]: Connecting to <GPS>
+2017-03-20 16:26:42.310 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:42.310 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:42.310 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:42.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:42.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:42.366 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:43.881 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:44.310 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:44.310 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:44.310 [Device]: Connecting to <GPS>
+2017-03-20 16:26:44.310 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:44.310 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:44.310 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:44.310 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:44.310 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:44.310 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:44.310 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:44.310 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:44.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:44.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:45.396 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:46.310 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:46.310 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:46.310 [Device]: Connecting to <GPS>
+2017-03-20 16:26:46.310 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:46.310 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:46.310 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:46.310 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:46.310 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:46.310 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:46.310 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:46.310 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:46.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:46.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:47.415 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:48.310 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:48.310 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:48.310 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:48.310 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:48.310 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:48.310 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:48.310 [Device]: Connecting to <GPS>
+2017-03-20 16:26:48.310 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:48.310 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:48.310 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:48.310 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:48.310 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:48.310 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:49.433 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:50.310 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:50.310 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:50.310 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:50.310 [Device]: Connecting to <GPS>
+2017-03-20 16:26:50.310 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:50.310 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:50.310 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:50.310 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:50.310 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:50.310 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:50.311 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:50.311 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:50.311 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:51.452 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:52.311 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:52.311 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:52.311 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:52.311 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:52.311 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:52.311 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:52.311 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:52.311 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:52.311 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:52.311 [Device]: Connecting to <GPS>
+2017-03-20 16:26:52.311 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:52.311 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:52.311 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:53.472 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:54.311 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:54.311 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:54.311 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:54.311 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:54.311 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:54.311 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:54.311 [Device]: Connecting to <GPS>
+2017-03-20 16:26:54.311 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:54.311 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:54.311 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:54.311 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:54.311 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:54.311 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:54.987 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:56.311 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:56.311 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:56.311 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:56.311 [Device]: Connecting to <GPS>
+2017-03-20 16:26:56.311 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:56.311 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:56.311 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:56.311 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:56.311 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:56.311 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:56.311 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:56.311 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:56.311 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:57.006 [] Warn: Mosquitto not connected...
+2017-03-20 16:26:58.311 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:26:58.311 [Device]: Connecting to <TempPCB>
+2017-03-20 16:26:58.311 [Device]: Connecting to <AccPCB>
+2017-03-20 16:26:58.311 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:26:58.311 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:26:58.311 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:26:58.311 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:26:58.311 [Device]: Connecting to <AccCore>
+2017-03-20 16:26:58.311 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:26:58.311 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:26:58.311 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:26:58.311 [Device]: Connecting to <GPS>
+2017-03-20 16:26:58.311 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:26:59.025 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:00.311 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:00.311 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:00.311 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:00.311 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:00.311 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:00.311 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:00.311 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:00.311 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:00.311 [Device]: Connecting to <GPS>
+2017-03-20 16:27:00.311 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:00.311 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:00.311 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:00.311 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:00.539 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:02.053 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:02.311 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:02.312 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:02.312 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:02.312 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:02.312 [Device]: Connecting to <GPS>
+2017-03-20 16:27:02.312 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:02.312 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:02.312 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:02.312 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:02.312 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:02.312 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:02.312 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:02.312 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:04.072 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:04.312 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:04.312 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:04.312 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:04.312 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:04.312 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:04.312 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:04.312 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:04.312 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:04.312 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:04.312 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:04.312 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:04.312 [Device]: Connecting to <GPS>
+2017-03-20 16:27:04.312 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:05.587 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:06.312 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:06.312 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:06.312 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:06.312 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:06.312 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:06.312 [Device]: Connecting to <GPS>
+2017-03-20 16:27:06.312 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:06.312 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:06.312 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:06.312 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:06.312 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:06.312 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:06.312 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:07.102 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:08.312 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:08.312 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:08.312 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:08.312 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:08.312 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:08.312 [Device]: Connecting to <GPS>
+2017-03-20 16:27:08.312 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:08.312 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:08.312 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:08.312 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:08.312 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:08.312 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:08.312 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:08.617 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:10.131 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:10.312 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:10.312 [Device]: Connecting to <GPS>
+2017-03-20 16:27:10.312 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:10.312 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:10.312 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:10.312 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:10.312 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:10.312 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:10.312 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:10.312 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:10.312 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:10.312 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:10.313 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:12.153 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:12.312 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:12.312 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:12.312 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:12.313 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:12.313 [Device]: Connecting to <GPS>
+2017-03-20 16:27:12.313 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:12.313 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:12.313 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:12.313 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:12.313 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:12.313 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:12.313 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:12.313 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:14.174 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:14.313 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:14.313 [Device]: Connecting to <GPS>
+2017-03-20 16:27:14.313 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:14.313 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:14.313 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:14.313 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:14.313 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:14.313 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:14.313 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:14.313 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:14.313 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:14.313 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:14.313 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:16.193 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:16.313 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:16.313 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:16.313 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:16.313 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:16.313 [Device]: Connecting to <GPS>
+2017-03-20 16:27:16.313 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:16.313 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:16.313 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:16.313 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:16.313 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:16.313 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:16.313 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:16.313 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:18.213 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:18.313 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:18.313 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:18.313 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:18.313 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:18.313 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:18.313 [Device]: Connecting to <GPS>
+2017-03-20 16:27:18.313 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:18.313 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:18.313 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:18.313 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:18.313 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:18.313 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:18.313 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:19.728 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:20.313 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:20.313 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:20.313 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:20.313 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:20.313 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:20.313 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:20.313 [Device]: Connecting to <GPS>
+2017-03-20 16:27:20.313 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:20.313 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:20.313 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:20.313 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:20.314 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:20.314 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:21.243 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:22.314 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:22.314 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:22.314 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:22.314 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:22.314 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:22.314 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:22.314 [Device]: Connecting to <GPS>
+2017-03-20 16:27:22.314 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:22.314 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:22.314 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:22.314 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:22.314 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:22.314 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:23.261 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:24.314 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:24.314 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:24.314 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:24.314 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:24.314 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:24.314 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:24.314 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:24.314 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:24.314 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:24.314 [Device]: Connecting to <GPS>
+2017-03-20 16:27:24.314 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:24.314 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:24.314 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:25.282 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:26.314 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:26.314 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:26.314 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:26.314 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:26.314 [Device]: Connecting to <GPS>
+2017-03-20 16:27:26.314 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:26.314 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:26.314 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:26.314 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:26.314 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:26.314 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:26.314 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:26.314 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:27.302 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:28.314 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:28.314 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:28.314 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:28.314 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:28.314 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:28.314 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:28.314 [Device]: Connecting to <GPS>
+2017-03-20 16:27:28.314 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:28.314 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:28.314 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:28.314 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:28.314 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:28.314 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:29.322 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:30.314 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:30.314 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:30.314 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:30.314 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:30.314 [Device]: Connecting to <GPS>
+2017-03-20 16:27:30.314 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:30.314 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:30.314 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:30.314 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:30.314 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:30.314 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:30.314 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:30.314 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:31.341 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:32.314 [Device]: Connecting to <GPS>
+2017-03-20 16:27:32.314 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:32.314 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:32.314 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:32.314 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:32.314 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:32.314 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:32.314 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:32.314 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:32.314 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:32.315 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:32.315 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:32.314 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:32.855 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:34.315 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:34.315 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:34.315 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:34.315 [Device]: Connecting to <GPS>
+2017-03-20 16:27:34.315 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:34.315 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:34.315 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:34.315 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:34.315 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:34.315 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:34.315 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:34.315 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:34.315 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:34.370 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:36.315 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:36.315 [Device]: Connecting to <GPS>
+2017-03-20 16:27:36.315 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:36.315 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:36.315 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:36.315 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:36.315 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:36.315 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:36.315 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:36.315 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:36.315 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:36.315 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:36.315 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:36.388 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:38.315 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:38.315 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:38.315 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:38.315 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:38.315 [Device]: Connecting to <GPS>
+2017-03-20 16:27:38.315 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:38.315 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:38.315 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:38.315 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:38.315 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:38.315 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:38.315 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:38.315 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:38.407 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:40.315 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:40.315 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:40.315 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:40.315 [Device]: Connecting to <GPS>
+2017-03-20 16:27:40.315 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:40.315 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:40.315 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:40.315 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:40.315 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:40.315 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:40.315 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:40.315 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:40.315 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:40.427 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:42.315 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:42.315 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:42.315 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:42.315 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:42.315 [Device]: Connecting to <GPS>
+2017-03-20 16:27:42.315 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:42.315 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:42.315 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:42.315 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:42.315 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:42.315 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:42.315 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:42.315 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:42.448 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:43.963 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:44.315 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:44.315 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:44.315 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:44.315 [Device]: Connecting to <GPS>
+2017-03-20 16:27:44.316 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:44.316 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:44.316 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:44.316 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:44.316 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:44.316 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:44.316 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:44.316 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:44.316 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:45.477 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:46.316 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:46.316 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:46.316 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:46.316 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:46.316 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:46.316 [Device]: Connecting to <GPS>
+2017-03-20 16:27:46.316 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:46.316 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:46.316 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:46.316 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:46.316 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:46.316 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:46.316 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:46.992 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:48.316 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:48.316 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:48.316 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:48.316 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:48.316 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:48.316 [Device]: Connecting to <GPS>
+2017-03-20 16:27:48.316 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:48.316 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:48.316 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:48.316 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:48.316 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:48.316 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:48.316 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:49.012 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:50.316 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:50.316 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:50.316 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:50.316 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:50.316 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:50.316 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:50.316 [Device]: Connecting to <GPS>
+2017-03-20 16:27:50.316 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:50.316 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:50.316 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:50.316 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:50.316 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:50.316 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:51.033 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:52.316 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:52.316 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:52.316 [Device]: Connecting to <GPS>
+2017-03-20 16:27:52.316 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:52.316 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:52.316 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:52.316 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:52.316 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:52.316 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:52.316 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:52.316 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:52.316 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:52.316 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:52.548 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:54.063 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:54.316 [Device]: Connecting to <GPS>
+2017-03-20 16:27:54.316 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:54.316 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:54.316 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:54.316 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:54.316 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:54.316 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:54.316 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:54.316 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:54.317 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:54.316 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:54.317 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:54.317 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:55.577 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:56.316 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:56.316 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:56.317 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:56.317 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:56.317 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:56.317 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:56.317 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:56.317 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:56.317 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:56.317 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:56.317 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:56.317 [Device]: Connecting to <GPS>
+2017-03-20 16:27:56.317 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:57.092 [] Warn: Mosquitto not connected...
+2017-03-20 16:27:58.317 [Device]: Connecting to <TempPCB>
+2017-03-20 16:27:58.317 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:27:58.317 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:27:58.317 [Device]: Connecting to <AccCore>
+2017-03-20 16:27:58.317 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:27:58.317 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:27:58.317 [Device]: Connecting to <AccPCB>
+2017-03-20 16:27:58.317 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:27:58.317 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:27:58.317 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:27:58.317 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:27:58.317 [Device]: Connecting to <GPS>
+2017-03-20 16:27:58.317 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:27:59.110 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:00.317 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:00.317 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:00.317 [Device]: Connecting to <GPS>
+2017-03-20 16:28:00.317 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:00.317 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:00.317 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:00.317 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:00.317 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:00.317 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:00.317 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:00.317 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:00.317 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:00.317 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:01.129 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:02.317 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:02.317 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:02.317 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:02.317 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:02.317 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:02.317 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:02.317 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:02.317 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:02.317 [Device]: Connecting to <GPS>
+2017-03-20 16:28:02.317 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:02.317 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:02.317 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:02.317 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:02.643 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:04.158 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:04.317 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:04.317 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:04.317 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:04.317 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:04.317 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:04.317 [Device]: Connecting to <GPS>
+2017-03-20 16:28:04.317 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:04.317 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:04.317 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:04.317 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:04.317 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:04.317 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:04.317 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:06.177 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:06.318 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:06.318 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:06.318 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:06.318 [Device]: Connecting to <GPS>
+2017-03-20 16:28:06.318 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:06.318 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:06.318 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:06.318 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:06.318 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:06.318 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:06.318 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:06.318 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:06.318 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:07.691 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:08.318 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:08.318 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:08.318 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:08.318 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:08.318 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:08.318 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:08.318 [Device]: Connecting to <GPS>
+2017-03-20 16:28:08.318 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:08.318 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:08.318 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:08.318 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:08.318 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:08.318 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:09.205 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:10.318 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:10.318 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:10.318 [Device]: Connecting to <GPS>
+2017-03-20 16:28:10.318 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:10.318 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:10.318 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:10.318 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:10.318 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:10.318 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:10.318 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:10.318 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:10.318 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:10.318 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:10.720 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:12.234 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:12.318 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:12.318 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:12.318 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:12.318 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:12.318 [Device]: Connecting to <GPS>
+2017-03-20 16:28:12.318 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:12.318 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:12.318 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:12.318 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:12.318 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:12.318 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:12.318 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:12.318 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:14.255 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:14.318 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:14.318 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:14.318 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:14.318 [Device]: Connecting to <GPS>
+2017-03-20 16:28:14.318 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:14.318 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:14.318 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:14.318 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:14.318 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:14.318 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:14.318 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:14.318 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:14.318 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:16.275 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:16.318 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:16.318 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:16.318 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:16.318 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:16.318 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:16.318 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:16.319 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:16.319 [Device]: Connecting to <GPS>
+2017-03-20 16:28:16.319 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:16.319 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:16.319 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:16.319 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:16.319 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:18.295 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:18.319 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:18.319 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:18.319 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:18.319 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:18.319 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:18.319 [Device]: Connecting to <GPS>
+2017-03-20 16:28:18.319 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:18.319 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:18.319 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:18.319 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:18.319 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:18.319 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:18.319 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:20.314 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:20.319 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:20.319 [Device]: Connecting to <GPS>
+2017-03-20 16:28:20.319 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:20.319 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:20.319 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:20.319 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:20.319 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:20.319 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:20.319 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:20.319 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:20.319 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:20.319 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:20.319 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:22.319 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:22.319 [Device]: Connecting to <GPS>
+2017-03-20 16:28:22.319 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:22.319 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:22.319 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:22.319 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:22.319 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:22.319 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:22.319 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:22.319 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:22.319 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:22.319 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:22.319 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:22.333 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:24.319 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:24.319 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:24.319 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:24.319 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:24.319 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:24.319 [Device]: Connecting to <GPS>
+2017-03-20 16:28:24.319 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:24.319 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:24.319 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:24.319 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:24.319 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:24.319 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:24.319 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:24.353 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:26.319 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:26.319 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:26.319 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:26.319 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:26.319 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:26.319 [Device]: Connecting to <GPS>
+2017-03-20 16:28:26.319 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:26.319 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:26.319 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:26.319 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:26.319 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:26.319 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:26.319 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:26.373 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:27.889 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:28.320 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:28.320 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:28.320 [Device]: Connecting to <GPS>
+2017-03-20 16:28:28.320 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:28.320 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:28.320 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:28.320 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:28.320 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:28.320 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:28.320 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:28.320 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:28.320 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:28.320 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:29.403 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:30.320 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:30.320 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:30.320 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:30.320 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:30.320 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:30.320 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:30.320 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:30.320 [Device]: Connecting to <GPS>
+2017-03-20 16:28:30.320 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:30.320 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:30.320 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:30.320 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:30.320 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:30.918 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:32.320 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:32.320 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:32.320 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:32.320 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:32.320 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:32.320 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:32.320 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:32.320 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:32.320 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:32.320 [Device]: Connecting to <GPS>
+2017-03-20 16:28:32.320 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:32.320 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:32.320 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:32.433 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:34.320 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:34.320 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:34.320 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:34.320 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:34.320 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:34.320 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:34.320 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:34.320 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:34.320 [Device]: Connecting to <GPS>
+2017-03-20 16:28:34.320 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:34.320 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:34.320 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:34.320 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:34.454 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:35.969 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:36.320 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:36.321 [Device]: Connecting to <GPS>
+2017-03-20 16:28:36.320 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:36.320 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:36.321 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:36.320 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:36.321 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:36.321 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:36.321 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:36.321 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:36.321 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:36.321 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:36.321 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:37.988 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:38.321 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:38.321 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:38.321 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:38.321 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:38.321 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:38.321 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:38.321 [Device]: Connecting to <GPS>
+2017-03-20 16:28:38.321 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:38.321 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:38.321 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:38.321 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:38.321 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:38.321 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:40.007 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:40.321 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:40.321 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:40.321 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:40.321 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:40.321 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:40.321 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:40.321 [Device]: Connecting to <GPS>
+2017-03-20 16:28:40.321 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:40.321 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:40.321 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:40.321 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:40.321 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:40.321 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:41.522 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:42.321 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:42.321 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:42.321 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:42.321 [Device]: Connecting to <GPS>
+2017-03-20 16:28:42.321 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:42.321 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:42.321 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:42.321 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:42.321 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:42.321 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:42.321 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:42.321 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:42.321 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:43.041 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:44.321 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:44.321 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:44.321 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:44.321 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:44.321 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:44.321 [Device]: Connecting to <GPS>
+2017-03-20 16:28:44.321 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:44.321 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:44.321 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:44.321 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:44.322 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:44.321 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:44.322 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:45.061 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:46.322 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:46.322 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:46.322 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:46.322 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:46.322 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:46.322 [Device]: Connecting to <GPS>
+2017-03-20 16:28:46.322 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:46.322 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:46.322 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:46.322 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:46.322 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:46.322 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:46.322 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:47.080 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:48.322 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:48.322 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:48.322 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:48.322 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:48.322 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:48.322 [Device]: Connecting to <GPS>
+2017-03-20 16:28:48.322 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:48.322 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:48.322 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:48.322 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:48.322 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:48.322 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:48.322 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:49.098 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:50.322 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:50.322 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:50.322 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:50.322 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:50.322 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:50.322 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:50.322 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:50.322 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:50.322 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:50.322 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:50.322 [Device]: Connecting to <GPS>
+2017-03-20 16:28:50.322 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:50.322 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:50.613 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:52.127 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:52.322 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:52.322 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:52.322 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:52.322 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:52.322 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:52.322 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:52.322 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:52.322 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:52.322 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:52.322 [Device]: Connecting to <GPS>
+2017-03-20 16:28:52.322 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:52.322 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:52.322 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:54.146 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:54.322 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:54.322 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:54.322 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:54.322 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:54.322 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:54.322 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:54.322 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:54.322 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:54.322 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:54.322 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:54.322 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:54.322 [Device]: Connecting to <GPS>
+2017-03-20 16:28:54.322 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:55.662 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:56.322 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:56.322 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:56.322 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:56.322 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:56.322 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:56.322 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:56.322 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:56.322 [Device]: Connecting to <GPS>
+2017-03-20 16:28:56.323 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:56.322 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:56.323 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:56.322 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:56.323 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:57.176 [] Warn: Mosquitto not connected...
+2017-03-20 16:28:58.323 [Device]: Connecting to <AccPCB>
+2017-03-20 16:28:58.323 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:28:58.323 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:28:58.323 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:28:58.323 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:28:58.323 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:28:58.323 [Device]: Connecting to <AccCore>
+2017-03-20 16:28:58.323 [Device]: Connecting to <GPS>
+2017-03-20 16:28:58.323 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:28:58.323 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:28:58.323 [Device]: Connecting to <TempPCB>
+2017-03-20 16:28:58.323 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:28:58.323 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:28:58.689 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:00.205 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:00.323 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:00.323 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:00.323 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:00.323 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:00.323 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:00.323 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:00.323 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:00.323 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:00.323 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:00.323 [Device]: Connecting to <GPS>
+2017-03-20 16:29:00.323 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:00.323 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:00.323 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:01.720 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:02.323 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:02.323 [Device]: Connecting to <GPS>
+2017-03-20 16:29:02.323 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:02.323 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:02.323 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:02.323 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:02.323 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:02.323 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:02.323 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:02.323 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:02.323 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:02.323 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:02.323 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:03.234 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:04.323 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:04.323 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:04.323 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:04.323 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:04.323 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:04.323 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:04.323 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:04.323 [Device]: Connecting to <GPS>
+2017-03-20 16:29:04.323 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:04.323 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:04.323 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:04.323 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:04.323 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:05.255 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:06.323 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:06.323 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:06.323 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:06.323 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:06.323 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:06.323 [Device]: Connecting to <GPS>
+2017-03-20 16:29:06.324 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:06.323 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:06.324 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:06.323 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:06.324 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:06.324 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:06.324 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:07.274 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:08.324 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:08.324 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:08.324 [Device]: Connecting to <GPS>
+2017-03-20 16:29:08.324 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:08.324 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:08.324 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:08.324 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:08.324 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:08.324 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:08.324 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:08.324 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:08.324 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:08.324 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:09.293 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:10.324 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:10.324 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:10.324 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:10.324 [Device]: Connecting to <GPS>
+2017-03-20 16:29:10.324 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:10.324 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:10.324 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:10.324 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:10.324 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:10.324 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:10.324 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:10.324 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:10.324 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:11.313 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:12.324 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:12.324 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:12.324 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:12.324 [Device]: Connecting to <GPS>
+2017-03-20 16:29:12.324 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:12.324 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:12.324 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:12.324 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:12.324 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:12.324 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:12.324 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:12.324 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:12.324 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:13.334 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:14.324 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:14.324 [Device]: Connecting to <GPS>
+2017-03-20 16:29:14.324 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:14.324 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:14.324 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:14.324 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:14.324 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:14.324 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:14.324 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:14.324 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:14.324 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:14.324 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:14.324 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:15.354 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:16.324 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:16.324 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:16.324 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:16.324 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:16.325 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:16.325 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:16.325 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:16.325 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:16.325 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:16.325 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:16.325 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:16.325 [Device]: Connecting to <GPS>
+2017-03-20 16:29:16.325 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:17.374 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:18.325 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:18.325 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:18.325 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:18.325 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:18.325 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:18.325 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:18.325 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:18.325 [Device]: Connecting to <GPS>
+2017-03-20 16:29:18.325 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:18.325 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:18.325 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:18.325 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:18.325 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:19.394 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:20.325 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:20.325 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:20.325 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:20.325 [Device]: Connecting to <GPS>
+2017-03-20 16:29:20.325 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:20.325 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:20.325 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:20.325 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:20.325 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:20.325 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:20.325 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:20.325 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:20.325 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:20.909 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:22.325 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:22.325 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:22.325 [Device]: Connecting to <GPS>
+2017-03-20 16:29:22.325 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:22.325 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:22.325 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:22.325 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:22.325 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:22.325 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:22.325 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:22.325 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:22.325 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:22.325 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:22.423 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:24.325 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:24.325 [Device]: Connecting to <GPS>
+2017-03-20 16:29:24.325 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:24.325 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:24.325 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:24.325 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:24.325 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:24.325 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:24.325 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:24.325 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:24.326 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:24.326 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:24.326 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:24.441 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:26.326 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:26.326 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:26.326 [Device]: Connecting to <GPS>
+2017-03-20 16:29:26.326 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:26.326 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:26.326 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:26.326 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:26.326 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:26.326 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:26.326 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:26.326 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:26.326 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:26.326 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:26.460 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:28.326 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:28.326 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:28.326 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:28.326 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:28.326 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:28.326 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:28.326 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:28.326 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:28.326 [Device]: Connecting to <GPS>
+2017-03-20 16:29:28.326 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:28.326 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:28.326 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:28.326 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:28.479 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:29.994 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:30.326 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:30.326 [Device]: Connecting to <GPS>
+2017-03-20 16:29:30.326 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:30.326 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:30.326 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:30.326 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:30.326 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:30.326 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:30.326 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:30.326 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:30.326 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:30.326 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:30.326 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:32.014 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:32.326 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:32.326 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:32.326 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:32.327 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:32.326 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:32.326 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:32.327 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:32.327 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:32.327 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:32.326 [Device]: Connecting to <GPS>
+2017-03-20 16:29:32.327 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:32.326 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:32.327 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:34.037 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:34.326 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:34.327 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:34.327 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:34.327 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:34.327 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:34.327 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:34.327 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:34.327 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:34.327 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:34.327 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:34.327 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:34.327 [Device]: Connecting to <GPS>
+2017-03-20 16:29:34.327 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:36.055 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:36.327 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:36.327 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:36.327 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:36.327 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:36.327 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:36.327 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:36.327 [Device]: Connecting to <GPS>
+2017-03-20 16:29:36.327 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:36.327 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:36.327 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:36.327 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:36.327 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:36.327 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:38.075 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:38.327 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:38.327 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:38.327 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:38.327 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:38.327 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:38.327 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:38.327 [Device]: Connecting to <GPS>
+2017-03-20 16:29:38.327 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:38.327 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:38.327 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:38.327 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:38.327 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:38.327 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:39.591 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:40.327 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:40.327 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:40.327 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:40.327 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:40.327 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:40.327 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:40.327 [Device]: Connecting to <GPS>
+2017-03-20 16:29:40.327 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:40.327 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:40.327 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:40.327 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:40.327 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:40.327 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:41.106 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:42.327 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:42.327 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:42.327 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:42.327 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:42.327 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:42.327 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:42.327 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:42.327 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:42.327 [Device]: Connecting to <GPS>
+2017-03-20 16:29:42.328 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:42.327 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:42.327 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:42.328 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:43.126 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:44.327 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:44.327 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:44.327 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:44.327 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:44.328 [Device]: Connecting to <GPS>
+2017-03-20 16:29:44.328 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:44.328 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:44.328 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:44.328 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:44.328 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:44.328 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:44.328 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:44.328 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:45.148 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:46.327 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:46.327 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:46.327 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:46.327 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:46.328 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:46.328 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:46.328 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:46.328 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:46.328 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:46.328 [Device]: Connecting to <GPS>
+2017-03-20 16:29:46.328 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:46.328 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:46.328 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:46.663 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:48.178 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:48.328 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:48.328 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:48.328 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:48.328 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:48.328 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:48.328 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:48.328 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:48.328 [Device]: Connecting to <GPS>
+2017-03-20 16:29:48.328 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:48.328 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:48.328 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:48.328 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:48.328 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:29:50.196 [] Warn: Mosquitto not connected...
+2017-03-20 16:29:50.328 [Device]: Connecting to <AccPCB>
+2017-03-20 16:29:50.328 [Device]: Connecting to <AccCore>
+2017-03-20 16:29:50.328 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:29:50.328 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:29:50.328 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:29:50.328 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:29:50.328 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:29:50.328 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:29:50.328 [Device]: Connecting to <GPS>
+2017-03-20 16:29:50.328 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:29:50.328 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:29:50.328 [Device]: Connecting to <TempPCB>
+2017-03-20 16:29:50.328 [I2c] Error: I2C-1: failed to set slave address 72

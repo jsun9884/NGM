@@ -1,0 +1,210 @@
+<div class="md-padding" layout="column" flex="100">
+    <ms-widget flippable="true" class="widget-wrapper" flex layout="column" style="height: 100%" ng-class="{'expanded' : expanded}">
+        <ms-widget-front class="" flex layout="column">
+            <md-toolbar md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>Device status</span>
+                    </h2>
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+            <md-content layout="row" class="md-padding" style="min-height: 200px">
+                <div flex layout="column">
+                    <div layout="row">
+                        <div flex="50" class="md-padding">
+
+                            <md-list ng-if="$ctrl.data" flex>
+                                <div layout="row">
+                                    <md-list-item class="md-1-line" layout="row">
+                                        <md-icon class="material-icons md-light md-48">whatshot</md-icon>
+                                        <span layout="column" flex="40">CPU temperature&nbsp;:</span>
+                                        <span layout="column" flex class="state-value">
+                                            {{(($ctrl.data.TempCPU | isObject) ? $ctrl.data.TempCPU.current_value : $ctrl.data.TempCPU) | toFixed}}
+                                            {{(($ctrl.data.TempCPU | isObject) ? $ctrl.data.TempCPU.current_value : $ctrl.data.TempCPU) != 'N/A' ? '&deg; C' : ''}}
+                                        </span>
+                                    </md-list-item>
+                                </div>
+                                <div layout="row">
+                                    <md-list-item class="md-1-line" layout="row">
+                                        <md-icon class="material-icons md-light md-48">whatshot</md-icon>
+                                        <span layout="column" flex="40">Board temperature&nbsp;:</span>
+                                        <span layout="column" flex class="state-value">
+                                            {{(($ctrl.data.TempPCB | isObject) ? $ctrl.data.TempPCB.current_value : $ctrl.data.TempPCB) | toFixed}}
+                                            {{(($ctrl.data.TempPCB | isObject) ? $ctrl.data.TempPCB.current_value : $ctrl.data.TempPCB) != 'N/A' ? '&deg; C' : ''}}
+                                        </span>
+                                    </md-list-item>
+                                </div>
+                                <div layout="row">
+                                    <md-list-item class="md-1-line" layout="row">
+                                        <md-icon class="material-icons md-light md-48">scanner</md-icon>
+                                        <span layout="column" flex="40">Tamper Switch&nbsp;:</span>
+                                        <span layout="column" flex class="state-value">
+                                            {{$ctrl.data.TamperSwitch != 'N/A'
+                                                ? (($ctrl.data.TamperSwitch) ? 'Closed' : 'Open')
+                                                : 'N/A'
+                                            }}
+                                        </span>
+                                    </md-list-item>
+                                </div>
+                                <div layout="row">
+                                    <md-list-item class="md-1-line" layout="row">
+                                        <md-icon class="material-icons md-light md-48">grain</md-icon>
+                                        <span layout="column" flex="40">Firmware version&nbsp;:</span>
+                                        <span layout="column" flex class="state-value">{{$ctrl.activeDeviceIsOnline ? $ctrl.data.FWVersion : 'N/A'}}</span>
+                                    </md-list-item>
+                                </div>
+                                <div layout="row">
+                                    <md-list-item class="md-1-line" layout="row">
+                                        <md-icon class="material-icons md-light md-48">signal_cellular_4_bar</md-icon>
+                                        <span layout="column" flex="40">GSM Signal strength&nbsp;:</span>
+                                        <span layout="column" flex class="state-value">{{$ctrl.activeDeviceIsOnline ? ($ctrl.data.GsmRSSI + ($ctrl.data.GsmRSSI != 'N/A' ? ' dBm' : '')) : 'N/A'}}</span>
+                                    </md-list-item>
+                                </div>
+                                <hr />
+                                <div layout="row">
+                                    <div layout="column" flex="25" class="status-pair-title md-padding">
+                                        <span>GPS data</span>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div layout="column" flex >
+                                        <md-list>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">gps_fixed</md-icon>
+                                                <span layout="column" flex="40">Latitude&nbsp;:</span>
+                                                <span layout="column" flex class="state-value">
+                                                    {{(($ctrl.data.GPS.latitude | isObject) ? $ctrl.data.GPS.latitude.current_value : $ctrl.data.GPS.latitude) | toFixed: 6}}
+                                                    {{(!!($ctrl.data.GPS.latitude | isObject) ? $ctrl.data.GPS.latitude.current_value : $ctrl.data.GPS.latitude) === undefined ? 'N/A' : ''}}
+                                                </span>
+                                            </md-list-item>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">gps_fixed</md-icon>
+                                                <span layout="column" flex="40">Longitude&nbsp;:</span>
+                                                <span layout="column" flex class="state-value">
+                                                    {{(($ctrl.data.GPS.longitude | isObject) ? $ctrl.data.GPS.longitude.current_value : $ctrl.data.GPS.longitude) | toFixed: 6}}
+                                                    {{(!!($ctrl.data.GPS.longitude | isObject) ? $ctrl.data.GPS.longitude.current_value : $ctrl.data.GPS.longitude) === undefined ? 'N/A' : ''}}
+                                                </span>
+                                            </md-list-item>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">gps_fixed</md-icon>
+                                                <span layout="column" flex="40">Satellite number&nbsp;:</span>
+                                                <span layout="column" flex class="state-value">
+                                                    {{(($ctrl.data.GPS.satelliteNumber | isObject) ? $ctrl.data.GPS.satelliteNumber.current_value : $ctrl.data.GPS.satelliteNumber)}}
+                                                    {{(($ctrl.data.GPS.satelliteNumber | isObject) ? $ctrl.data.GPS.satelliteNumber.current_value : $ctrl.data.GPS.satelliteNumber) === undefined ? 'N/A' : ''}}
+                                                </span>
+                                            </md-list-item>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">gps_fixed</md-icon>
+                                                <span layout="column" flex="40">Time (UTC)&nbsp;:</span>
+                                                <span layout="column" flex class="state-value">
+                                                    {{(($ctrl.data.GPS.time | isObject) ? $ctrl.data.GPS.time.current_value : $ctrl.data.GPS.time) | formatTime}}
+                                                    {{(($ctrl.data.GPS.time | isObject) ? $ctrl.data.GPS.time.current_value : $ctrl.data.GPS.time) === undefined ? 'N/A' : ''}}
+                                                </span>
+                                            </md-list-item>
+                                        </md-list>
+                                    </div>
+                                </div>
+                            </md-list>
+                        </div>
+                        <md-divider></md-divider>
+                        <div flex class="md-padding">
+                            <md-list>
+                                <div layout="row">
+                                    <div layout="column" flex="25" class="status-pair-title md-padding">
+                                        Sensors
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div layout="column" flex >
+                                        <md-list>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">scanner</md-icon>
+                                                <span layout="column" flex="55">Tamper Switch&nbsp;:</span>
+                                                <span layout="column" flex
+                                                      class="state-value"
+                                                      ng-class="{'red-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.TamperSwitch == 'Faulty'), 'green-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.TamperSwitch == 'Active')}"
+                                                >{{$ctrl.activeDeviceIsOnline ? $ctrl.data.status.TamperSwitch : 'N/A'}}</span>
+                                            </md-list-item>
+
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">flash_on</md-icon>
+                                                <span layout="column" flex="55">Power Meter&nbsp;:</span>
+                                                <span layout="column" flex
+                                                      class="state-value"
+                                                      ng-class="{'red-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.PowerMeter == 'Faulty'), 'green-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.PowerMeter == 'Active')}"
+                                                >{{$ctrl.activeDeviceIsOnline ? $ctrl.data.status.PowerMeter : 'N/A'}}</span>
+                                            </md-list-item>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">gps_fixed</md-icon>
+                                                <span layout="column" flex="55">GPS&nbsp;:</span>
+                                                <span layout="column" flex
+                                                      class="state-value"
+                                                      ng-class="{'red-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.GPS == 'Faulty'), 'green-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.GPS == 'Active')}"
+                                                >{{$ctrl.activeDeviceIsOnline ? $ctrl.data.status.GPS : 'N/A'}}</span>
+                                            </md-list-item>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">all_out</md-icon>
+                                                <span layout="column" flex="55">Accelerometer (NGM&nbsp;internal)&nbsp;:</span>
+                                                <span layout="column" flex
+                                                      class="state-value"
+                                                      ng-class="{'red-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.AccCore == 'Faulty'), 'green-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.AccCore == 'Active')}"
+                                                >{{$ctrl.activeDeviceIsOnline ? $ctrl.data.status.AccCore : 'N/A'}}</span>
+                                            </md-list-item>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">all_out</md-icon>
+                                                <span layout="column" flex="55">Accelerometer (NGM&nbsp;enclosure)&nbsp;:</span>
+                                                <span layout="column" flex
+                                                      class="state-value"
+                                                      ng-class="{'red-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.AccPCB == 'Faulty'), 'green-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.AccPCB == 'Active')}"
+                                                >{{$ctrl.activeDeviceIsOnline ? $ctrl.data.status.AccPCB : 'N/A'}}</span>
+                                            </md-list-item>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">signal_cellular_null</md-icon>
+                                                <span layout="column" flex="55">LTE Modem&nbsp;:</span>
+                                                <span layout="column" flex
+                                                      class="state-value"
+                                                      ng-class="{'red-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.LTE == 'Faulty'), 'green-color make-bold' : ($ctrl.activeDeviceIsOnline && $ctrl.data.status.LTE == 'Active')}"
+                                                >{{$ctrl.activeDeviceIsOnline ? $ctrl.data.status.LTE : 'N/A'}}</span>
+                                            </md-list-item>
+                                        </md-list>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div layout="row">
+                                    <div layout="column" flex="25" class="status-pair-title md-padding">
+                                        <span>LTE Modem</span>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div layout="column" flex >
+                                        <md-list>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">signal_cellular_null</md-icon>
+                                                <span layout="column" flex="40">Data received&nbsp;:</span>
+                                                <span layout="column" flex class="state-value">
+                                                    {{(($ctrl.data.LTE.rx | isObject) ? $ctrl.data.LTE.rx.current_value : $ctrl.data.LTE.rx)}}
+                                                    {{(!!($ctrl.data.LTE.rx | isObject) ? $ctrl.data.LTE.rx.current_value : $ctrl.data.LTE.rx) === undefined ? 'N/A' : ''}}
+                                                </span>
+                                            </md-list-item>
+                                            <md-list-item class="md-1-line" layout="row">
+                                                <md-icon class="material-icons md-light md-48">signal_cellular_null</md-icon>
+                                                <span layout="column" flex="40">Data transferred&nbsp;:</span>
+                                                <span layout="column" flex class="state-value">
+                                                    {{(($ctrl.data.LTE.tx | isObject) ? $ctrl.data.LTE.tx.current_value : $ctrl.data.LTE.tx)}}
+                                                    {{(!!($ctrl.data.LTE.tx | isObject) ? $ctrl.data.LTE.tx.current_value : $ctrl.data.LTE.tx) === undefined ? 'N/A' : ''}}
+                                                </span>
+                                            </md-list-item>
+                                        </md-list>
+                                    </div>
+                                </div>
+                            </md-list>
+                        </div>
+                    </div>
+                </div>
+                <div flex="100" layout="column" ng-if="!$ctrl.data">
+                    <span flex layout="column" style="text-align: center; display: flex; justify-content: center; flex-direction: column;">No data</span>
+                </div>
+
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>
+

@@ -1,0 +1,91 @@
+<Device name="PowerMeter" type="msp430">
+    <Parameter name="HRFrequency">2</Parameter>
+    <Parameter name="HRHistoryMin">2</Parameter>
+    <Parameter name="DevStatisticsEnabled">true</Parameter>
+    <HRData>
+        <HRParameter name="timestamp" type="QWord" defaultValue="0" />
+
+        <HRParameter name="voltage1" type="Float" defaultValue="0.1" thresholdLow="85" thresholdHigh="230" statisticsEnabled="true"/>
+        <HRParameter name="current1" type="Float" defaultValue="0.2" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="active_power1" type="Float" defaultValue="0.3" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="reactive_power1" type="Float" defaultValue="0.4" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="apparent_power1" type="Float" defaultValue="0.5" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="power_factor1" type="Float" defaultValue="0.6" thresholdLow="0" thresholdHigh="100" />
+        <HRParameter name="frequency1" type="Float" defaultValue="0.7" thresholdLow="45" thresholdHigh="65" />
+
+        <HRParameter name="voltage2" type="Float" defaultValue="0.1" thresholdLow="85" thresholdHigh="230" statisticsEnabled="true"/>
+        <HRParameter name="current2" type="Float" defaultValue="0.2" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="active_power2" type="Float" defaultValue="0.3" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="reactive_power2" type="Float" defaultValue="0.4" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="apparent_power2" type="Float" defaultValue="0.5" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="power_factor2" type="Float" defaultValue="0.6" thresholdLow="0" thresholdHigh="100" />
+        <HRParameter name="frequency2" type="Float" defaultValue="0.7" thresholdLow="45" thresholdHigh="65" />
+
+        <HRParameter name="voltage3" type="Float" defaultValue="0.1" thresholdLow="85" thresholdHigh="230" statisticsEnabled="true"/>
+        <HRParameter name="current3" type="Float" defaultValue="0.2" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="active_power3" type="Float" defaultValue="0.3" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="reactive_power3" type="Float" defaultValue="0.4" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="apparent_power3" type="Float" defaultValue="0.5" thresholdLow="0" thresholdHigh="100" statisticsEnabled="true"/>
+        <HRParameter name="power_factor3" type="Float" defaultValue="0.6" thresholdLow="0" thresholdHigh="100" />
+        <HRParameter name="frequency3" type="Float" defaultValue="0.7" thresholdLow="45" thresholdHigh="65" />
+    </HRData>
+</Device>
+<Device name="GPS" type="gps" devPath="/dev/ttyACM0">
+    <Parameter name="HRFrequency">1</Parameter>
+    <Parameter name="HRHistoryMin">1</Parameter>
+    <Parameter name="DevStatisticsEnabled">false</Parameter>
+    <HRData>
+        <HRParameter name="timestamp" type="QWord" defaultValue="0" statisticsEnabled="false"/>
+
+        <HRParameter name="latitude" type="Double" defaultValue="0.0" statisticsEnabled="false"/>
+	<HRParameter name="longitude" type="Double" defaultValue="0.0" statisticsEnabled="false"/>
+        <HRParameter name="altitude" type="Int" defaultValue="0" statisticsEnabled="false"/>
+	<HRParameter name="satelliteNumber" type="Word" defaultValue="0" statisticsEnabled="false"/>
+	<HRParameter name="time" type="QWord" defaultValue="0" statisticsEnabled="false"/>
+    </HRData>
+</Device>
+<Device name="AccCore" type="accelerometer" devPath="/dev/spidev0.0">
+    <Parameter name="HRFrequency">40</Parameter>
+    <Parameter name="HRHistoryMin">1</Parameter>
+    <HRData>
+        <HRParameter name="accX" type="Double" defaultValue="0" />
+        <HRParameter name="accY" type="Double" defaultValue="0" />
+        <HRParameter name="accZ" type="Double" defaultValue="0" />
+        <HRParameter name="gyroX" type="Double" defaultValue="0" />
+        <HRParameter name="gyroY" type="Double" defaultValue="0" />
+        <HRParameter name="gyroZ" type="Double" defaultValue="0" />
+    </HRData>
+</Device>
+<Device name="AccPCB" type="accelerometer_inverted" devPath="/dev/spidev2.0">
+    <Parameter name="HRFrequency">40</Parameter>
+    <Parameter name="HRHistoryMin">1</Parameter>
+    <HRData>
+        <HRParameter name="accX" type="Double" defaultValue="0" />
+        <HRParameter name="accY" type="Double" defaultValue="0" />
+        <HRParameter name="accZ" type="Double" defaultValue="0" />
+        <HRParameter name="gyroX" type="Double" defaultValue="0" />
+        <HRParameter name="gyroY" type="Double" defaultValue="0" />
+        <HRParameter name="gyroZ" type="Double" defaultValue="0" />
+   </HRData>
+</Device>
+<Device name="TempPCB" type="temperature">
+    <HRData>
+        <HRParameter name="temperature" type="Float" defaultValue="0" />
+    </HRData>
+</Device>
+<Device name="TempCPU" type="cpu_temp">
+    <HRData>
+        <HRParameter name="temperature" type="Float" defaultValue="0" />
+    </HRData>
+</Device>
+<Device name="TamperSwitch" type="disclosing_sensor">
+    <HRData>
+        <HRParameter name="closed" type="Bool" defaultValue="true" />
+    </HRData>
+</Device>
+<Device name="General" type="general">
+    <Parameter name="RegularMsgTransmissionRate">1</Parameter>
+    <Parameter name="AutoHrEnabled">false</Parameter>
+    <Parameter name="DeviceID">NGM-SIMDEV-02</Parameter>
+</Device>
+

@@ -1,0 +1,38 @@
+{
+  "name": "ngm-api",
+  "version": "0.0.4",
+  "description": "NGM Api",
+  "main": "server.js",
+  "scripts": {
+    "start": "pm2 start app-run.json",
+    "stop": "pm2 stop app-run.json"
+  },
+  "keywords": [
+    "NGM",
+    "Dashboard"
+  ],
+  "author": "NGM",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "aws-sdk": "^2.3.16",
+    "body-parser": "^1.15.1",
+    "config": "^1.21.0",
+    "dynogels": "^7.0.0",
+    "error-factory": "^0.1.6",
+    "express": "^4.13.4",
+    "express-jwt": "^3.4.0",
+    "helmet": "^3.4.1",
+    "joi": "^10.2.1",
+    "json2csv": "^3.9.1",
+    "jsonwebtoken": "^7.1.9",
+    "moment": "^2.14.1",
+    "morgan": "^1.7.0",
+    "node-resque": "^4.0.5",
+    "q": "^1.4.1",
+    "redis": "^2.6.1",
+    "spex": "^1.2.0",
+    "uuid": "^2.0.2",
+    "winston": "^2.2.0"
+  }
+}

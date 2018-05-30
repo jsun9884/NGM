@@ -1,0 +1,105 @@
+<div class="md-padding">
+    <ms-widget flippable="true" class="" layout="column" flex="100" ng-class="{'flipped': ctrl.custom_flipped} {{ctrl.custom_flipped}}">
+        <ms-widget-front class="">
+            <md-toolbar style="min-height:42px;max-height: 42px" md-colors="{background: 'blue-600'}">
+                <div class="md-toolbar-tools">
+                    <h2><span>{{$ctrl.command.displayName}}</span></h2>
+                    <span flex></span>
+                    <md-button md-raised md-warn ng-show="!$ctrl.progressMode && $ctrl.cmdParams.length" class="md-icon-button launch" ng-click="flipWidget()" style="width: 38px; padding: 8px 2px;">
+                        <md-tooltip md-direction="top">Edit parameters</md-tooltip>
+                        <md-icon style="display: inline-block;">code</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content class="md-padding">
+                <div ng-if="!$ctrl.resultMode"
+                     layout="column"
+                     style="min-width: 260px;max-width: 260px; min-height: 300px; max-height: 300px"
+                >
+                    <md-subheader class="md-no-sticky">{{$ctrl.command.description}}</md-subheader>
+                    <span flex></span>
+                    <div class="error-container" ng-class="{show : $ctrl.paramsError}" md-colors="{color: 'red-600'}"><span>{{$ctrl.paramsErrorMessage}}</span></div>
+                    <md-button class="md-raised md-warn" ng-click="$ctrl.send()" ng-disabled="!$ctrl.deviceIsOnline">Send</md-button>
+                </div>
+
+                <div ng-if="$ctrl.resultMode && $ctrl.state.execCmdState"
+                     layout="column"
+                     layout-align="center center"
+                     style="min-width: 260px; min-height: 300px;">
+
+                    <div ng-if="$ctrl.resultMode" layout="run" layout-align="right top" flex>
+                        <div layout="row">
+                            <md-button class="md-icon-button" ng-click="$ctrl.resultMode = false" style="position: absolute; right: 0px; top: 0px;">
+                                <md-icon>close</md-icon>
+                            </md-button>
+                        </div>
+                        <div layout="column">
+                            <div layout="row" style="font-weight: bold; padding: 10px 0">{{$ctrl.state.metaData.error}}</div>
+                            <div layout="row" style="">{{$ctrl.state.metaData.message}}</div>
+                        </div>
+                        <span flex></span>
+
+                    </div>
+
+                    <div ng-if="$ctrl.progressMode" layout="column" layout-align="center center" flex>
+                        <md-progress-circular md-diameter="60" md-mode="indeterminate"></md-progress-circular>
+                    </div>
+
+                    <span flex></span>
+                    <div layout="row">
+                        <p>Status:</p>&nbsp;<p>{{$ctrl.state.execCmdState}}</p>
+                    </div>
+                </div>
+
+                <div ng-if="!$ctrl.state.execCmdState"
+                     layout="column"
+                     layout-align="center center"
+                     style="min-width: 260px;min-height: 300px">
+                    <div layout="row">
+                        <md-button class="md-icon-button" ng-click="$ctrl.resetState()" style="position: absolute; right: 0px; top: 0px; z-index: 10;">
+                            <md-icon>close</md-icon>
+                        </md-button>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <md-subheader class="md-no-sticky" style="color: #ff0000">Can't get response command state</md-subheader>
+                    </div>
+                    <span flex></span>
+                    <div layout="row">
+                        <p>Status:&nbsp;</p><p>unknown</p>
+                    </div>
+                </div>
+            </md-content>
+        </ms-widget-front>
+        <ms-widget-back class="p-16 light-blue-bg white-fg">
+            <md-toolbar style="min-height:42px;max-height: 42px" class="flip-to-front" md-colors="{background: 'grey-100', color: 'grey-900'}" >
+                <div class="md-toolbar-tools">
+                    <h2><span>{{$ctrl.command.displayName}}</span></h2>
+                    <span flex></span>
+                    <md-button md-raised md-warn ng-show="!$ctrl.resultMode && $ctrl.cmdParams.length" class="md-icon-button launch" ng-click="flipWidget()" style="width: 38px; padding: 8px 2px;">
+                        <md-tooltip md-direction="top">close</md-tooltip>
+                        <md-icon md-colors="{color: 'grey-900'}" style="display: inline-block;">close</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content class="md-padding">
+
+                <div class="" ng-class="{expanded : $ctrl.paramsExpanded}"
+                     layout="column"
+                     style="min-width: 260px;max-width: 260px; min-height: 300px; max-height: 300px" >
+
+                    <md-content layout="column" class="md-padding">
+                        <form>
+                            <md-input-container ng-repeat="param in $ctrl.cmdParams">
+                                <label style="{{param.attributes.type == 'file' ? 'text-align: right' : ''}}">{{param.caption}} </label>
+
+                                <input ng-model="param.value" ng-required='param.required' dynamic-attrs="param.attributes" />
+
+                            </md-input-container>
+                        </form>
+
+                    </md-content>
+                </div>
+            </md-content>
+        </ms-widget-back>
+    </ms-widget>
+</div>

@@ -1,0 +1,18 @@
+[
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "admin",
+    "role": "ADMIN",
+    "id": 123,
+    "password": "admin"
+  },
+  {
+    "first_name": "Max",
+    "last_name": "Fry",
+    "email": "maxfry@mail.com",
+    "role": "TECH",
+    "id": 124,
+    "password": "tech"
+  }
+]

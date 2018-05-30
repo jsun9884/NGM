@@ -1,0 +1,634 @@
+/* TODO Check this */
+
+.nav-header {
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.nav-header h1,
+.nav-header h4 {
+    color: white;
+    text-align: center;
+}
+
+#top-toolbar .account-box{
+    width: 60px;
+    overflow: hidden;
+}
+#top-toolbar .account-box.expanded {
+    width: auto;
+}
+
+#top-toolbar .account-box-content{
+    white-space: nowrap;
+}
+
+#top-toolbar .account-box-content > *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+#overview-page-container {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#page-content-container{
+    height: calc(100% - 64px);
+    min-height: calc(100% - 64px);
+}
+
+#device-list-sidenav {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+}
+
+.device-active {
+    background-color: #a5a5a5;
+}
+
+.icon-device-online {
+    color: #2E7D32;
+}
+
+.icon-device-offline {
+    color: #F44336;
+}
+
+.elm-clear-padding {
+    padding: 0;
+}
+
+.elm-clear-margin {
+    margin: 0;
+}
+
+.text-color-grey {
+    color: grey;
+}
+
+#search-device-input {
+    margin: 0
+}
+
+#search-device-input > .md-errors-spacer {
+    min-height: 0 !important;
+}
+
+.toolbar-separator {
+    height: 64px;
+    width: 1px;
+    background: rgba(0,0,0,.12);
+}
+
+.md-title{
+    font-size: 15px !important;
+}
+
+/********************************************************************************************************************** side-nav **/
+md-sidenav, md-sidenav.md-locked-open, md-sidenav.md-closed.md-locked-open-add-active {
+    min-width: 280px !important;
+    width: 50vw !important;
+    max-width: 280px !important;
+    position:relative;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+#vertical-navigation {
+    display: flex;
+}
+#vertical-navigation.md-closed {
+    width: 60px !important;
+    min-width: 60px !important;;
+    max-width: 60px !important;;
+
+    transform: initial  !important;;
+    -webkit-transform: initial  !important;;
+
+    /*display: flex;*/
+    position: initial;
+}
+
+#vertical-navigation.md-closed .md-toolbar-tools {
+    padding: 0 9px;
+}
+
+
+.left-sidebar-toggler{
+    min-width: 40px;
+    margin-left: 0;
+}
+
+#vertical-navigation.show-titles .left-sidebar-toggler{
+    margin-left: 5px;
+}
+
+#vertical-navigation.md-closed .menu .menu-toggle-list a.md-button{
+    width: 60px;
+    min-width: 60px;
+    padding: 0 16px;
+}
+
+.hide-sidebar-tooltips md-tooltip.sidebar-tooltip{
+    display: none;
+}
+
+#vertical-navigation hr{
+    margin-top: 4px;
+}
+
+#vertical-navigation .menu-heading.md-subhead{
+    line-height: 17px;
+    text-align: right;
+    font-size: 14px;
+    width: calc(100% - 32px);
+}
+
+#vertical-navigation .item-title,
+#vertical-navigation h3,
+#vertical-navigation h2,
+#vertical-navigation h2 span{
+    transition: all 0.3s;
+}
+
+#vertical-navigation h2 span{
+    width: 210px;
+}
+
+#vertical-navigation .item-title,
+#vertical-navigation h3,
+#vertical-navigation h2 span{
+    /*#vertical-navigation h2{*/
+    /*visibility: hidden;*/
+    opacity: 0;
+    /*width: 0;*/
+    display: block;
+    overflow: hidden;
+}
+#vertical-navigation .item-title{
+    display: inline;
+}
+
+
+/*#vertical-navigation .md-toolbar-tools h2,*/
+/*#vertical-navigation .item-title,*/
+#vertical-navigation  .menu .md-toggle-icon{
+    display: none;
+}
+#vertical-navigation.show-titles  .menu .md-toggle-icon{
+    /*#vertical-navigation .menu-heading.md-subhead{*/
+    /*visibility: hidden;*/
+    display: inline;
+}
+
+#vertical-navigation.show-titles .item-title,
+#vertical-navigation.show-titles .menu .md-toggle-icon{
+/*#vertical-navigation.show-titles .menu-heading.md-subhead{*/
+    /*display: inline;*/
+    opacity: 1;
+    /*visibility: visible;*/
+}
+/*#vertical-navigation.show-titles .md-toolbar-tools h3{*/
+    /*visibility: hidden;*/
+    /*width: 0;*/
+/*}*/
+
+
+
+/*#vertical-navigation.show-titles .item-title{*/
+    /*/!*visibility: visible;*!/*/
+    /*opacity: 1;*/
+/*}*/
+#vertical-navigation h2{
+    width: 0;
+    overflow: hidden;
+}
+#vertical-navigation.show-titles h3,
+#vertical-navigation.show-titles h2,
+#vertical-navigation.show-titles h2 span{
+    /*visibility: visible;*/
+    opacity: 1;
+    width: 210px;
+    /*display: block;*/
+    /*overflow: hidden;*/
+}
+
+#vertical-navigation.show-titles .item-title{
+    width: auto;
+}
+
+/*#vertical-navigation.show-titles h2 span{*/
+    /*width: 280px;*/
+/*}*/
+
+
+/********************************************************************************************************************** side-nav **/
+/********************************************************************************************************************** device-list-side-nav **/
+.device-list-toggler.md-button.md-icon-button{
+    margin: 7px 0 7px -50px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    padding: 8px 2px;
+}
+
+.device-list-toggler.md-button.md-icon-button > md-icon{
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 24px;
+    margin: 0 6px;
+}
+
+device-list-side-nav md-toolbar.md-hue-1.md-accent .md-toolbar-tools md-icon{
+    color: #ffffff;
+    font-weight: normal;
+}
+
+device-list-side-nav md-toolbar.md-hue-1.md-accent .md-toolbar-tools input{
+    color: #ffffff;
+    font-weight: normal;
+}
+
+device-list-side-nav md-toolbar.md-hue-1.md-accent .md-toolbar-tools input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #ffffff;
+    font-weight: normal;
+}
+device-list-side-nav md-toolbar.md-hue-1.md-accent .md-toolbar-tools input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ffffff;
+    font-weight: normal;
+}
+device-list-side-nav md-toolbar.md-hue-1.md-accent .md-toolbar-tools input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ffffff;
+    font-weight: normal;
+}
+device-list-side-nav md-toolbar.md-hue-1.md-accent .md-toolbar-tools input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ffffff;
+    font-weight: normal;
+}
+
+/********************************************************************************************************************** device-list-side-nav **/
+/********************************************************************************************************************** panel-data-widget **/
+panel-data-widget .widget-wrapper:not(.expanded) md-content{
+    height: 200px;
+    overflow-y: auto;
+
+    transform: initial  !important;
+    -webkit-transform: initial  !important;
+}
+
+panel-data-widget .md-toggle-icon md-icon{
+    height: auto;
+}
+/********************************************************************************************************************** panel-data-widget **/
+/********************************************************************************************************************** panel-power-data-widget **/
+panel-general-data-widget md-content .panel-mainline,
+panel-power-data-widget md-content .panel-mainline,
+panel-seismic-data-widget md-content .panel-mainline{
+    padding: 10px;
+}
+
+/********************************************************************************************************************** panel-power-data-widget **/
+/********************************************************************************************************************** commands-widget **/
+command-widget md-input-container{
+    margin: 18px 0 10px;
+}
+
+command-widget .md-errors-spacer:empty{
+    display: none;
+}
+
+command-widget .error-container{
+    text-align: center;
+}
+
+command-widget .error-container > span{
+    text-shadow: 0 0 0 rgba(255, 0, 0, .5);
+    display: inline-block;
+    position: relative;
+
+    bottom: -26px;
+    opacity: 1;
+
+    transition: bottom 0s, opacity 0s;
+}
+
+command-widget .error-container.show > span{
+    transition: bottom 2s ease-out, opacity 2s ease-in-out;
+
+    bottom: 20px;
+    opacity: 0;
+}
+/********************************************************************************************************************** commands-widget **/
+/********************************************************************************************************************** md-table **/
+md-card {
+    flex: 0 0 auto;
+    position: relative;
+}
+md-toolbar.md-table-toolbar.ng-hide {
+    display: none;
+}
+md-toolbar.md-table-toolbar.alternate .md-toolbar-tools {
+    background-color: #e3f2fd;
+    color: #1e88e5;
+    font-size: 16px;
+}
+md-toolbar.md-table-toolbar form {
+    margin-left: 16px;
+}
+md-toolbar.md-table-toolbar form > input {
+    border: medium none;
+    color: rgba(0, 0, 0, 0.87);
+    margin: 0;
+    width: 100%;
+}
+md-toolbar.md-table-toolbar form > input:focus {
+    outline: medium none;
+}
+/********************************************************************************************************************** md-table **/
+/********************************************************************************************************************** logs form **/
+#logs-page-container md-card md-toolbar .filter-selects mdc-datetime-picker {
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0,0,0,0.12);
+}
+
+#logs-page-container md-card md-toolbar .filter-selects mdc-datetime-picker:not([disabled]):focus {
+    border-bottom-width: 2px;
+}
+/********************************************************************************************************************** logs form **/
+/********************************************************************************************************************** commands **/
+.command_params_shore{
+    min-width: 260px;
+    max-width: 260px;
+    /*min-height: 300px; */
+    /*max-height: 300px;*/
+    height: 0px;
+    transition: height .5s;
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .3);
+}
+
+.command_params_shore.expanded{
+    height: 250px;
+}
+/********************************************************************************************************************** commands **/
+/********************************************************************************************************************** overview page **/
+nvd3 > svg{
+    margin: auto;
+}
+/********************************************************************************************************************** overview page **/
+/********************************************************************************************************************** config page **/
+md-dialog{
+    background-color: #ffffff;
+}
+.device_config_panel .md-subhead,
+md-dialog-content .md-subhead{
+    line-height: 17px;
+    text-align: right;
+    font-size: 14px;
+    margin: 12px 0 2px;
+    font-weight: bold;
+}
+
+.device_config_panel md-divider ,
+md-dialog-content md-divider {
+    border-color: #888888;
+}
+
+.device_config_panel md-content.layout-row > md-divider{
+    border-right-color: rgba(0, 0, 0, 0.12);
+}
+
+md-list-item md-input-container .md-input,
+md-list-item md-input-container md-select .md-select-value{
+    border-color: rgba(0,0,0,0.3);
+}
+
+md-list-item.disabled_option * {
+    color: #bbbbbb;
+}
+/********************************************************************************************************************** config page **/
+/********************************************************************************************************************** login page **/
+#login.invalid {
+    outline-color: red;
+    /* also need animation and -moz-animation */
+    -webkit-animation: shake .5s linear;
+}
+/* also need keyframes and -moz-keyframes */
+@-webkit-keyframes shake {
+    8%, 41% {
+        -webkit-transform: translateX(-10px);
+    }
+    25%, 58% {
+        -webkit-transform: translateX(8px);
+    }
+    75% {
+        -webkit-transform: translateX(-5px);
+    }
+    92% {
+        -webkit-transform: translateX(2px);
+    }
+    0%, 100% {
+        -webkit-transform: translateX(0);
+    }
+}
+/********************************************************************************************************************** login page **/
+/********************************************************************************************************************** ms-widget **/
+.ms-widget .ms-widget-front{
+    box-sizing: border-box;
+}
+
+.ms-widget md-toolbar .md-toolbar-tools button{
+    /*    padding-right: 0;
+        width: 32px;*/
+}
+
+
+
+
+
+.ms-widget .ms-widget-back, .ms-widget .ms-widget-front {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12)
+}
+
+.ms-widget.sidenav-widget .ms-widget-back, .ms-widget.sidenav-widget .ms-widget-front {
+    box-shadow: none
+}
+
+/*
+.ms-widget .flip-to-front {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+*/
+
+.ms-widget .c3 {
+    height: 100%
+}
+
+.ms-widget .chart-fill-8 {
+    margin: 0 -8px -8px
+}
+
+.ms-widget .chart-fill-16 {
+    margin: 0 -16px -16px
+}
+
+.ms-widget .chart-fill-24 {
+    margin: 0 -24px -24px
+}
+
+.ms-widget .chart-fill-32 {
+    margin: 0 -32px -32px
+}
+
+.ms-widget .chart-fill-40 {
+    margin: 0 -40px -40px
+}
+
+.ms-widget .chart-fill-48 {
+    margin: 0 -48px -48px
+}
+
+.ms-widget .chart-fill-56 {
+    margin: 0 -56px -56px
+}
+
+.ms-widget .chart-fill-64 {
+    margin: 0 -64px -64px
+}
+
+.ms-widget .chart-fill-72 {
+    margin: 0 -72px -72px
+}
+
+.ms-widget .chart-fill-80 {
+    margin: 0 -80px -80px
+}
+
+.ms-widget {
+    position: relative;
+    /*font-size: 1.3rem;*/
+    -webkit-perspective: 3000px;
+    perspective: 3000px;
+    /*padding: 12px*/
+}
+
+.ms-widget .ms-widget-front {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+    visibility: visible;
+    width: 100%;
+    opacity: 1;
+    z-index: 10;
+    border-radius: 2px;
+    -webkit-transition: visibility 0s ease-in .2s, opacity 0s ease-in .2s, -webkit-transform .5s ease-out 0s;
+    transition: visibility 0s ease-in .2s, opacity 0s ease-in .2s, -webkit-transform .5s ease-out 0s;
+    transition: transform .5s ease-out 0s, visibility 0s ease-in .2s, opacity 0s ease-in .2s;
+    transition: transform .5s ease-out 0s, visibility 0s ease-in .2s, opacity 0s ease-in .2s, -webkit-transform .5s ease-out 0s;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.ms-widget .ms-widget-back {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    /*top: 12px;*/
+    /*right: 12px;*/
+    /*bottom: 12px;*/
+    /*left: 12px;*/
+    border-radius: 2px;
+    -webkit-transition: visibility 0s ease-in .2s, opacity 0s ease-in .2s, -webkit-transform .5s ease-out 0s;
+    transition: visibility 0s ease-in .2s, opacity 0s ease-in .2s, -webkit-transform .5s ease-out 0s;
+    transition: transform .5s ease-out 0s, visibility 0s ease-in .2s, opacity 0s ease-in .2s;
+    transition: transform .5s ease-out 0s, visibility 0s ease-in .2s, opacity 0s ease-in .2s, -webkit-transform .5s ease-out 0s;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+/*.ms-widget .md-button, .ms-widget .md-button.md-icon-button {*/
+/*margin: 0*/
+/*}*/
+
+.ms-widget.flipped .ms-widget-front {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg)
+}
+
+.ms-widget.flipped .ms-widget-back {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg)
+}
+
+.ms-widget.sidenav-widget {
+    padding: 0
+}
+
+.ms-widget.ar-2-1 .widget {
+    padding: 0;
+    position: relative
+}
+
+.ms-widget.ar-2-1 .widget:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 50%
+}
+
+.ms-widget.ar-2-1 .widget > .widget {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px
+}
+
+.ms-widget.ar-1-1 .widget {
+    padding: 0;
+    position: relative
+}
+
+.ms-widget.ar-1-1 .widget:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%
+}
+
+.ms-widget.ar-1-1 .widget > .widget {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px
+}
+/********************************************************************************************************************** ms-widget **/

@@ -1,0 +1,33 @@
+{
+  "name": "ngm-webui-server",
+  "version": "0.0.4",
+  "description": "NGM WebUI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "NGM WebUI"
+  ],
+  "author": "NGM",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bleno": "^0.4.1",
+    "bluetooth-serial-port": "^2.1.1",
+    "body-parser": "^1.15.1",
+    "config": "^1.21.0",
+    "express": "^4.13.4",
+    "express-fileupload": "^0.1.3",
+    "express-jwt": "^3.4.0",
+    "jsonwebtoken": "^7.1.9",
+    "moment": "^2.14.1",
+    "morgan": "^1.7.0",
+    "mqtt": "^1.13.0",
+    "multer": "^1.3.0",
+    "q": "^1.4.1",
+    "uuid": "^2.0.2",
+    "winston": "^2.2.0",
+    "xml2js": "^0.4.17"
+  }
+}

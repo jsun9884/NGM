@@ -1,0 +1,13 @@
+{
+  "AwsIotData" : {
+    "endpoint" : "https://A7RDHYR0RGGZ.iot.us-west-2.amazonaws.com"
+  },
+  "S3" : {
+    "firmwareBucket" : "ngm-firmware",
+    "cfgFilesBucket" : "ngm-config",
+    "hrDataBucket": "ngm-hr-raw-data"
+  },
+  "JWT_SECRET" : {
+    "secret": "AHwd37y192jsadasdiWJH*(^+%Uasi62819"
+  }
+}

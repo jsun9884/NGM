@@ -1,0 +1,54 @@
+/var/log/syslog
+{
+	rotate 4
+	daily
+	missingok
+	notifempty
+	delaycompress
+	compress
+	size 10M
+	postrotate
+		invoke-rc.d rsyslog rotate > /dev/null
+	endscript
+}
+
+/var/log/mail.info
+/var/log/mail.warn
+/var/log/mail.err
+/var/log/mail.log
+/var/log/daemon.log
+{
+	rotate 4
+	weekly
+	missingok
+	notifempty
+	size 10M	
+}
+/var/log/kern.log
+{
+	rotate 4
+	size 10M
+}
+/var/log/auth.log
+/var/log/user.log
+{
+	rotate 4
+	size 10M
+}
+/var/log/lpr.log
+/var/log/cron.log
+/var/log/debug
+/var/log/messages
+{
+	rotate 4
+	weekly
+	size 10M
+	missingok
+	notifempty
+	compress
+	delaycompress
+	sharedscripts
+	postrotate
+		invoke-rc.d rsyslog rotate > /dev/null
+	endscript
+}

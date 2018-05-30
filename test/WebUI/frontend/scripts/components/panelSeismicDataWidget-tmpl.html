@@ -1,0 +1,67 @@
+<div class="md-padding">
+    <div class="md-whiteframe-z2 widget-wrapper {{expanded ? 'expanded' : ''}}">
+        <md-toolbar style="min-height:42px; max-height: 42px"
+                    md-colors="{background: 'blue-600'}">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Seismic meters</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button md-button-toggle" ng-click="toggle()">
+                    <span aria-hidden="true" class="md-toggle-icon {{expanded ? 'toggled' : ''}}" >
+                        <md-icon md-svg-src="md-toggle-arrow"  style="height: 20px"></md-icon>
+                        <md-tooltip md-direction="top">Expand</md-tooltip>
+                    </span>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <div layout="column">
+                <div layout="row" class="panel-mainline">
+                    <span flex="20"></span>
+                    <span flex="10" style="text-align: right">Acc X</span>
+                    <span flex="10" style="text-align: right">Acc Y</span>
+                    <span flex="10" style="text-align: right">Acc Z</span>
+
+                    <span flex="10" style="text-align: right">Gyro X</span>
+                    <span flex="10" style="text-align: right">Gyro Y</span>
+                    <span flex="10" style="text-align: right">Gyro Z</span>
+
+                    <span flex="20" style="text-align: right">Time(UTC)</span>
+                </div>
+                <div layout="row" ng-repeat="scheme_item in $ctrl.scheme" class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="20" class="md-title">
+                                {{scheme_item.title}} :
+                            </span>
+                            <span layout-align="center end" layout="column" flex="10" style="text-align: right" class="md-title">
+                                {{((($ctrl.data[scheme_item.name].accX | isObject) ? $ctrl.data[scheme_item.name].accX.current_value : $ctrl.data[scheme_item.name].accX) | toFixed : 3)}}
+                            </span>
+                            <span layout-align="center end" layout="column" flex="10" style="text-align: right" class="md-title">
+                                {{((($ctrl.data[scheme_item.name].accY | isObject) ? $ctrl.data[scheme_item.name].accY.current_value : $ctrl.data[scheme_item.name].accY) | toFixed : 3)}}
+                            </span>
+                            <span layout-align="center end" layout="column" flex="10" style="text-align: right" class="md-title">
+                                {{((($ctrl.data[scheme_item.name].accZ | isObject) ? $ctrl.data[scheme_item.name].accZ.current_value : $ctrl.data[scheme_item.name].accZ) | toFixed : 3)}}
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="10" style="text-align: right" class="md-title">
+                                {{((($ctrl.data[scheme_item.name].gyroX | isObject) ? $ctrl.data[scheme_item.name].gyroX.current_value : $ctrl.data[scheme_item.name].gyroX) | toFixed : 3)}}
+                            </span>
+                            <span layout-align="center end" layout="column" flex="10" style="text-align: right" class="md-title">
+                                {{((($ctrl.data[scheme_item.name].gyroY | isObject) ? $ctrl.data[scheme_item.name].gyroY.current_value : $ctrl.data[scheme_item.name].gyroY) | toFixed : 3)}}
+                            </span>
+                            <span layout-align="center end" layout="column" flex="10" style="text-align: right" class="md-title">
+                                {{((($ctrl.data[scheme_item.name].gyroZ | isObject) ? $ctrl.data[scheme_item.name].gyroZ.current_value : $ctrl.data[scheme_item.name].gyroZ) | toFixed : 3)}}
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="20" style="text-align: right" class="md-title">
+                                {{((($ctrl.data[scheme_item.name].timestamp | isObject) ? $ctrl.data[scheme_item.name].timestamp.current_value : $ctrl.data[scheme_item.name].timestamp) | formatTime)}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+</div>

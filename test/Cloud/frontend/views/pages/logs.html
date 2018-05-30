@@ -1,0 +1,86 @@
+        <div flex layout-fill layout="row" class="md-padding">
+            <md-card layout-column flex  md-colors="{color: 'f2-900', background: 'f2-50'}">
+
+                <md-toolbar class="md-table-toolbar md-default">
+                    <div class="md-toolbar-tools filter-selects">
+                        <md-input-container flex-gt-md="15" style="height: 40px; margin-left:20px">
+                            <input mdc-datetime-picker date="true" time="true" type="text" id="dateFrom" short-time="false"
+                                   placeholder="Enter date from"
+                                   min-date="minDate"
+                                   format="YYYY.MM.DD HH:mm"
+                                   ng-model="query.filter.dateFrom"
+                                   class="md-input"
+                            />
+
+                            <md-button class="md-icon-button" ng-show="query.filter.dateFrom" ng-click="query.filter.dateFrom = null; " style="position: absolute; right: -16px; top: 0px;">
+                                <md-icon>close</md-icon>
+                            </md-button>
+                        </md-input-container>
+
+                        <md-input-container flex-gt-md="15" style="height: 40px; margin-left:20px">
+                            <input mdc-datetime-picker date="true" time="true" type="text" id="dateTo" short-time="false"
+                                   placeholder="Enter date till"
+                                   min-date="minDate"
+                                   format="YYYY.MM.DD HH:mm"
+                                   ng-model="query.filter.dateTo"
+                                   class="md-input"
+                            />
+
+                            <md-button class="md-icon-button" ng-show="query.filter.dateTo" ng-click="query.filter.dateTo = null" style="position: absolute; right: -16px; top: 0px;">
+                                <md-icon>close</md-icon>
+                            </md-button>
+                        </md-input-container>
+<!--
+
+                        <md-input-container flex-gt-md="25" style="height: 40px; margin-left:20px">
+                            <md-tooltip md-direction="top">Command</md-tooltip>
+                            <md-select ng-model="query.filter.command" aria-label="None" placeholder="Command">
+                                <md-option value="">All</md-option>
+                                <md-option ng-value="eventType" ng-repeat="command in commands">{{ command }}</md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container flex-gt-md="25" style="height: 40px; margin-left:20px">
+                            <md-tooltip md-direction="top">Result</md-tooltip>
+                            <md-select ng-model="query.filter.result" aria-label="None" placeholder="Result">
+                                <md-option value="">All</md-option>
+                                <md-option ng-value="eventSource" ng-repeat="result in results">{{ result }}</md-option>
+                            </md-select>
+                        </md-input-container>
+-->
+                    </div>
+                </md-toolbar>
+
+                <md-table-container>
+                    <table md-table multiple ng-model="selected" md-progress="promise">
+                        <thead md-head md-order="query.order" md-on-reorder="logsReorder">
+                            <tr md-row>
+                                <th md-column md-order-by="timestamp"><span>Time</span></th>
+                                <th md-column md-order-by="deviceId"><span>Device name</span></th>
+                                <th md-column md-order-by="command"><span>Command</span></th>
+                                <th md-column md-order-by="result"><span>Result</span></th>
+                            </tr>
+                        </thead>
+                        <tbody md-body>
+                            <tr md-row md-select="log" md-select-id="name" md-auto-select ng-repeat="log in logs.items">
+                                <td md-cell>{{log.timestamp | amUtc | amDateFormat:'YYYY.MM.DD HH:mm:ss'}}</td>
+                                <td md-cell>{{log.deviceId}}</td>
+                                <td md-cell>{{log.command}}</td>
+                                <td md-cell>{{log.result}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </md-table-container>
+
+                <md-table-pagination
+                        style="min-height: 56px"
+                        md-limit="query.limit"
+                        md-limit-options="[5, 10, 15]"
+                        md-page="query.page"
+                        md-total="{{logs.total}}"
+                        md-on-paginate="getLogs"
+                        md-page-select
+                ></md-table-pagination>
+            </md-card>
+        </div>
+    </md-content>

@@ -1,0 +1,64 @@
+#!/bin/bash
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Generate the SSH keys if non-existent
+test -f /etc/ssh/ssh_host_dsa_key || dpkg-reconfigure openssh-server
+
+modprobe option
+
+echo 134 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio134/direction
+echo 1 > /sys/class/gpio/gpio134/value
+
+echo 135 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio135/direction
+echo 1 > /sys/class/gpio/gpio135/value
+
+echo 137 > /sys/class/gpio/export 
+echo out > /sys/class/gpio/gpio137/direction
+echo 0 > /sys/class/gpio/gpio137/value
+
+# TamperSwitch
+echo 122 > /sys/class/gpio/export
+echo in > /sys/class/gpio/gpio122/direction
+
+# pwm for power led
+echo 0 > /sys/class/pwm/pwmchip0/export
+echo 1 > /sys/class/pwm/pwmchip0/pwm0/enable
+echo 1000000 > /sys/class/pwm/pwmchip0/pwm0/period
+echo 900000 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
+
+UPGRADE_DIR=/root/upgrade
+UPGRADE_CMD_ID=
+
+service bluetooth start
+sleep 1
+hciconfig hci0 piscan
+
+if [ -a ${UPGRADE_DIR}/upgrade.sh ]
+then
+	echo "*** Upgrade found: Upgrading..."
+	cd ${UPGRADE_DIR} && ${UPGRADE_DIR}/upgrade.sh
+	UPGRADE_CMD_ID=`cat ${UPGRADE_DIR}/commandId`
+	rm -Rf ${UPGRADE_DIR}
+elif [ -a /home/linaro/ngm.new ]
+then
+	echo "*** Found ngm.new: Upgrading..."
+	mv -f /home/linaro/ngm.new /home/linaro/ngm
+fi
+
+echo ${UPGRADE_CMD_ID} > /home/linaro/.upgrade_cmd_id
+
+/home/linaro/nodejs-ui.sh > /dev/null 2> /dev/null &
+
+exit 0

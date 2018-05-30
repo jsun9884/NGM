@@ -1,0 +1,40 @@
+<div class="md-padding" layout="column" flex="100" >
+    <ms-widget flippable="true" class="" flex layout="column" style="height: 100%" ng-class="{'fully-expanded' : $ctrl.expanded}">
+        <ms-widget-front class="" flex layout="column">
+            <md-toolbar md-colors="{color: 'grey', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>Map</span>
+                    </h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button launch" ng-click="$ctrl.expand()">
+                        <md-icon md-colors="{color: 'grey'}">{{$ctrl.expanded ? 'fullscreen_exit' : 'fullscreen'}}</md-icon>
+                        <md-tooltip md-direction="top">{{$ctrl.expanded ? 'Shrink' : 'Expand'}}</md-tooltip>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content flex layout="column">
+                <ui-gmap-google-map class="col-md-8"
+                                    center="$ctrl.center"
+                                    zoom="$ctrl.zoom"
+                                    flex="100" layout="column"
+                                    ng-if="$ctrl.markers.length"
+                                    ng-init="$ctrl.widgetShowed()"
+                        >
+                    <ui-gmap-markers
+                            models="$ctrl.markers"
+                            coords="'location'"
+                            idkey="'thingName'"
+                            options="'options'"
+                            click="$ctrl.onMarkerClicked(thingName)"
+                            >
+                    </ui-gmap-markers>
+
+                </ui-gmap-google-map>
+                <div flex="100" layout="column" ng-if="!$ctrl.markers.length">
+                    <span flex layout="column" style="text-align: center; display: flex; justify-content: center; flex-direction: column;">No data</span>
+                </div>
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>

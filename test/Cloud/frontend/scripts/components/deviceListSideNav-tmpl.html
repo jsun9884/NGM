@@ -1,0 +1,46 @@
+<md-button class="md-icon-button device-list-toggler" ng-click="$ctrl.toggle()" style="z-index: 10;">
+    <md-tooltip md-direction="top">{{$ctrl.sideNavIsOpened ? 'Close' : 'Open'}} devices list</md-tooltip>
+    <md-icon ng-class="{expanded : $ctrl.sideNavIsOpened}">chevron_right</md-icon>
+</md-button>
+
+<md-sidenav id="device-list-sidenav"
+            md-component-id="device-list-sidenav"
+            md-is-locked-open="$ctrl.sideNavIsOpened"
+            style="/*overflow: visible;*/"
+            flex layout="column"
+    >
+    <md-content flex layout="column">
+        <md-toolbar md-colors="{color: 'f2-50'}" class="md-accent" layout="row">
+            <div class="md-toolbar-tools">
+                <md-icon style="margin-right: 8px" md-colors="f2-50" class="material-icons">search</md-icon>
+                <md-input-container id="search-device-input" md-no-float class="md-accent md-block">
+                    <input md-colors="{color: 'f2-50'}" ng-model="$ctrl.searchPhrase" placeholder="Search Device" class="search-device-input" />
+                </md-input-container>
+            </div>
+        </md-toolbar>
+        <md-list style="padding-top: 0; overflow-y: auto;"
+                 layout="column"
+        >
+            <md-list-item ng-click="$ctrl.selectActiveDevice($event, device)"
+                          ng-class="$ctrl.isActive(device) ? 'device-active' : ''"
+                          class="md-2-line"
+                          ng-repeat="device in $ctrl.devices"
+                          ng-show="([device.thingName, device.attributes.LogicName] | filter:$ctrl.searchPhrase).length"
+                          layout="row"
+            >
+                <md-tooltip md-direction="top" style="height: auto">
+                    <h3 style="margin-bottom: 4px">{{device.thingName}}</h3>
+                    <div><span style="font-weight: bold">{{device.attributes.LogicName}}</span></div>
+                </md-tooltip>
+                <md-icon ng-class="device.online ? 'icon-device-online' : 'icon-device-offline'">
+                    settings_remote
+                </md-icon>
+                <div class="md-list-item-text">
+                    <h3 style="margin-bottom: 4px">{{device.thingName}}</h3>
+                    <div><span style="font-weight: bold">{{device.attributes.LogicName}}</span></div>
+                </div>
+                <md-divider></md-divider>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>

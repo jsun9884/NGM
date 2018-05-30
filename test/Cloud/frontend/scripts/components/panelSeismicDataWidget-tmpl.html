@@ -1,0 +1,49 @@
+<div class="md-padding" layout="column" flex="100">
+    <ms-widget flippable="true" class="widget-wrapper" flex layout="column" style="height: 100%" ng-class="{'expanded' : expanded}">
+        <ms-widget-front class="" flex layout="column">
+            <md-toolbar md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>{{$ctrl.card.title}}</span>
+                    </h2>
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+            <md-content flex layout="column" style="min-height: 200px">
+                <md-list ng-if="$ctrl.data.sensor.length">
+                    <md-list-item class="md-1-line" layout="row">
+                        <span layout="column" flex="15"></span>
+                        <span layout="column" flex="10" style="text-align: center;">Acc X</span>
+                        <span layout="column" flex="10" style="text-align: center;">Acc Y</span>
+                        <span layout="column" flex="10" style="text-align: center;">Acc Z</span>
+                        <span layout="column" flex="10" style="text-align: center;">Acc Raw X</span>
+                        <span layout="column" flex="10" style="text-align: center;">Acc Raw Y</span>
+                        <span layout="column" flex="10" style="text-align: center;">Acc Raw Z</span>
+                        <span layout="column" flex="25" style="text-align: center;">Time (UTC)</span>
+                    </md-list-item>
+
+                    <md-list-item class="md-1-line" ng-repeat="item in $ctrl.data.sensor"  layout="row" ng-click="itemSelected(item.name, item)" ng-class="{'selected-list-item': selectedParam.name == item.name}">
+
+                        <span layout="column" flex="15" style="font-size: 15px; line-height: 18px; overflow: hidden"><span ng-bind-html="item.title"></span></span>
+                        <span   layout="column" flex="{{item_scheme.name != 'timestamp' ? 10 : 25}}"
+                                ng-repeat="item_scheme in item.scheme"
+                                style="font-weight: bold; text-align: center; font-size: 14px; line-height: 18px; color: {{item_scheme.color}};"
+                        >
+                            {{getItemValue(item, item_scheme)}}
+                           <!-- {{item_scheme.name != 'timestamp' ?
+                                (((item.value[item_scheme.name] | isObject) ? item.value[item_scheme.name].current_value : item.value[item_scheme.name]) | toFixed)
+                              : (((item.value[item_scheme.name] | isObject) ? item.value[item_scheme.name].current_value : item.value[item_scheme.name]) | formatTime)
+                            }} {{item.unit}} -->
+                        </span>
+                    </md-list-item>
+                </md-list>
+
+                <div flex="100" layout="column" ng-if="!$ctrl.data.sensor.length">
+                    <span flex layout="column" style="text-align: center; display: flex; justify-content: center; flex-direction: column;">No data</span>
+                </div>
+
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>
+

@@ -1,0 +1,172 @@
+<!doctype html>
+<html ng-app="NgmAdmin">
+    <head>
+        <meta charset="utf-8">
+        <title>NGM Dashboard</title>
+        <meta name="description" content="NGM Dashboard">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="styles/material-icons-font.css">
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="styles/angular-material-sidenav.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/roboto-font.css">
+
+        <!-- region preloader spinner -->
+        <style>
+            .sk-folding-cube {
+                margin: 20px auto;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                -webkit-transform: rotateZ(45deg);
+                transform: rotateZ(45deg);
+                top: 40%;
+            }
+
+            .sk-folding-cube .sk-cube {
+                float: left;
+                width: 50%;
+                height: 50%;
+                position: relative;
+                -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            .sk-folding-cube .sk-cube:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(3,155,229);
+                -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+                animation: sk-foldCubeAngle 2.4s infinite linear both;
+                -webkit-transform-origin: 100% 100%;
+                -ms-transform-origin: 100% 100%;
+                transform-origin: 100% 100%;
+            }
+            .sk-folding-cube .sk-cube2 {
+                -webkit-transform: scale(1.1) rotateZ(90deg);
+                transform: scale(1.1) rotateZ(90deg);
+            }
+            .sk-folding-cube .sk-cube3 {
+                -webkit-transform: scale(1.1) rotateZ(180deg);
+                transform: scale(1.1) rotateZ(180deg);
+            }
+            .sk-folding-cube .sk-cube4 {
+                -webkit-transform: scale(1.1) rotateZ(270deg);
+                transform: scale(1.1) rotateZ(270deg);
+            }
+            .sk-folding-cube .sk-cube2:before {
+                -webkit-animation-delay: 0.3s;
+                animation-delay: 0.3s;
+            }
+            .sk-folding-cube .sk-cube3:before {
+                -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;
+            }
+            .sk-folding-cube .sk-cube4:before {
+                -webkit-animation-delay: 0.9s;
+                animation-delay: 0.9s;
+            }
+            @-webkit-keyframes sk-foldCubeAngle {
+                0%, 10% {
+                    -webkit-transform: perspective(140px) rotateX(-180deg);
+                    transform: perspective(140px) rotateX(-180deg);
+                    opacity: 0;
+                } 25%, 75% {
+                      -webkit-transform: perspective(140px) rotateX(0deg);
+                      transform: perspective(140px) rotateX(0deg);
+                      opacity: 1;
+                  } 90%, 100% {
+                        -webkit-transform: perspective(140px) rotateY(180deg);
+                        transform: perspective(140px) rotateY(180deg);
+                        opacity: 0;
+                    }
+            }
+
+            @keyframes sk-foldCubeAngle {
+                0%, 10% {
+                    -webkit-transform: perspective(140px) rotateX(-180deg);
+                    transform: perspective(140px) rotateX(-180deg);
+                    opacity: 0;
+                } 25%, 75% {
+                      -webkit-transform: perspective(140px) rotateX(0deg);
+                      transform: perspective(140px) rotateX(0deg);
+                      opacity: 1;
+                  } 90%, 100% {
+                        -webkit-transform: perspective(140px) rotateY(180deg);
+                        transform: perspective(140px) rotateY(180deg);
+                        opacity: 0;
+                    }
+            }
+        </style>
+        <!-- endregion preloader spinner -->
+    </head>
+    <body class="{{shouldLockOpen ? 'hide-sidebar-tooltips' : ''}}">
+        <div ng-hide="dataLoaded" class="sk-folding-cube" style="{{dataLoaded ? 'display: none' : ''}}">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+
+        <div ui-view="content" layout-fill></div>
+
+        <!-- 3rd party -->
+        <script src="bower_components/moment/moment.js"></script>
+
+        <!-- Angular.js Libraries -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="bower_components/angular-material/angular-material.min.js"></script>
+
+        <!-- Angular Material sidenav module -->
+        <script src="scripts/angular-material-sidenav.js"></script>
+
+
+        <!-- Application specific -->
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/controllers/SignInController.js"></script>
+        <script src="scripts/controllers/MainController.js"></script>
+        <script src="scripts/controllers/DevicePageController.js"></script>
+        <script src="scripts/controllers/DeviceGeneralController.js"></script>
+        <script src="scripts/controllers/DevicePowerController.js"></script>
+        <script src="scripts/controllers/DeviceSeismicController.js"></script>
+        <script src="scripts/controllers/DeviceConfigController.js"></script>
+        <script src="scripts/controllers/DeviceCommandController.js"></script>
+
+        <script src="scripts/factories/ApiFactory.js"></script>
+        <script src="scripts/factories/DeviceFactory.js"></script>
+        <script src="scripts/factories/AuthInterceptorFactory.js"></script>
+        <script src="scripts/factories/AuthorizationFactory.js"></script>
+        <script src="scripts/factories/DeviceCommandsFactory.js"></script>
+
+        <script src="scripts/components/panelGeneralDataWidget.js"></script>
+        <script src="scripts/components/panelPowerDataWidget.js"></script>
+        <script src="scripts/components/panelSeismicDataWidget.js"></script>
+        <script src="scripts/components/commandWidget.js"></script>
+        <script src="scripts/components/deviceConfigWidget.js"></script>
+
+        <script src="scripts/directives/ms-widget/ms-widget.directive.js"></script>
+        <script src="scripts/directives/convertToNumber.js"></script>
+        <script src="scripts/directives/attrs.js"></script>
+        <script src="scripts/directives/fileInput.js"></script>
+
+        <script src="scripts/filters/filters.js"></script>
+
+
+    </body>
+</html>

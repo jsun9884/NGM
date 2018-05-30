@@ -1,0 +1,153 @@
+<div flex layout-fill layout="row" class="data-export-page-container md-padding">
+    <ms-widget flippable="false" class="widget-wrapper" flex="60" layout="column" style="height: 100%">
+        <md-card layout-column md-colors="{color: 'f2-900', background: 'f2-50'}">
+            <md-toolbar md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>Data export</span>
+                    </h2>
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+
+
+            <md-content layout="row"
+                        class="md-padding"
+                        style="min-height: 200px"
+                        ng-show="preQuery.deviceId"
+            >
+                <div layout="column" flex>
+                    <md-list flex>
+                        <div layout="row">
+                            <md-list-item class="md-1-line">
+                                <div  layout="column" flex>
+                                    <div layout="row" flex>
+                                        <div layout="column" flex="90">
+                                            <span layout="row" flex style="font-weight: 500">Export events&nbsp;:</span>
+                                        </div>
+                                        <div layout="column" flex>
+                                            <md-button layout="row" flex
+                                                       class="download-button md-icon-button md-padding"
+                                                       ng-disabled="!preQuery.params.eventsDateFrom || !preQuery.params.eventsDateTo || waitingForEvents"
+                                                       ng-click="downloadEvents()"
+                                            >
+                                                <md-icon class="material-icons md-light md-48">file_download</md-icon>
+                                                <span class="waiting-spinner" ng-if="waitingForEvents" title="Preparing for download">
+                                                   <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                                </span>
+                                            </md-button>
+                                        </div>
+                                    </div>
+                                    <div layout="row" flex>
+                                        <div layout="column" flex="80">
+                                            <md-input-container flex-gt-md="15" style="height: 40px;" layout="row" flex>
+                                                <input mdc-datetime-picker date="true" time="true" type="text" id="eventsDateFrom" short-time="false"
+                                                       placeholder="Enter date from"
+                                                       min-date="eventsFromMinDate"
+                                                       max-date="eventsFromMaxDate"
+                                                       format="HH:mm:ss MM/DD/YYYY"
+                                                       ng-model="preQuery.params.eventsDateFrom"
+                                                       class="md-input"
+                                                />
+
+                                                <md-button class="md-icon-button" ng-show="preQuery.params.eventsDateFrom" ng-click="preQuery.params.eventsDateFrom = null;" style="position: absolute; right: -16px; top: 0px;">
+                                                    <md-icon>close</md-icon>
+                                                </md-button>
+                                            </md-input-container>
+                                        </div>
+                                    </div>
+                                    <div layout="row" flex>
+                                        <div layout="column" flex="80">
+                                            <md-input-container flex-gt-md="15" style="height: 40px;" layout="row" flex>
+                                                <input mdc-datetime-picker date="true" time="true" type="text" id="eventsDateTo" short-time="false"
+                                                       placeholder="Enter date to"
+                                                       min-date="eventsFromMinDate"
+                                                       max-date="eventsFromMaxDate"
+                                                       format="HH:mm:ss MM/DD/YYYY"
+                                                       ng-model="preQuery.params.eventsDateTo"
+                                                       class="md-input"
+                                                />
+
+                                                <md-button class="md-icon-button" ng-show="preQuery.params.eventsDateTo" ng-click="preQuery.params.eventsDateTo = null; " style="position: absolute; right: -16px; top: 0px;">
+                                                    <md-icon>close</md-icon>
+                                                </md-button>
+                                            </md-input-container>
+                                        </div>
+                                    </div>
+                                </div>
+                            </md-list-item>
+                            <md-divider></md-divider>
+                            <md-list-item class="md-1-line">
+                                <div  layout="column" flex>
+                                    <div layout="row" flex>
+                                        <div layout="column" flex="90">
+                                            <span layout="row" flex style="font-weight: 500">Export device data&nbsp;:</span>
+                                        </div>
+                                        <div layout="column" flex>
+                                            <md-button layout="row" flex
+                                                       class="download-button md-icon-button md-padding"
+                                                       ng-disabled="!preQuery.params.regDataDateFrom || waitingForRegData"
+                                                       ng-click="downloadRegData()"
+                                            >
+                                                <md-icon class="material-icons md-light md-48">file_download</md-icon>
+                                                <span class="waiting-spinner" ng-if="waitingForRegData" title="Preparing for download">
+                                                   <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                                </span>
+                                            </md-button>
+                                        </div>
+                                    </div>
+
+                                    <div layout="row" flex>
+                                        <div layout="column" flex="80">
+                                            <md-input-container flex-gt-md="15" style="height: 40px;" layout="row" flex >
+                                                <input mdc-datetime-picker date="true" time="true" type="text" id="regDataDateFrom" short-time="false"
+                                                       placeholder="Enter date from"
+                                                       min-date="eventsFromMinDate"
+                                                       max-date="eventsFromMaxDate"
+                                                       format="HH:mm:ss MM/DD/YYYY"
+                                                       ng-model="preQuery.params.regDataDateFrom"
+                                                       class="md-input"
+                                                />
+
+                                                <md-button class="md-icon-button" ng-show="preQuery.params.regDataDateFrom" ng-click="preQuery.params.regDataDateFrom = null;" style="position: absolute; right: -16px; top: 0px;">
+                                                    <md-icon>close</md-icon>
+                                                </md-button>
+                                            </md-input-container>
+                                        </div>
+                                    </div>
+                                    <div layout="row" flex>
+                                        <div layout="column" flex="80">
+                                            <md-input-container flex-gt-md="15" style="height: 40px;" layout="row" flex >
+                                                <input mdc-datetime-picker date="true" time="true" type="text" id="regDataDateTo" short-time="false"
+                                                       placeholder="Enter date to"
+                                                       min-date="eventsFromMinDate"
+                                                       max-date="eventsFromMaxDate"
+                                                       format="HH:mm:ss MM/DD/YYYY"
+                                                       ng-model="preQuery.params.regDataDateTo"
+                                                       class="md-input"
+                                                />
+        
+                                                <md-button class="md-icon-button" ng-show="preQuery.params.regDataDateTo" ng-click="preQuery.params.regDataDateTo = null;" style="position: absolute; right: -16px; top: 0px;">
+                                                    <md-icon>close</md-icon>
+                                                </md-button>
+                                            </md-input-container>
+                                        </div>
+                                    </div>
+                                </div>
+                            </md-list-item>
+                        </div>
+                    </md-list>
+                </div>
+            </md-content>
+
+            <md-content ng-hide="preQuery.deviceId" class="md-padding">
+                <div layout="row" layout-align="center center">
+                    <div layout="column" layout-fill="true" layout-align="center center">
+                        <h1 class="md-display-3" style="color: gray"> Please select a device.</h1>
+                    </div>
+                </div>
+            </md-content>
+
+        </md-card>
+    </ms-widget>
+</div>

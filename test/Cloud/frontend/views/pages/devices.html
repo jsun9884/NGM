@@ -1,0 +1,89 @@
+        <md-tabs flex layout-fill md-border-bottom >  <!--md-colors="{background: 'f2-A100'}"-->
+            <md-tab label="General"
+                    ui-sref="dashboard.devices.general"
+                    md-active="$state.includes('dashboard.devices.general')">
+                <md-content ui-view="deviceStatus" ng-show="vm.isDeviceSelected()" layout-fill flex></md-content>
+                <md-content ng-hide="vm.isDeviceSelected()" class="md-padding">
+                    <div layout="row" layout-align="center center">
+                        <div layout="column" layout-fill="true" layout-align="center center">
+                            <h1 class="md-display-3" style="color: gray"> Please select a device.</h1>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Power data"
+                    ui-sref="dashboard.devices.power"
+                    md-active="$state.includes('dashboard.devices.power')">
+                <md-content ui-view="devicePower" ng-show="vm.isDeviceSelected()" layout-fill flex></md-content>
+                <md-content ng-hide="vm.isDeviceSelected()" class="md-padding">
+                    <div layout="row" layout-align="center center">
+                        <div layout="column" layout-fill="true" layout-align="center center">
+                            <h1 class="md-display-3" style="color: gray"> Please select a device.</h1>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Seismic data"
+                    ui-sref="dashboard.devices.seismic"
+                    md-active="$state.includes('dashboard.devices.seismic')">
+                <md-content ui-view="deviceSeismic" ng-show="vm.isDeviceSelected()" layout-fill flex></md-content>
+                <md-content ng-hide="vm.isDeviceSelected()" class="md-padding">
+                    <div layout="row" layout-align="center center">
+                        <div layout="column" layout-fill="true" layout-align="center center">
+                            <h1 class="md-display-3" style="color: gray"> Please select a device.</h1>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Configuration"
+                    ui-sref="dashboard.devices.config"
+                    md-active="$state.includes('dashboard.devices.config')">
+                <md-content ui-view="deviceConfig" ng-show="vm.isDeviceSelected()"></md-content>
+                <md-content ng-hide="vm.isDeviceSelected()" class="md-padding">
+                    <div layout="row" layout-align="center center">
+                        <div layout="column" layout-fill="true" layout-align="center center">
+                            <h1 class="md-display-3" style="color: gray"> Please select a device.</h1>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Commands"
+                    ui-sref="dashboard.devices.commands"
+                    md-active="$state.includes('dashboard.devices.commands')">
+                <md-content ui-view="deviceCommands" ng-show="vm.isDeviceSelected()"> </md-content>
+                <md-content ng-hide="vm.isDeviceSelected()" class="md-padding">
+                    <div layout="row" layout-align="center center">
+                        <div layout="column" layout-fill="true" layout-align="center center">
+                            <h1 class="md-display-3" style="color: gray"> Please select a device.</h1>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+<!--
+            <md-tab label="ZigBee"
+                    ui-sref="dashboard.devices.zigbee"
+                    md-active="$state.includes('dashboard.devices.zigbee')">
+                <md-content ui-view="deviceZigBee" ng-show="vm.isDeviceSelected()"> </md-content>
+                <md-content ng-hide="vm.isDeviceSelected()" class="md-padding">
+                    <div layout="row" layout-align="center center">
+                        <div layout="column" layout-fill="true" layout-align="center center">
+                            <h1 class="md-display-3" style="color: gray"> Please select a device.</h1>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+-->
+            <md-tab label="Data switch"
+                    ui-sref="dashboard.devices.dataswitch"
+                    md-active="$state.includes('dashboard.devices.dataswitch')">
+                <md-content ui-view="deviceDataSwitch" ng-show="vm.isDeviceSelected()"> </md-content>
+                <md-content ng-hide="vm.isDeviceSelected()" class="md-padding">
+                    <div layout="row" layout-align="center center">
+                        <div layout="column" layout-fill="true" layout-align="center center">
+                            <h1 class="md-display-3" style="color: gray"> Please select a device.</h1>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+         </md-tabs>
+

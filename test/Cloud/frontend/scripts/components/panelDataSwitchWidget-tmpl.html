@@ -1,0 +1,63 @@
+<div class="md-padding" layout="column" flex="100">
+    <ms-widget flippable="true" class="widget-wrapper" flex layout="column" style="height: 100%" ng-class="{'expanded' : expanded}">
+        <ms-widget-front class="" flex layout="column">
+            <md-toolbar md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>{{$ctrl.card.title}}</span>
+                    </h2>
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+            <md-content flex layout="column" style="min-height: 200px">
+                <md-list ng-if="$ctrl.data.sensor.length">
+                    <md-list-item class="md-1-line" layout="row">
+                        <span layout="column" flex="50"></span>
+                        <span layout="column" flex="25" style="text-align: right;">Port A</span>
+                        <span layout="column" flex="25" style="text-align: right;">Port B</span>
+                    </md-list-item>
+
+                    <md-list-item class="md-1-line" layout="row"
+                                  ng-class="{'selected-list-item': selectedParam.name == item.name}"
+                                  ng-repeat="item in $ctrl.data.sensor"
+                                  ng-click="itemSelected(item.name, item)"
+                    >
+
+                        <span layout="column" flex="50" style="font-size: 15px; line-height: 18px; overflow: hidden"><span ng-bind-html="item.title"></span>{{(item.value.portA != undefined || item.value.portB != undefined) ? ' (Bytes)' : ''}}</span>
+
+                        <span   layout="column" flex="50"
+                                ng-if="item.name != 'timestamp' && !(item.value | isObject)"
+                                style="font-weight: bold; text-align: right;"
+                                >{{item.value}} {{item.unit}}</span>
+
+                        <span   layout="column" flex="25"
+                                ng-if="item.name != 'timestamp' && item.value.portA != undefined"
+                                style="font-weight: bold; text-align: right; color: #e53935"
+                                >{{(item.value.portA | isObject) ? item.value.portA.current_value : item.value.portA}} {{item.unit}}</span>
+                        <span   layout="column" flex="25"
+                                ng-if="item.name != 'timestamp' && item.value.portB != undefined"
+                                style="font-weight: bold; text-align: right; color: #1e88e5"
+                                >{{(item.value.portB | isObject) ? item.value.portB.current_value : item.value.portB}} {{item.unit}}</span>
+
+                        <span ng-if="item.name == 'timestamp'" layout="column" flex="50" style="font-weight: bold; text-align: right;">{{((item.value | isObject) ? item.value.current_value : item.value) | formatTime}}</span>
+
+<!--
+                        <span   layout="column" flex="{{item_scheme.name != 'timestamp' ? 35 : 70}}"
+                                ng-repeat="item_scheme in item.scheme"
+                                style="font-weight: bold; text-align: center; font-size: 14px; line-height: 18px; color: {{item_scheme.color}};"
+                                >
+                            {{item_scheme.name != 'timestamp' ? (item.value[item_scheme.name] | toFixed) : (item.value[item_scheme.name] | formatTime)}} {{item.unit}}
+                        </span>
+-->
+                    </md-list-item>
+                </md-list>
+
+                <div flex="100" layout="column" ng-if="!$ctrl.data.sensor.length">
+                    <span flex layout="column" style="text-align: center; display: flex; justify-content: center; flex-direction: column;">No data</span>
+                </div>
+
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>
+

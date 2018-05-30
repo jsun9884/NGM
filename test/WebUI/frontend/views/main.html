@@ -1,0 +1,52 @@
+<div layout="row" layout-fill flex >
+    <md-sidenav md-disable-backdrop flex id="vertical-navigation" class="md-sidenav-left md-whiteframe-z2" ng-class="showTitles ? 'show-titles' : ''" md-component-id="left"
+                 layout="column" >
+        <div flex ng-controller="sidenavMainCtrl"  layout="column">
+            <md-toolbar class="md-whiteframe-1dp" >
+                <div class="md-toolbar-tools">
+                    <h2><span> NGM Dashboard </span></h2>
+                    <md-button class="menu left-sidebar-toggler" ng-click="toggleLeft()">
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content flex role="navigation" ss-style-color="{'background-color': 'primary.default'}">
+                <ss-sidenav flex menu="menu"></ss-sidenav>
+            </md-content>
+            <!--<span flex></span>-->
+
+        </div>
+
+    </md-sidenav>
+    <div style="overflow-y: hidden" id="main-content-area-wrapper" flex layout="column">
+        <md-toolbar md-theme="default" id="top-toolbar" class="md-whiteframe-z2" ng-style="{'background-color': '#ffffff'}" style="z-index: 10">
+            <div class="md-toolbar-tools">
+                <h2 style="padding-right: 14px" >
+                    <span class="md-title" style="color: dimgray" ng-repeat="state_path in current_state_path" ng-if="state_path.title != ''">
+                        {{state_path.title}} {{$last ? '' : state_path.title ? '>' : ''}}
+                    </span>
+                </h2>
+                <span flex></span>
+                <div class="account-box" ng-class="{'expanded': accountBoxExpanded}" ng-click="toggleAccountBoxExpansion()">
+                    <div class="account-box-content">
+                        <div class="toolbar-separator"></div>
+                        <md-button class="md-icon-button">
+                            <md-icon style="color: #727272">account_circle</md-icon>
+                        </md-button>
+                        <h2 style="padding-right: 14px" >
+                            <span class="md-title" style="color: dimgray">
+                                Role : {{userProfile.role}}
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="toolbar-separator"></div>
+                <md-button class="md-icon-button" ng-click="signout()">
+                    <md-icon style="color: dimgray">power_settings_new</md-icon>
+                    <md-tooltip md-direction="top">Log out</md-tooltip>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content layout-fill id="page-content-container" ui-view role="main"></md-content>
+    </div>
+</div>

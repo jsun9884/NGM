@@ -1,0 +1,36 @@
+{
+  "AwsElastiCache" : {
+    "endpoint" : "iot-dev.fdndys.0001.usw2.cache.amazonaws.com",
+    "port" : 6379,
+    "sensorDB" : 0,
+    "queueDB": 1
+  },
+  "DynamoDB" : {
+    "DEVICE_EVENTS_TABLE": "device-events",
+    "DEVICE_COMMANDS_TABLE": "device-commands",
+    "DEVICE_REGULAR_DATA_TABLE": "device-data",
+    "DEVICE_STATUS_TABLE": "device-status"
+  },
+  "Lambda":{
+    "PREPARE_HR_DATA_FN_QUALIFIER" : "DEV"
+  },
+  "users": [
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "admin",
+      "role": "ADMIN",
+      "id": 123,
+      "password": "admin"
+
+    },
+    {
+      "first_name": "Max",
+      "last_name": "Fry",
+      "email": "maxfry@mail.com",
+      "role": "TECH",
+      "id": 124,
+      "password": "tech"
+    }
+  ]
+}

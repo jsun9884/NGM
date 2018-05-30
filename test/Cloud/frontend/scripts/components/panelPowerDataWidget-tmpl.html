@@ -1,0 +1,233 @@
+<div class="md-padding" layout="column" flex="100">
+    <ms-widget flippable="true" class="widget-wrapper" flex layout="column" style="height: 100%" ng-class="{'expanded' : expanded}">
+        <ms-widget-front class="" flex layout="column">
+            <md-toolbar md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>{{$ctrl.card.title}}</span>
+                    </h2>
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+            <md-content flex layout="column" style="min-height: 200px">
+                <md-list ng-if="$ctrl.data.sensor.length">
+                    <md-list-item class="md-1-line" layout="row">
+                        <span layout="column" flex="30"></span>
+                        <span layout="column" flex="15" style="text-align: right;">Phase A</span>
+                        <span layout="column" flex="15" style="text-align: right;">Phase B</span>
+                        <span layout="column" flex="15" style="text-align: right;">Phase C</span>
+                        <span layout="column" flex="15" style="text-align: right;">Total</span>
+                        <span layout="column" flex="10" style="text-align: right;"></span>
+                    </md-list-item>
+
+
+                    <md-list-item class="md-1-line" ng-repeat="item in $ctrl.data.sensor"  layout="row" ng-click="itemSelected('PowerMeter', item)" ng-class="{'selected-list-item': selectedParam.name == item.name, 'expanded': item.expanded}">
+                        <div layout="column" flex>
+                            <div layout="row" layout-row flex style="outline: none; line-height: 18px; padding-top: 5px">
+                                <span layout="column" flex="30">{{item.title}} {{!!item.unit ? ('(' + item.unit + ')') : ''}}</span>
+
+                                <span   layout="column" flex="60"
+                                        ng-if="item.name != 'timestamp' && !(item.value | isObject)"
+                                        style="font-weight: bold; text-align: right;"
+                                >{{item.value | toFixed}}</span>
+
+                                <!--phases values--
+                                <span   layout="column" flex="15"
+                                        ng-if="item.name != 'timestamp' && !(item.value.phase1 | isObject) && item.value.phase1 != undefined"
+                                        style="font-weight: bold; text-align: right; color: #e53935"
+                                >{{item.value.phase1 | toFixed}} {{item.unit}}</span>
+                                <span   layout="column" flex="15"
+                                        ng-if="item.name != 'timestamp' && !(item.value.phase2 | isObject) && item.value.phase2 != undefined"
+                                        style="font-weight: bold; text-align: right; color: #1e88e5"
+                                >{{item.value.phase2 | toFixed}} {{item.unit}}</span>
+                                <span   layout="column" flex="15"
+                                        ng-if="item.name != 'timestamp' && !(item.value.phase3 | isObject) && item.value.phase3 != undefined"
+                                        style="font-weight: bold; text-align: right; color: #2e7d32"
+                                >{{item.value.phase3 | toFixed}} {{item.unit}}</span>
+                                <span   layout="column" flex="15"
+                                        ng-if="item.name != 'timestamp' && !(item.value.phase3 | isObject) && item.value.phase3 != undefined"
+                                        style="font-weight: bold; text-align: right; color: #2e7d32"
+                                >{{(item.value.phase1 + item.value.phase2 + item.value.phase3) | toFixed}} {{item.unit}}</span>
+                                <!--phases values-->
+
+                                <!--phases objects-->
+                                <span   layout="column" flex="15"
+                                        ng-if="item.name != 'timestamp' && (item.value.phase1 | isObject) && item.value.phase1 != undefined"
+                                        style="font-weight: bold; text-align: right; color: #e53935"
+                                >{{((item.value.phase1 | isObject) ? item.value.phase1.current_value : item.value.phase1) | toFixed: item.fixedNum}}</span>
+
+                                <span   layout="column" flex="15"
+                                        ng-if="item.name != 'timestamp' && (item.value.phase2 | isObject) && item.value.phase2 != undefined"
+                                        style="font-weight: bold; text-align: right; color: #1e88e5"
+                                >{{((item.value.phase2 | isObject) ? item.value.phase2.current_value : item.value.phase2) | toFixed: item.fixedNum}}</span>
+
+                                <span   layout="column" flex="15"
+                                        ng-if="item.name != 'timestamp' && (item.value.phase3 | isObject) && item.value.phase3 != undefined"
+                                        style="font-weight: bold; text-align: right; color: #2e7d32"
+                                >{{((item.value.phase3 | isObject) ? item.value.phase3.current_value : item.value.phase3) | toFixed: item.fixedNum}}</span>
+
+                                <span   layout="column" flex="15"
+                                        ng-if="item.name != 'timestamp' && (item.value.phase3 | isObject) && item.value.phase3 != undefined"
+                                        style="font-weight: bold; text-align: right; color: #2d323e"
+                                >{{!!item.total ?
+                                    ((
+                                        ((item.value.phase1 | isObject) ? item.value.phase1.current_value : item.value.phase1) +
+                                        ((item.value.phase2 | isObject) ? item.value.phase2.current_value : item.value.phase2) +
+                                        ((item.value.phase3 | isObject) ? item.value.phase3.current_value : item.value.phase3)
+                                     ) | toFixed: item.fixedNum)
+                                    :
+                                    ''
+                                }}</span>
+                                <!--phases objects-->
+
+
+                                <span ng-if="item.name == 'timestamp'" layout="column" flex="60" style="font-weight: bold; text-align: right;">
+                                    {{((item.value | isObject) ? item.value.current_value : item.value) | formatTime}}
+                                </span>
+
+                                <div ng-if="(item.value | isObject) && (item.value.phase1 | isObject) && item.value.phase1.avg_15 != undefined"
+                                     ng-click="$ctrl.toggleExpansion(item)"
+                                     layout="column" flex="10"
+                                     style="text-align: right; display: block"
+                                >
+                                    <md-button class="md-icon-button md-toggle-icon launch" style="margin: 0; margin-top: -12px ">
+                                        <md-icon>keyboard_arrow_left</md-icon>
+                                        <md-tooltip md-direction="top">Expand</md-tooltip>
+                                    </md-button>
+                                </div>
+                            </div>
+                            <div layout-row flex ng-show="item.expanded">
+                                <div layout-row flex class="md-list-item-inner">
+                                    <div layout-row flex class="expanded-visible">
+                                        <div layout-row flex class="layout-row">
+                                            <div flex="30" layout="column">
+                                                <span style="color: #888888">Average 15 min:</span>
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase1.avg_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase2.avg_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase3.avg_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{!!item.total ? ((item.value.phase1.avg_15 + item.value.phase2.avg_15 + item.value.phase3.avg_15) | toFixed: item.fixedNum) : ''}}
+                                            </div>
+                                            <div layout="column" flex="10">
+                                            </div>
+                                        </div>
+                                        <div layout-row flex class="layout-row">
+                                            <div layout="column" flex="30" class="layout-column">
+                                                <span style="color: #888888">Average 60 min:</span>
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase1.avg_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase2.avg_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase3.avg_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{!!item.total ? ((item.value.phase1.avg_15 + item.value.phase2.avg_60 + item.value.phase3.avg_60) | toFixed: item.fixedNum) : ''}}
+                                            </div>
+                                            <div layout="column" flex="10">
+                                            </div>
+                                        </div>
+                                        <div layout-row flex class="layout-row">
+                                            <div layout="column" flex="30" class="layout-column">
+                                                <span style="color: #888888">Min 15 min:</span>
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase1.min_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase2.min_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase3.min_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{!!item.total ? ((item.value.phase1.min_15 + item.value.phase2.min_15 + item.value.phase3.min_15) | toFixed: item.fixedNum) : ''}}
+                                            </div>
+                                            <div layout="column" flex="10">
+                                            </div>
+                                        </div>
+                                        <div layout-row flex class="layout-row">
+                                            <div layout="column" flex="30" class="layout-column">
+                                                <span style="color: #888888">Max 15 min:</span>
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase1.max_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase2.max_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase3.max_15 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{!!item.total ? ((item.value.phase1.max_15 + item.value.phase2.max_15 + item.value.phase3.max_15) | toFixed: item.fixedNum) : ''}}
+                                            </div>
+                                            <div layout="column" flex="10">
+                                            </div>
+                                        </div>
+                                        <div layout-row flex class="layout-row">
+                                            <div layout="column" flex="30" class="layout-column">
+                                                <span style="color: #888888">Min 60 min:</span>
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase1.min_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase2.min_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase3.min_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{!!item.total ? ((item.value.phase1.min_60 + item.value.phase2.min_60 + item.value.phase3.min_60) | toFixed: item.fixedNum) : ''}}
+                                            </div>
+                                            <div layout="column" flex="10">
+                                            </div>
+                                        </div>
+                                        <div layout-row flex class="layout-row">
+                                            <div layout="column" flex="30" class="layout-column">
+                                                <span style="color: #888888">Max 60 min:</span>
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase1.max_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase2.max_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{item.value.phase3.max_60 | toFixed: item.fixedNum}}
+                                            </div>
+                                            <div layout="column" flex="15" style="text-align: right">
+                                                {{!!item.total ? ((item.value.phase1.max_60 + item.value.phase2.max_60 + item.value.phase3.max_60) | toFixed: item.fixedNum) : ''}}
+                                            </div>
+                                            <div layout="column" flex="10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr style="width: 100%; border-top: 1px solid #eeeeee; border-right: 0px; border-left: 0px; margin-top: 0; "/>
+
+                            </div>
+                        </div>
+                    </md-list-item>
+                </md-list>
+
+                <div flex="100" layout="column" ng-if="!$ctrl.data.sensor.length">
+                    <span flex layout="column" style="text-align: center; display: flex; justify-content: center; flex-direction: column;">No data</span>
+                </div>
+
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>
+

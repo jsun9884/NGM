@@ -1,0 +1,17 @@
+<div class="md-padding" layout="column" flex="100" style="padding-top: 0">
+    <ms-widget flippable="true" class="" layout="column" flex="100" >
+        <ms-widget-front class="">
+            <md-toolbar md-colors="{color: 'grey', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>Online Devices</span>
+                    </h2>
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+            <md-content class="md-padding layout-column flex">
+                <nvd3 id="online-devices-chart" options="$ctrl.options" data="$ctrl.chartData" class="layout-column flex" style="height: 100%"></nvd3>
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>

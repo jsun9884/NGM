@@ -1,0 +1,35 @@
+<div class="widget-group" layout="row" layout-wrap>
+    <div class="widget-group" layout="column" flex="65">
+        <panel-seismic-data-widget
+                            card="card"
+                            card-name="seismic"
+        ></panel-seismic-data-widget>
+
+            <div class="md-padding" style="padding-top: 0px; padding-bottom: 0px" layout="row" layout-align="start center" flex>
+				
+				<md-switch class="md-secondary" ng-disabled="!devSeismicCtrl.activeDevice.config || !devSeismicCtrl.activeDevice.online || devSeismicCtrl.sendingConfig.AccAutoHr" ng-true-value="true" ng-false-value="false" ng-model-options="{ allowInvalid: false }"
+                           ng-model="devSeismicCtrl.AccAutoHrEnabled" ng-change="toggleAccAutoHr()">Automatic HR Data upon event occurrence</md-switch>
+				&nbsp;<md-progress-circular class="md-accent" md-mode="indeterminate" md-diameter="20px" ng-disabled="!devSeismicCtrl.sendingConfig.AccAutoHr"></md-progress-circular>				
+            </div>
+            <div class="md-padding" style="padding-top: 0px; padding-bottom: 0px" layout="row" layout-align="start center" flex>
+                <md-switch class="md-secondary" ng-disabled="!devSeismicCtrl.activeDevice.config || !devSeismicCtrl.activeDevice.online || devSeismicCtrl.sendingConfig.AccEvents" ng-true-value="true" ng-false-value="false" ng-model-options="{ allowInvalid: false }"
+                           ng-model="devSeismicCtrl.AccEventsEnabled" ng-change="toggleAccEvents()">Enable / Disable Events reporting</md-switch>
+				&nbsp;<md-progress-circular class="md-accent" md-mode="indeterminate" md-diameter="20px" ng-disabled="!devSeismicCtrl.sendingConfig.AccEvents"></md-progress-circular>
+            </div>
+        <div class="widget-group" layout="row" layout-wrap>
+            <command-card-widget card="card"
+                                 ng-repeat="card in devSeismicCtrl.commandsCards"
+            ></command-card-widget>
+        </div>
+
+    </div>
+
+    <line-chart-widget flex layout-column layout="column"
+                       sensors-names="['AccCore', 'AccPCB']"
+                       labels="['Acc X', 'Acc Y', 'Acc Z', 'Acc Raw X', 'Acc Raw Y', 'Acc Raw Z']"
+                       border-colors="['#e61510', '#0d74ce', '#08860e', '#e67976', '#69a8e0', '#68af6c']"
+                       empty-title="Please, select a parameter from the Seismic meter widget"
+    ></line-chart-widget>
+
+
+</div>

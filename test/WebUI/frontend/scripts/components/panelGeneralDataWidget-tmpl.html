@@ -1,0 +1,114 @@
+<div class="md-padding">
+    <div class="md-whiteframe-z2 widget-wrapper {{expanded ? 'expanded' : ''}}">
+        <md-toolbar style="min-height:42px; max-height: 42px"
+                    md-colors="{background: 'blue-600'}">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Device status</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button md-button-toggle" ng-click="toggle()">
+                    <span aria-hidden="true" class="md-toggle-icon {{expanded ? 'toggled' : ''}}" >
+                        <md-icon md-svg-src="md-toggle-arrow" style="height: 20px"></md-icon>
+                        <md-tooltip md-direction="top">Expand</md-tooltip>
+                    </span>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <div layout="column">
+                <div layout="row" class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="70" class="md-title">
+                                CPU temperature :
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="30" style="text-align: right" class="md-title"  ng-if="$ctrl.data.length">
+                                {{($ctrl.data | itemPropByProp: 'name':'TempCPU':'temperature').current_value | toFixed}} &deg; C
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div layout="row" class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="70" class="md-title">
+                                Board temperature :
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="30" style="text-align: right" class="md-title" ng-if="$ctrl.data.length">
+                                {{($ctrl.data | itemPropByProp: 'name':'TempPCB':'temperature').current_value | toFixed}} &deg; C
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div layout="row" class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="70" class="md-title">
+                                Disclosing sensor :
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="30" style="text-align: right" class="md-title" ng-if="$ctrl.data.length">
+                                {{($ctrl.data | itemPropByProp: 'name':'TamperSwitch':'closed').current_value ? 'Closed' : 'Opened'}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div layout="row" class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="70" class="md-title">
+                                GPS Latitude :
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="30" style="text-align: right" class="md-title" ng-if="$ctrl.data.length">
+                                {{($ctrl.data | itemPropByProp: 'name':'GPS':'latitude').current_value | toFixed}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div layout="row" class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="70" class="md-title">
+                                GPS Longitude :
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="30" style="text-align: right" class="md-title" ng-if="$ctrl.data.length">
+                                {{($ctrl.data | itemPropByProp: 'name':'GPS':'longitude').current_value | toFixed}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div layout="row" class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="70" class="md-title">
+                                GPS Altitude :
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="30" style="text-align: right" class="md-title" ng-if="$ctrl.data.length">
+                                {{($ctrl.data | itemPropByProp: 'name':'GPS':'altitude').current_value | toFixed}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div layout="row" class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="70" class="md-title">
+                                GPS time :
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="30" style="text-align: right" class="md-title" ng-if="$ctrl.data.length">
+                                {{($ctrl.data | itemPropByProp: 'name':'GPS':'time').current_value | formatTime}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </div>
+</div>

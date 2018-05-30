@@ -1,0 +1,31 @@
+<div class="md-padding" style="height: calc(100% - 32px); padding-left: 0px">
+    <ms-widget flippable="true" class="" layout="column" flex="100" style="height: 534px" ng-class="{'fully-expanded' : $ctrl.expanded}">
+        <ms-widget-front class="" style="height: 100%">
+            <md-toolbar md-colors="{color: 'grey', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>Data histogram (<span ng-bind-html="$ctrl.paramForShow.title"></span>{{$ctrl.paramForShow.title ? '' : 'No selected params'}}) &nbsp;<span style="display: none" ng-class="{'showed-inline' : $ctrl.frozen}">[ <span class="blink-it make-italic make-bold">Display on hold</span> ]</span></span>
+                    </h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button launch" ng-click="$ctrl.expand()">
+                        <md-icon md-colors="{color: 'grey'}">{{$ctrl.expanded ? 'fullscreen_exit' : 'fullscreen'}}</md-icon>
+                        <md-tooltip md-direction="top">{{$ctrl.expanded ? 'Shrink' : 'Expand'}}</md-tooltip>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <md-content class="md-padding" style="height: 100%; text-align: center">
+                <canvas
+                    id="overviewChart"
+                    ng-mouseover="freezeChart(true)"
+                    ng-mouseleave="freezeChart(false)"
+                    ng-show="$ctrl.paramForShow.title"
+                ></canvas>
+
+                <div flex="100" layout="column" ng-show="!$ctrl.paramForShow.title" style="text-align: center; display: flex; justify-content: center; flex-direction: column; height: 100%">
+                    {{$ctrl.emptyTitle}}
+                </div>
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>

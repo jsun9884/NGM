@@ -1,0 +1,23 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_C_COMPILER /usr/bin/arm-linux-gnueabihf-gcc)
+set(CMAKE_CXX_COMPILER /usr/bin/arm-linux-gnueabihf-g++)
+#set(CMAKE_C_LINK_EXECUTABLE /usr/bin/arm-linux-gnueabihf-ld)
+#set(CMAKE_CXX_LINK_EXECUTABLE /usr/bin/arm-linux-gnueabihf-ld)
+
+set(PROJ_LDFLAGS "-L/mnt/OCE/debian-build/var_som_mx6_debian/rootfs/usr/lib/arm-linux-gnueabihf/ -L/mnt/OCE/debian-build/var_som_mx6_debian/rootfs/usr/lib/")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${PROJ_LDFLAGS}")
+#set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} ${PROJ_LDFLAGS}")
+#set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${PROJ_LDFLAGS}")
+#set(CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} ${PROJ_LDFLAGS}")
+
+# where is the target environment
+set(CMAKE_FIND_ROOT_PATH /mnt/OCE/debian-build/var_som_mx6_debian/rootfs)
+
+# search for programs in the build host directories
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+# for libraries and headers in the target directories
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+set(AWS_CPP_DIR /mnt/OCE/lib/aws-sdk)
+set(SQLITE3_DIR /mnt/OCE/lib/sqlite3)

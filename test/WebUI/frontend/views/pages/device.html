@@ -1,0 +1,42 @@
+<md-content id="device-page-container" flex layout-fill layout="row">
+    <md-content style="overflow-y: hidden" layout-fill layout="column">
+        <md-toolbar class="md-accent">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Device Management</span>
+                </h2>
+            </div>
+        </md-toolbar>
+        <md-tabs flex layout-fill md-border-bottom>
+            <md-tab label="General"
+                    ui-sref="dashboard.device.general"
+                    md-active="$state.includes('dashboard.device.general')">
+                <md-content ui-view="deviceGeneral"></md-content>
+            </md-tab>
+            <md-tab label="Power data"
+                    ui-sref="dashboard.device.power"
+                    md-active="$state.includes('dashboard.device.power')">
+                <md-content ui-view="devicePower"></md-content>
+            </md-tab>
+            <md-tab label="Seismic data"
+                    ui-sref="dashboard.device.seismic"
+                    md-active="$state.includes('dashboard.device.seismic')">
+                <md-content ui-view="deviceSeismic"></md-content>
+            </md-tab>
+            <md-tab label="Configuration"
+                    ui-sref="dashboard.device.config"
+                    md-active="$state.includes('dashboard.device.config')">
+                <md-content ui-view="deviceConfig"></md-content>
+            </md-tab>
+
+<!--
+            <md-tab label="Commands"
+                    ui-sref="dashboard.device.commands"
+                    md-active="$state.includes('dashboard.device.commands')">
+                <md-content ui-view="deviceCommands"></md-content>
+            </md-tab>
+-->
+
+         </md-tabs>
+    </md-content>
+</md-content>

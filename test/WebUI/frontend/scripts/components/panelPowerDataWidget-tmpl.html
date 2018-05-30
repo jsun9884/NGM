@@ -1,0 +1,179 @@
+<div class="md-padding">
+    <div class="md-whiteframe-z2 widget-wrapper {{expanded ? 'expanded' : ''}}">
+        <md-toolbar style="min-height:42px; max-height: 42px"
+                    md-colors="{background: 'blue-600'}">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Power sensor</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button md-button-toggle" ng-click="toggle()">
+                    <span aria-hidden="true" class="md-toggle-icon {{expanded ? 'toggled' : ''}}" >
+                        <md-icon md-svg-src="md-toggle-arrow" style="height: 20px"></md-icon>
+                        <md-tooltip md-direction="top">Expand</md-tooltip>
+                    </span>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content class="md-padding">
+            <div layout="column">
+                <div layout="row" class="panel-mainline">
+                    <span flex="35"></span>
+                    <span flex="20" style="text-align: right">Phase 1</span>
+                    <span flex="20" style="text-align: right">Phase 2</span>
+                    <span flex="20" style="text-align: right">Phase 3</span>
+                    <span flex="5"></span>
+                </div>
+                <div layout="row" ng-repeat="scheme_item in $ctrl.scheme"  class="panel-mainline">
+                    <div layout="column" style="width: 100%">
+                        <div layout="row">
+                            <span layout-align="center start" layout="column" flex="35" class="md-title">
+                                {{scheme_item.title}} :
+                            </span>
+
+                            <span layout-align="center end" layout="column" flex="20" style="text-align: right" class="md-title" ng-if="!($ctrl.data[scheme_item.name + '1'] | isObject)">
+                                {{$ctrl.data[scheme_item.name + '1'].current_value | toFixed}}
+                            </span>
+                            <span layout-align="center end" layout="column" flex="20" style="text-align: right" class="md-title" ng-if="!($ctrl.data[scheme_item.name + '2'] | isObject)">
+                                {{$ctrl.data[scheme_item.name + '2'].current_value | toFixed}}
+                            </span>
+                            <span layout-align="center end" layout="column" flex="20" style="text-align: right" class="md-title" ng-if="!($ctrl.data[scheme_item.name + '3'] | isObject)">
+                                {{$ctrl.data[scheme_item.name + '3'].current_value | toFixed}}
+                            </span>
+
+                            <span layout-align="center end" layout-align="center end" layout="column" flex="20" style="text-align: right" class="md-title" ng-if="$ctrl.data[scheme_item.name + '1'] | isObject">
+                                {{$ctrl.data[scheme_item.name + '1'].current_value | toFixed}}
+                            </span>
+                            <span layout-align="center end" layout="column" flex="20" style="text-align: right" class="md-title" ng-if="$ctrl.data[scheme_item.name + '2'] | isObject">
+                                {{$ctrl.data[scheme_item.name + '2'].current_value | toFixed}}
+                            </span>
+                            <span layout-align="center end" layout="column" flex="20" style="text-align: right" class="md-title" ng-if="$ctrl.data[scheme_item.name + '3'] | isObject">
+                                {{$ctrl.data[scheme_item.name + '3'].current_value | toFixed}}
+                            </span>
+
+
+                            <div ng-if="($ctrl.data[scheme_item.name + '1'] | isObject)"
+                                 ng-click="$ctrl.toggleExpansion(scheme_item)"
+                                 layout="column" flex="5"
+                                 style="text-align: right; display: block"
+                            >
+                                <md-button class="md-icon-button md-toggle-icon launch" style="margin: 0; padding: 0; height: 36px;">
+                                    <md-icon style="height: 20px">keyboard_arrow_left</md-icon>
+                                    <md-tooltip md-direction="top">Expand</md-tooltip>
+                                </md-button>
+                            </div>
+                        </div>
+
+                        <div layout-row ng-if="($ctrl.data[scheme_item.name + '1'] | isObject)" ng-show="scheme_item.expanded">
+                            <div layout-row flex class="md-list-item-inner">
+                                <div layout-row flex class="expanded-visible">
+                                    <div layout-row flex class="layout-row">
+                                        <div layout-column flex="35" class="layout-column" style="line-height: 22px">
+                                            <span style="color: #888888">Average 15 min:</span>
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '1'].avg_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '2'].avg_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '3'].avg_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="5" class="layout-column"></div>
+                                    </div>
+                                    <div layout-row flex class="layout-row">
+                                        <div layout-column flex="35" class="layout-column" style="line-height: 22px">
+                                            <span style="color: #888888">Average 60 min:</span>
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '1'].avg_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '2'].avg_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '3'].avg_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="5" class="layout-column"></div>
+                                    </div>
+                                    <div layout-row flex class="layout-row">
+                                        <div layout-column flex="35" class="layout-column" style="line-height: 22px">
+                                            <span style="color: #888888">Min 15 min:</span>
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '1'].min_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '2'].min_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '3'].min_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="5" class="layout-column"></div>
+                                    </div>
+                                    <div layout-row flex class="layout-row">
+                                        <div layout-column flex="35" class="layout-column" style="line-height: 22px">
+                                            <span style="color: #888888">Max 15 min:</span>
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '1'].max_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '2'].max_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '3'].max_15 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="5" class="layout-column"></div>
+                                    </div>
+                                    <div layout-row flex class="layout-row">
+                                        <div layout-column flex="35" class="layout-column" style="line-height: 22px">
+                                            <span style="color: #888888">Min 60 min:</span>
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '1'].min_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '2'].min_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '3'].min_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="5" class="layout-column"></div>
+                                    </div>
+                                    <div layout-row flex class="layout-row">
+                                        <div layout-column flex="35" class="layout-column" style="line-height: 22px">
+                                            <span style="color: #888888">Max 60 min:</span>
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '1'].max_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '2'].max_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="20" style="text-align: right">
+                                            {{$ctrl.data[scheme_item.name + '3'].max_60 | toFixed}}
+                                        </div>
+                                        <div layout-column flex="5" class="layout-column"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="width: 100%; border-top: 1px solid #eeeeee; border-right: 0px; border-left: 0px; margin-top: 0; "/>
+                        </div>
+
+                    </div>
+                </div>
+                <div layout="row" class="panel-mainline">
+                    <span flex="40" class="md-title">State :</span>
+
+                    <span flex="60"class="md-title">{{$ctrl.data.state}} </span>
+                </div>
+                <div layout="row" layout-align="center center" class="panel-mainline">
+                    <span flex="40" class="md-title">Time(UTC) :</span>
+                    <span flex="60" class="md-title">{{$ctrl.data.timestamp.current_value | formatTime}} </span>
+                </div>
+            </div>
+        </md-content>
+    </div>
+</div>

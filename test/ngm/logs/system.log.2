@@ -1,0 +1,622 @@
+2017-03-20 16:17:43.454 []: *** Starting NGM v. 0.9.12 ***
+2017-03-20 16:17:43.454 [AwsClient]: 
+AWS IoT SDK Version 2.1.0-
+2017-03-20 16:17:43.455 [CloudMgr]: Creating CloudManager...
+2017-03-20 16:17:43.455 [CloudMgr]: std::atomic<ShadowState> is lock free!!!
+2017-03-20 16:17:43.455 [I2c] Error: I2C: open </dev/i2c-0> failed...
+2017-03-20 16:17:43.455 [Leds]: Leds initializing...
+2017-03-20 16:17:43.455 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:17:46.626 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:17:46.626 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:17:46.626 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:17:46.627 []: Loading configuration for msp430(PowerMeter)
+2017-03-20 16:17:46.627 [CloudMgr]: -- preInit
+2017-03-20 16:17:46.627 [CloudMgr]: -- initialize
+2017-03-20 16:17:46.627 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:17:46.627 []: Loading parameter: name = HRFrequency, type = QWord, value = 2, defaultValue = 1
+2017-03-20 16:17:46.627 []: Loading parameter: name = HRHistoryMin, type = QWord, value = 2, defaultValue = 1
+2017-03-20 16:17:46.627 []: Loading parameter: name = DevStatisticsEnabled, type = Bool, value = true, defaultValue = false
+2017-03-20 16:17:46.628 []: Loading HR parameter: name = timestamp, type = QWord, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.628 [Device]: voltage1: thresholdHigh = 230
+2017-03-20 16:17:46.628 [Device]: voltage1: thresholdLow = 200
+2017-03-20 16:17:46.628 []: Loading HR parameter: name = voltage1, type = Float, defaultValue = 0.1, statisticsEnabled = true
+2017-03-20 16:17:46.628 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.628 [Device]: current1: thresholdHigh = 100
+2017-03-20 16:17:46.628 [Device]: current1: thresholdLow = 0
+2017-03-20 16:17:46.628 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.628 [Device]: active_power1: thresholdHigh = 100
+2017-03-20 16:17:46.628 []: Loading HR parameter: name = current1, type = Float, defaultValue = 0.2, statisticsEnabled = true
+2017-03-20 16:17:46.628 [Device]: active_power1: thresholdLow = 0
+2017-03-20 16:17:46.628 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.628 []: Loading HR parameter: name = active_power1, type = Float, defaultValue = 0.3, statisticsEnabled = true
+2017-03-20 16:17:46.628 [Device]: reactive_power1: thresholdHigh = 100
+2017-03-20 16:17:46.628 [Device]: reactive_power1: thresholdLow = 0
+2017-03-20 16:17:46.628 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.628 [Device]: apparent_power1: thresholdHigh = 100
+2017-03-20 16:17:46.628 [Device]: apparent_power1: thresholdLow = 0
+2017-03-20 16:17:46.628 []: Loading HR parameter: name = reactive_power1, type = Float, defaultValue = 0.4, statisticsEnabled = true
+2017-03-20 16:17:46.628 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.628 []: Loading HR parameter: name = apparent_power1, type = Float, defaultValue = 0.5, statisticsEnabled = true
+2017-03-20 16:17:46.628 [Device]: power_factor1: thresholdHigh = 100
+2017-03-20 16:17:46.628 [Device]: power_factor1: thresholdLow = 0
+2017-03-20 16:17:46.628 []: Loading HR parameter: name = power_factor1, type = Float, defaultValue = 0.6, statisticsEnabled = false
+2017-03-20 16:17:46.628 [Device]: frequency1: thresholdHigh = 65
+2017-03-20 16:17:46.628 [Device]: frequency1: thresholdLow = 45
+2017-03-20 16:17:46.628 []: Loading HR parameter: name = frequency1, type = Float, defaultValue = 0.7, statisticsEnabled = false
+2017-03-20 16:17:46.629 [Device]: voltage2: thresholdHigh = 230
+2017-03-20 16:17:46.629 [Device]: voltage2: thresholdLow = 200
+2017-03-20 16:17:46.629 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = voltage2, type = Float, defaultValue = 0.1, statisticsEnabled = true
+2017-03-20 16:17:46.629 [Device]: current2: thresholdHigh = 100
+2017-03-20 16:17:46.629 [Device]: current2: thresholdLow = 0
+2017-03-20 16:17:46.629 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = current2, type = Float, defaultValue = 0.2, statisticsEnabled = true
+2017-03-20 16:17:46.629 [Device]: active_power2: thresholdHigh = 100
+2017-03-20 16:17:46.629 [Device]: active_power2: thresholdLow = 0
+2017-03-20 16:17:46.629 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = active_power2, type = Float, defaultValue = 0.3, statisticsEnabled = true
+2017-03-20 16:17:46.629 [Device]: reactive_power2: thresholdHigh = 100
+2017-03-20 16:17:46.629 [Device]: reactive_power2: thresholdLow = 0
+2017-03-20 16:17:46.629 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = reactive_power2, type = Float, defaultValue = 0.4, statisticsEnabled = true
+2017-03-20 16:17:46.629 [Device]: apparent_power2: thresholdHigh = 100
+2017-03-20 16:17:46.629 [Device]: apparent_power2: thresholdLow = 0
+2017-03-20 16:17:46.629 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = apparent_power2, type = Float, defaultValue = 0.5, statisticsEnabled = true
+2017-03-20 16:17:46.629 [Device]: power_factor2: thresholdHigh = 100
+2017-03-20 16:17:46.629 [Device]: power_factor2: thresholdLow = 0
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = power_factor2, type = Float, defaultValue = 0.6, statisticsEnabled = false
+2017-03-20 16:17:46.629 [Device]: frequency2: thresholdHigh = 65
+2017-03-20 16:17:46.629 [Device]: frequency2: thresholdLow = 45
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = frequency2, type = Float, defaultValue = 0.7, statisticsEnabled = false
+2017-03-20 16:17:46.629 [Device]: voltage3: thresholdHigh = 230
+2017-03-20 16:17:46.629 [Device]: voltage3: thresholdLow = 200
+2017-03-20 16:17:46.629 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = voltage3, type = Float, defaultValue = 0.1, statisticsEnabled = true
+2017-03-20 16:17:46.629 [Device]: current3: thresholdHigh = 100
+2017-03-20 16:17:46.629 [Device]: current3: thresholdLow = 0
+2017-03-20 16:17:46.629 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.629 []: Loading HR parameter: name = current3, type = Float, defaultValue = 0.2, statisticsEnabled = true
+2017-03-20 16:17:46.629 [Device]: active_power3: thresholdHigh = 100
+2017-03-20 16:17:46.630 [Device]: active_power3: thresholdLow = 0
+2017-03-20 16:17:46.630 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.630 []: Loading HR parameter: name = active_power3, type = Float, defaultValue = 0.3, statisticsEnabled = true
+2017-03-20 16:17:46.630 [Device]: reactive_power3: thresholdHigh = 100
+2017-03-20 16:17:46.630 [Device]: reactive_power3: thresholdLow = 0
+2017-03-20 16:17:46.630 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.630 []: Loading HR parameter: name = reactive_power3, type = Float, defaultValue = 0.4, statisticsEnabled = true
+2017-03-20 16:17:46.630 [Device]: apparent_power3: thresholdHigh = 100
+2017-03-20 16:17:46.630 [Device]: apparent_power3: thresholdLow = 0
+2017-03-20 16:17:46.630 [Device]: statisticsEnabled = true
+2017-03-20 16:17:46.630 []: Loading HR parameter: name = apparent_power3, type = Float, defaultValue = 0.5, statisticsEnabled = true
+2017-03-20 16:17:46.630 [Device]: power_factor3: thresholdHigh = 100
+2017-03-20 16:17:46.630 [Device]: power_factor3: thresholdLow = 0
+2017-03-20 16:17:46.630 []: Loading HR parameter: name = power_factor3, type = Float, defaultValue = 0.6, statisticsEnabled = false
+2017-03-20 16:17:46.630 [Device]: frequency3: thresholdHigh = 65
+2017-03-20 16:17:46.630 [Device]: frequency3: thresholdLow = 45
+2017-03-20 16:17:46.630 []: Loading HR parameter: name = frequency3, type = Float, defaultValue = 0.7, statisticsEnabled = false
+2017-03-20 16:17:46.630 [CloudMgr]: -- addDevice
+2017-03-20 16:17:46.630 [CloudMgr]: -- ApplyParams
+2017-03-20 16:17:46.630 [Device]: PowerMeter: HRFrequency = 2
+2017-03-20 16:17:46.630 [Device]: PowerMeter: HRHistoryMin = 2
+2017-03-20 16:17:46.630 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:17:46.630 [HRData]: setRecordsBufferSize: 240
+2017-03-20 16:17:46.630 [HRData]: HRBufferSize: 42240, RecordSize: 176
+2017-03-20 16:17:46.630 [Device]: PowerMeter: DevStatisticsEnabled = true
+2017-03-20 16:17:46.630 [CloudMgr]: -- Done
+2017-03-20 16:17:46.630 []: Loading configuration for gps(GPS)
+2017-03-20 16:17:46.630 [CloudMgr]: -- preInit
+2017-03-20 16:17:46.630 [CloudMgr]: -- initialize
+2017-03-20 16:17:46.630 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:17:46.630 []: Loading parameter: name = HRFrequency, type = QWord, value = 1, defaultValue = 1
+2017-03-20 16:17:46.631 []: Loading parameter: name = HRHistoryMin, type = QWord, value = 1, defaultValue = 1
+2017-03-20 16:17:46.631 []: Loading parameter: name = DevStatisticsEnabled, type = Bool, value = false, defaultValue = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = timestamp, type = QWord, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = latitude, type = Double, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 [Device]: statisticsEnabled = false
+2017-03-20 16:17:46.631 [Device]: statisticsEnabled = false
+2017-03-20 16:17:46.631 [Device]: statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = longitude, type = Double, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 [Device]: statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = altitude, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = satelliteNumber, type = Word, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 [Device]: statisticsEnabled = false
+2017-03-20 16:17:46.631 [Device]: statisticsEnabled = false
+2017-03-20 16:17:46.631 [CloudMgr]: -- addDevice
+2017-03-20 16:17:46.631 [CloudMgr]: -- ApplyParams
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = time, type = QWord, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 [Device]: GPS: HRFrequency = 1
+2017-03-20 16:17:46.631 [Device]: GPS: HRHistoryMin = 1
+2017-03-20 16:17:46.631 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:17:46.631 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:17:46.631 [HRData]: HRBufferSize: 2280, RecordSize: 38
+2017-03-20 16:17:46.631 [Device]: GPS: DevStatisticsEnabled = false
+2017-03-20 16:17:46.631 [CloudMgr]: -- Done
+2017-03-20 16:17:46.631 []: Loading configuration for accelerometer(AccCore)
+2017-03-20 16:17:46.631 [CloudMgr]: -- preInit
+2017-03-20 16:17:46.631 [CloudMgr]: -- initialize
+2017-03-20 16:17:46.631 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = accX, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = accY, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = accZ, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = gyroX, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = gyroY, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = gyroZ, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 [CloudMgr]: -- addDevice
+2017-03-20 16:17:46.631 [CloudMgr]: -- ApplyParams
+2017-03-20 16:17:46.631 [Device]: AccCore: HRFrequency = 1
+2017-03-20 16:17:46.631 [Device]: AccCore: HRHistoryMin = 1
+2017-03-20 16:17:46.631 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:17:46.631 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:17:46.631 [HRData]: HRBufferSize: 1920, RecordSize: 32
+2017-03-20 16:17:46.631 [Device]: AccCore: DevStatisticsEnabled = false
+2017-03-20 16:17:46.631 [CloudMgr]: -- Done
+2017-03-20 16:17:46.631 []: Loading configuration for accelerometer_inverted(AccPCB)
+2017-03-20 16:17:46.631 [CloudMgr]: -- preInit
+2017-03-20 16:17:46.631 [CloudMgr]: -- initialize
+2017-03-20 16:17:46.631 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = accX, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = accY, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = accZ, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = gyroX, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = gyroY, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 []: Loading HR parameter: name = gyroZ, type = Int, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.631 [CloudMgr]: -- addDevice
+2017-03-20 16:17:46.631 [CloudMgr]: -- ApplyParams
+2017-03-20 16:17:46.631 [Device]: AccPCB: HRFrequency = 1
+2017-03-20 16:17:46.631 [Device]: AccPCB: HRHistoryMin = 1
+2017-03-20 16:17:46.631 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:17:46.631 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:17:46.631 [HRData]: HRBufferSize: 1920, RecordSize: 32
+2017-03-20 16:17:46.631 [Device]: AccPCB: DevStatisticsEnabled = false
+2017-03-20 16:17:46.631 [CloudMgr]: -- Done
+2017-03-20 16:17:46.631 []: Loading configuration for temperature(TempPCB)
+2017-03-20 16:17:46.631 [CloudMgr]: -- preInit
+2017-03-20 16:17:46.632 [CloudMgr]: -- initialize
+2017-03-20 16:17:46.632 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:17:46.632 []: Loading HR parameter: name = temperature, type = Float, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.632 [CloudMgr]: -- addDevice
+2017-03-20 16:17:46.632 [CloudMgr]: -- ApplyParams
+2017-03-20 16:17:46.632 [Device]: TempPCB: HRFrequency = 1
+2017-03-20 16:17:46.632 [Device]: TempPCB: HRHistoryMin = 1
+2017-03-20 16:17:46.632 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:17:46.632 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:17:46.632 [HRData]: HRBufferSize: 960, RecordSize: 16
+2017-03-20 16:17:46.632 [Device]: TempPCB: DevStatisticsEnabled = false
+2017-03-20 16:17:46.632 [CloudMgr]: -- Done
+2017-03-20 16:17:46.632 []: Loading configuration for cpu_temp(TempCPU)
+2017-03-20 16:17:46.632 [CloudMgr]: -- preInit
+2017-03-20 16:17:46.632 [CloudMgr]: -- initialize
+2017-03-20 16:17:46.632 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:17:46.632 []: Loading HR parameter: name = temperature, type = Float, defaultValue = 0, statisticsEnabled = false
+2017-03-20 16:17:46.632 [CloudMgr]: -- addDevice
+2017-03-20 16:17:46.632 [CloudMgr]: -- ApplyParams
+2017-03-20 16:17:46.632 [Device]: TempCPU: HRFrequency = 1
+2017-03-20 16:17:46.632 [Device]: TempCPU: HRHistoryMin = 1
+2017-03-20 16:17:46.632 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:17:46.632 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:17:46.632 [HRData]: HRBufferSize: 960, RecordSize: 16
+2017-03-20 16:17:46.632 [Device]: TempCPU: DevStatisticsEnabled = false
+2017-03-20 16:17:46.632 [CloudMgr]: -- Done
+2017-03-20 16:17:46.632 []: Loading configuration for disclosing_sensor(TamperSwitch)
+2017-03-20 16:17:46.632 [CloudMgr]: -- preInit
+2017-03-20 16:17:46.632 [CloudMgr]: -- initialize
+2017-03-20 16:17:46.632 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:17:46.632 []: Loading HR parameter: name = closed, type = Bool, defaultValue = true, statisticsEnabled = false
+2017-03-20 16:17:46.632 [CloudMgr]: -- addDevice
+2017-03-20 16:17:46.632 [CloudMgr]: -- ApplyParams
+2017-03-20 16:17:46.632 [Device]: TamperSwitch: HRFrequency = 1
+2017-03-20 16:17:46.632 [Device]: TamperSwitch: HRHistoryMin = 1
+2017-03-20 16:17:46.632 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:17:46.632 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:17:46.632 [HRData]: HRBufferSize: 540, RecordSize: 9
+2017-03-20 16:17:46.632 [Device]: TamperSwitch: DevStatisticsEnabled = false
+2017-03-20 16:17:46.632 [CloudMgr]: -- Done
+2017-03-20 16:17:46.632 []: Loading configuration for general(General)
+2017-03-20 16:17:46.632 [CloudMgr]: -- preInit
+2017-03-20 16:17:46.632 [CloudMgr]: -- initialize
+2017-03-20 16:17:46.632 [CloudMgr]: -- LoadConfiguration
+2017-03-20 16:17:46.632 []: Loading parameter: name = RegularMsgTransmissionRate, type = QWord, value = 1, defaultValue = 5
+2017-03-20 16:17:46.632 []: Loading parameter: name = AutoHrEnabled, type = Bool, value = false, defaultValue = false
+2017-03-20 16:17:46.632 []: Loading parameter: name = DeviceID, type = String, value = NGM-SIMDEV-02, defaultValue = DEV_ID
+2017-03-20 16:17:46.632 [CloudMgr]: -- addDevice
+2017-03-20 16:17:46.632 [CloudMgr]: -- ApplyParams
+2017-03-20 16:17:46.632 [Device]: General: HRFrequency = 1
+2017-03-20 16:17:46.632 [Device]: General: HRHistoryMin = 1
+2017-03-20 16:17:46.632 [Device]: Parameter HRHistoryMin: pass
+2017-03-20 16:17:46.632 [HRData]: setRecordsBufferSize: 60
+2017-03-20 16:17:46.632 [HRData]: HRBufferSize: 480, RecordSize: 8
+2017-03-20 16:17:46.632 [Device]: General: DevStatisticsEnabled = false
+2017-03-20 16:17:46.632 [Device]: General: RegularMsgTransmissionRate = 1
+2017-03-20 16:17:46.632 [Device]: General: AutoHrEnabled = false
+2017-03-20 16:17:46.632 [Device]: General: DeviceID = NGM-SIMDEV-02
+2017-03-20 16:17:46.632 [Device]: General: MqttHost = A7RDHYR0RGGZ.iot.us-west-2.amazonaws.com
+2017-03-20 16:17:46.632 [Device]: General: MqttPort = 8883
+2017-03-20 16:17:46.632 [CloudMgr]: -- Done
+2017-03-20 16:17:46.632 [HRStat]: Statistics thread for <PowerMeter> is started!
+2017-03-20 16:17:46.632 [Device]: Device PowerMeter started!
+2017-03-20 16:17:46.633 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:17:46.633 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:17:46.633 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:17:46.633 [Device]: Device GPS started!
+2017-03-20 16:17:46.633 [Device]: Connecting to <GPS>
+2017-03-20 16:17:46.633 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:17:46.633 [Device]: Device AccCore started!
+2017-03-20 16:17:46.633 [Device]: Connecting to <AccCore>
+2017-03-20 16:17:46.633 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:17:46.633 [Device]: Device AccPCB started!
+2017-03-20 16:17:46.633 [Device]: Connecting to <AccPCB>
+2017-03-20 16:17:46.633 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:17:46.634 [Device]: Device TempPCB started!
+2017-03-20 16:17:46.634 [Device]: Connecting to <TempPCB>
+2017-03-20 16:17:46.634 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:17:46.634 [Device]: Device TempCPU started!
+2017-03-20 16:17:46.634 [Device]: Connecting to <TempCPU>
+2017-03-20 16:17:46.634 [Device]: Starting reading data loop for TempCPU
+2017-03-20 16:17:46.634 [Device]: Device TamperSwitch started!
+2017-03-20 16:17:46.634 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:17:46.634 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:17:46.634 [Device]: Device General started!
+2017-03-20 16:17:46.634 [Device]: Connecting to <General>
+2017-03-20 16:17:46.634 [Device]: Starting reading data loop for General
+2017-03-20 16:17:46.634 [CloudMgr]: Shadow Loop started!
+2017-03-20 16:17:46.634 [AwsShadow]: Shadow Init
+2017-03-20 16:17:46.634 [AwsShadow]: Shadow Connect
+2017-03-20 16:17:46.634 [CloudMgr]: Events Loop started!
+2017-03-20 16:17:46.635 [CloudMgr]: Commands Thread Started...
+2017-03-20 16:17:46.935 [] Warn: Mosquitto not connected...
+2017-03-20 16:17:47.936 [CloudMgr]: AWS Client connecting....
+2017-03-20 16:17:47.936 [AwsClient]: Connecting...
+2017-03-20 16:17:48.633 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:17:48.633 [Device]: Connecting to <GPS>
+2017-03-20 16:17:48.633 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:17:48.633 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:17:48.633 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:17:48.633 [Device]: Connecting to <AccCore>
+2017-03-20 16:17:48.633 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:17:48.634 [Device]: Connecting to <AccPCB>
+2017-03-20 16:17:48.634 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:17:48.634 [Device]: Connecting to <TempPCB>
+2017-03-20 16:17:48.634 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:17:48.634 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:17:48.634 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:17:48.836 [CloudMgr]: register_delta PowerMeter successful!
+2017-03-20 16:17:48.836 [CloudMgr]: register_delta GPS successful!
+2017-03-20 16:17:48.836 [CloudMgr]: register_delta AccCore successful!
+2017-03-20 16:17:48.836 [CloudMgr]: register_delta AccPCB successful!
+2017-03-20 16:17:48.836 [CloudMgr]: register_delta TempPCB successful!
+2017-03-20 16:17:48.836 [CloudMgr]: register_delta TempCPU successful!
+2017-03-20 16:17:48.836 [CloudMgr]: register_delta TamperSwitch successful!
+2017-03-20 16:17:48.836 [CloudMgr]: register_delta General successful!
+2017-03-20 16:17:49.496 [CloudMgr]: AWS Client is connected!!!
+2017-03-20 16:17:49.797 [] Warn: Mosquitto not connected...
+2017-03-20 16:18:17.124 []: AWS Client is connected!!!
+2017-03-20 16:18:17.124 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:17.124 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:17.124 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:17.124 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:17.124 [Device]: Connecting to <GPS>
+2017-03-20 16:18:17.124 [CloudMgr]: Subscribing to "iot/device/NGM-SIMDEV-02/command":32
+2017-03-20 16:18:17.124 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:17.124 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:17.124 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:17.124 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:17.124 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:17.124 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:17.124 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:17.124 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:17.124 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:17.124 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:17.124 [CloudMgr]: delete shadow
+2017-03-20 16:18:17.124 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:20.043 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:20.043 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:20.043 [Device]: Connecting to <GPS>
+2017-03-20 16:18:20.043 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:20.043 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:20.043 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:20.044 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:20.044 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:20.043 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:20.044 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:20.044 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:20.044 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:20.044 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:20.044 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:20.044 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:20.044 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:25.699 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:25.699 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:25.699 [Device]: Connecting to <GPS>
+2017-03-20 16:18:25.699 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:25.699 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:25.699 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:25.699 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:25.699 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:25.699 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:25.699 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:25.699 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:25.699 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:25.699 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:25.699 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:25.699 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:25.699 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:32.530 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:32.530 [Device]: Connecting to <GPS>
+2017-03-20 16:18:32.530 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:32.530 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:32.530 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:32.530 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:32.530 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:32.530 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:32.530 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:32.530 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:32.530 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:32.530 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:32.530 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:32.530 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:32.531 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:32.531 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:36.219 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:36.219 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:36.219 [Device]: Connecting to <GPS>
+2017-03-20 16:18:36.219 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:36.219 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:36.219 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:36.219 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:36.219 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:36.219 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:36.219 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:36.219 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:36.219 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:36.219 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:36.219 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:36.219 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:36.220 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:38.332 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:38.332 [Device]: Connecting to <GPS>
+2017-03-20 16:18:38.332 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:38.332 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:38.332 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:38.332 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:38.332 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:38.332 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:38.332 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:38.332 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:38.332 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:38.332 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:38.332 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:38.332 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:38.332 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:38.332 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:41.283 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:41.283 [Device]: Connecting to <GPS>
+2017-03-20 16:18:41.283 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:41.283 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:41.283 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:41.283 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:41.283 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:41.283 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:41.283 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:41.283 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:41.283 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:41.283 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:41.283 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:41.283 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:41.283 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:41.283 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:43.404 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:43.404 [Device]: Connecting to <GPS>
+2017-03-20 16:18:43.404 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:43.405 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:43.405 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:43.405 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:43.405 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:43.405 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:43.405 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:43.405 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:43.405 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:43.405 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:43.405 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:43.405 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:43.405 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:43.405 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:45.899 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:45.899 [Device]: Connecting to <GPS>
+2017-03-20 16:18:45.899 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:45.899 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:45.899 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:45.899 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:45.899 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:45.899 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:45.899 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:45.899 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:45.899 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:45.899 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:45.899 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:48.882 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:48.882 [Device]: Connecting to <GPS>
+2017-03-20 16:18:48.882 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:48.882 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:48.882 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:48.882 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:48.882 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:48.882 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:48.882 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:48.882 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:48.882 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:48.882 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:48.882 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:48.882 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:48.882 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:48.882 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:51.355 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:51.355 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:51.355 [Device]: Connecting to <GPS>
+2017-03-20 16:18:51.355 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:51.355 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:51.355 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:51.355 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:51.355 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:51.355 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:51.355 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:51.355 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:51.355 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:51.355 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:51.355 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:51.355 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:51.355 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:54.259 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:54.259 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:54.259 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:54.259 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:54.259 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:54.259 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:54.259 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:54.259 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:54.259 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:54.259 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:54.259 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:54.259 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:54.259 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:54.259 [Device]: Connecting to <GPS>
+2017-03-20 16:18:54.260 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:54.260 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:56.953 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:56.953 [Device]: Connecting to <GPS>
+2017-03-20 16:18:56.953 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:56.953 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:56.953 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:56.953 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:56.953 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:18:56.953 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:56.953 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:56.953 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:56.953 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:56.953 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:56.953 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:56.953 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:56.953 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:56.953 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:59.185 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:18:59.185 [Device]: Connecting to <GPS>
+2017-03-20 16:18:59.185 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:18:59.185 [Device]: Connecting to <AccCore>
+2017-03-20 16:18:59.185 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:18:59.185 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:18:59.185 [Device]: Connecting to <TempPCB>
+2017-03-20 16:18:59.185 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:18:59.185 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:18:59.185 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:18:59.185 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:18:59.185 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:18:59.185 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:18:59.185 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:18:59.185 [Device]: Connecting to <AccPCB>
+2017-03-20 16:18:59.185 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:19:00.811 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:19:00.811 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:19:00.811 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:19:01.731 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:19:01.731 [Device]: Connecting to <GPS>
+2017-03-20 16:19:01.731 [Device]: Connecting to <AccCore>
+2017-03-20 16:19:01.731 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:19:01.731 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:19:01.731 [Device]: Connecting to <AccPCB>
+2017-03-20 16:19:01.731 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:19:01.731 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:19:01.731 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:19:01.731 [Device]: Connecting to <TempPCB>
+2017-03-20 16:19:01.731 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:19:01.731 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:19:01.731 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:19:04.347 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:19:04.347 [Device]: Connecting to <GPS>
+2017-03-20 16:19:04.347 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:19:04.347 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:19:04.347 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:19:04.347 [Device]: Connecting to <AccCore>
+2017-03-20 16:19:04.347 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:19:04.347 [Device]: Connecting to <TempPCB>
+2017-03-20 16:19:04.347 [Device]: Connecting to <AccPCB>
+2017-03-20 16:19:04.348 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:19:04.348 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:19:04.348 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:19:04.348 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:19:09.075 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:19:09.075 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:19:09.075 [Device]: Connecting to <AccCore>
+2017-03-20 16:19:09.075 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:19:09.075 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:19:09.075 [Device]: Connecting to <GPS>
+2017-03-20 16:19:09.075 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:19:09.075 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:19:09.075 [Device]: Connecting to <TempPCB>
+2017-03-20 16:19:09.075 [Device]: Connecting to <AccPCB>
+2017-03-20 16:19:09.075 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:19:09.075 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:19:09.075 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:19:09.075 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:19:09.075 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:19:09.075 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:19:11.587 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:19:11.587 [Device]: Connecting to <AccPCB>
+2017-03-20 16:19:11.587 [Device]: Connecting to <GPS>
+2017-03-20 16:19:11.587 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:19:11.587 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:19:11.587 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:19:11.587 [Device]: Connecting to <AccCore>
+2017-03-20 16:19:11.587 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:19:11.587 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:19:11.587 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:19:11.587 [Device]: Connecting to <TempPCB>
+2017-03-20 16:19:11.587 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:19:11.587 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:19:21.867 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:19:21.867 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:19:21.867 [Device]: Connecting to <AccCore>
+2017-03-20 16:19:21.867 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:19:21.867 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:19:21.867 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:19:21.867 [Device]: Connecting to <GPS>
+2017-03-20 16:19:21.867 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:19:21.867 [Device]: Connecting to <TempPCB>
+2017-03-20 16:19:21.867 [Device]: Connecting to <AccPCB>
+2017-03-20 16:19:21.867 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:19:21.867 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:19:21.867 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:19:21.867 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:19:21.867 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:19:21.867 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:19:26.859 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:19:26.859 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:19:26.859 [Device]: Connecting to <GPS>
+2017-03-20 16:19:26.859 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:19:26.859 [Device]: Connecting to <AccCore>
+2017-03-20 16:19:26.859 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:19:26.859 [Device]: Connecting to <TempPCB>
+2017-03-20 16:19:26.859 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:19:26.859 [Device]: Connecting to <AccPCB>
+2017-03-20 16:19:26.859 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:19:26.859 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:19:26.859 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:19:26.859 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:19:26.859 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:19:26.859 [Device] Warn: <General> reading data too slow!...
+2017-03-20 16:19:26.859 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:19:31.276 [Device]: Connecting to <PowerMeter>
+2017-03-20 16:19:31.276 [HRStat] Warn: Statistics thread for <PowerMeter> too slow!...
+2017-03-20 16:19:31.276 [Device]: Connecting to <AccCore>
+2017-03-20 16:19:31.276 [Serial] Error: open: /dev/ttymxc3 failed... -1
+2017-03-20 16:19:31.276 [Spi] Error: can't open /dev/spidev0.0
+2017-03-20 16:19:31.276 [Device]: Connecting to <GPS>
+2017-03-20 16:19:31.276 [Msp430] Error: Can't open /dev/ttymxc3 for read...
+2017-03-20 16:19:31.276 [Serial] Error: open: /dev/ttyACM0 failed... -1
+2017-03-20 16:19:31.276 [Device]: Connecting to <AccPCB>
+2017-03-20 16:19:31.276 [Device]: Connecting to <TempPCB>
+2017-03-20 16:19:31.276 [I2c] Error: I2C-1: failed to set slave address 72
+2017-03-20 16:19:31.276 [Device]: Connecting to <TamperSwitch>
+2017-03-20 16:19:31.276 [Spi] Error: can't open /dev/spidev2.0
+2017-03-20 16:19:31.276 [Device] Warn: <TempCPU> reading data too slow!...
+2017-03-20 16:19:31.276 [I2c] Error: I2C-1: failed to set slave address 50
+2017-03-20 16:19:31.276 [Device] Warn: <General> reading data too slow!...

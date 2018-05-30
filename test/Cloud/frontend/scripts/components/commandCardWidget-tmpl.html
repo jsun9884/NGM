@@ -1,0 +1,109 @@
+<div class="md-padding" style="padding-right: 5px; padding-bottom: 5px; ">
+    <ms-widget flippable="true" class="" layout="column" flex="100" ng-class="{'flipped': ctrl.custom_flipped} {{ctrl.custom_flipped}}">
+        <ms-widget-front class="">
+            <md-toolbar style="min-height:42px;max-height: 42px" md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2><span>{{$ctrl.card.title}}</span></h2>
+                    <span flex></span>
+                    <md-button md-raised md-warn ng-show="!$ctrl.commandFlow.progressMode && $ctrl.commandFlow.cmd.hasParams && !$ctrl.card.defaultParameter" class="md-icon-button launch" ng-click="flipWidget()" style="width: 38px; padding: 8px 2px;">
+                        <md-tooltip md-direction="top">Edit parameters</md-tooltip>
+                        <md-icon style="color: #888888; display: inline-block;">settings</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content class="md-padding">
+                <div ng-if="!$ctrl.commandFlow.resultMode && !$ctrl.commandFlow.progressMode"
+                     layout="column"
+                     style="min-width: 256px; max-width: 256px; min-height: 300px; max-height: 300px" >
+                    <md-subheader class="md-no-sticky" style="line-height: 20px">{{$ctrl.card.description}}</md-subheader>
+                    <span flex></span>
+                    <md-button class="md-raised md-warn" ng-click="$ctrl.send()" ng-disabled="!$ctrl.activeDeviceIsOnline">Send</md-button>
+                </div>
+
+                <div ng-if="$ctrl.commandFlow.resultMode || $ctrl.commandFlow.progressMode"
+                     layout="column"
+                     layout-align="center center"
+                     style="min-width: 256px; max-width: 256px; min-height: 300px; max-height: 300px">
+
+                    <div ng-if="$ctrl.commandFlow.resultMode" layout="run" layout-align="right top" flex>
+                        <div layout="row">
+                            <md-button ng-if="$ctrl.commandFlow.resultMode" ng-click="$ctrl.commandFlow.resultMode = false" class="md-icon-button" style="position: absolute; right: 0px; top: 0px;">
+                                <md-icon>close</md-icon>
+                            </md-button>
+                        </div>
+                        <div layout="column">
+                            <div layout="row" style="font-weight: bold; padding: 10px 0">{{$ctrl.commandFlow.state.metaData.error}}</div>
+                            <div layout="row" style="">{{$ctrl.commandFlow.state.metaData.message}}</div>
+                        </div>
+                        <span flex></span>
+                    </div>
+
+                    <div ng-if="$ctrl.commandFlow.progressMode"
+                         layout="column" layout-align="center center" flex>
+                        <md-progress-circular md-diameter="60" md-mode="indeterminate"></md-progress-circular>
+                    </div>
+
+                    <span flex></span>
+                    <div style="text-align: center">
+                        <p>{{$ctrl.commandFlow.cmd.description}}</p>
+                        <p>Status:&nbsp;<span style="font-weight: bold">{{$ctrl.commandFlow.state.execCmdState}}</span></p>
+                    </div>
+                </div>
+                <div ng-if="!$ctrl.commandFlow.state.execCmdState"
+                     layout="column"
+                     layout-align="center center"
+                     style="min-width: 256px; max-width: 256px; min-height: 300px; max-height: 300px">
+                    <div layout="row" layout-align="center center">
+                        <md-subheader class="md-no-sticky" style="color: #ff0000">Can't get response command state</md-subheader>
+                    </div>
+                    <span flex></span>
+                    <div layout="row">
+                        <p>Status:</p>
+                        <span flex></span>
+                        <p>unknown</p>
+                    </div>
+                </div>
+            </md-content>
+        </ms-widget-front>
+        <ms-widget-back class="p-16 light-blue-bg white-fg">
+            <md-toolbar style="min-height:42px; max-height: 42px" class="flip-to-front" md-colors="{background: 'grey-50', color: 'grey-900'}" >
+                <div class="md-toolbar-tools">
+                    <h2><span>{{$ctrl.commandFlow.cmd.displayName}} (parameters)</span></h2>
+                    <span flex></span>
+                    <md-button md-raised md-warn ng-show="!$ctrl.commandFlow.progressMode && $ctrl.commandFlow.cmd.hasParams" class="md-icon-button launch" ng-click="flipWidget()" style="width: 38px; padding: 8px 2px;">
+                        <md-tooltip md-direction="top">close</md-tooltip>
+                        <md-icon md-colors="{color: 'grey-900'}" style="display: inline-block;">close</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content class="md-padding">
+
+                <div class="" ng-class="{expanded : $ctrl.paramsExpanded}"
+                     layout="column"
+                     style="min-width: 256px; max-width: 256px; min-height: 300px; max-height: 300px" >
+
+                    <md-content layout="column" class="md-padding">
+                        <form>
+                            <md-input-container ng-repeat="param in $ctrl.commandFlow.cmd.params" style="width: 100%">
+                                <label ng-if="!param.options" style="{{param.attributes.type == 'file' ? 'text-align: right' : ''}}">{{param.caption}} </label>
+                                <input ng-if="!param.options" ng-model="param.value" ng-required='param.required' dynamic-attrs="param.attributes" />
+
+                                <label ng-if="param.options" style="position: relative; ">{{param.caption}} </label>
+
+                                <md-select aria-label="Regular Messages"
+                                           ng-if="param.options" ng-model="param.value"
+                                >
+                                    <md-option ng-repeat="(key, option) in param.options" value="{{key}}">
+                                        <span ng-bind-html="option"></span>
+                                    </md-option>
+                                </md-select>
+
+                            </md-input-container>
+                        </form>
+
+                    </md-content>
+                </div>
+            </md-content>
+        </ms-widget-back>
+    </ms-widget>
+</div>

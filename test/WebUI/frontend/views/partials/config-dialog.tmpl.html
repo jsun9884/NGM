@@ -1,0 +1,212 @@
+<md-dialog aria-label="New Configuration" ng-cloak>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>New Configuration</h2>
+                <span flex></span>
+                <md-button class="md-icon-button"
+                           ng-click="cancel()">
+                    <md-icon aria-label="Close dialog">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content style="max-width:450px; min-width:450px;max-height:810px;">
+            <div class="md-dialog-content">
+                <md-list>
+                    <!-- -------------------- Power Meter ------------------------ -->
+ <!--                   <h3 class="md-subhead md-no-sticky">
+                        <span class="item-title">Power Meter</span>
+                    </h3>
+                    <md-divider></md-divider>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">warning</md-icon>
+                        <p>Voltage Threshold</p>
+                        <md-input-container style="margin: 0" class="md-block" md-no-float>
+                            <input flex
+                                   aria-label="Voltage Threshold"
+                                   style="max-width: 80px"
+                                   type="number"
+                                   ng-model="config.sensors.powerMeter.voltageThreshold"
+                                    >
+                        </md-input-container>
+                    </md-list-item>
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">warning</md-icon>
+                        <p>Power Threshold</p>
+                        <md-input-container style="margin: 0" class="md-block" md-no-float>
+                            <input flex style="max-width: 80px"
+                                   aria-label="Power Threshold"
+                                   type="number"
+                                   ng-model="config.sensors.powerMeter.powerThreshold">
+                        </md-input-container>
+                    </md-list-item>
+-->
+                    <!-- -------------------- APN Settings ------------------------ -->
+                    <h3 class="md-subhead md-no-sticky">
+                        <span class="item-title">APN Settings</span>
+                    </h3>
+                    <md-divider></md-divider>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">network_cell</md-icon>
+                        <p>GSM APN</p>
+                        <md-input-container style="margin: 0" class="md-block" md-no-float>
+                            <input flex
+                                   aria-label="GSM APN"
+                                   style="max-width: 80px"
+                                   type="text"
+                                   ng-model="config.General.GsmApn"
+                            />
+                        </md-input-container>
+                    </md-list-item>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">network_cell</md-icon>
+                        <p>GSM Number</p>
+                        <md-input-container style="margin: 0" class="md-block" md-no-float>
+                            <input flex
+                                   aria-label="GSM Number"
+                                   style="max-width: 80px"
+                                   type="text"
+                                   ng-model="config.General.GsmNumber"
+                            />
+                        </md-input-container>
+                    </md-list-item>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">network_cell</md-icon>
+                        <p>GSM Username</p>
+                        <md-input-container style="margin: 0" class="md-block" md-no-float>
+                            <input flex
+                                   aria-label="GSM Username"
+                                   style="max-width: 80px"
+                                   type="text"
+                                   ng-model="config.General.GsmUsername"
+                            />
+                        </md-input-container>
+                    </md-list-item>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">network_cell</md-icon>
+                        <p>GSM Password</p>
+                        <md-input-container style="margin: 0" class="md-block" md-no-float>
+                            <input flex
+                                   aria-label="GSM Password"
+                                   style="max-width: 80px"
+                                   type="text"
+                                   ng-model="config.General.GsmPassword"
+                            />
+                        </md-input-container>
+                    </md-list-item>
+<!--
+
+                    &lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Data Switch &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;
+                    <h3 class="md-subhead md-no-sticky">
+                        <span class="item-title">Data Switch</span>
+                    </h3>
+                    <md-divider></md-divider>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">settings_input_component</md-icon>
+                        <p> Open / Close Data Port A </p>
+                        <md-switch class="md-secondary"
+                                   ng-model="config.sensors.dataSwitch.portAOpened">
+                        </md-switch>
+                    </md-list-item>
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">settings_input_component</md-icon>
+                        <p> Open / Close Data Port B </p>
+                        <md-switch class="md-secondary"
+                                   ng-model="config.sensors.dataSwitch.portBOpened">
+                        </md-switch>
+                    </md-list-item>
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">settings_input_component</md-icon>
+                        <p> Open / Close Data Port C </p>
+                        <md-switch class="md-secondary"
+                                   ng-model="config.sensors.dataSwitch.portCOpened">
+                        </md-switch>
+                    </md-list-item>
+
+                    &lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Bluetooth &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;
+                    <h3 class="md-subhead md-no-sticky">
+                        <span class="item-title">Bluetooth</span>
+                    </h3>
+                    <md-divider></md-divider>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">bluetooth</md-icon>
+                        <p>Enabled / Disable Bluetooth</p>
+                        <md-switch class="md-secondary" ng-model="config.sensors.blueTooth.enabled"></md-switch>
+                    </md-list-item>
+
+                    &lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; ZigBee &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;
+                    <h3 class="md-subhead md-no-sticky">
+                        <span class="item-title">ZigBee</span>
+                    </h3>
+                    <md-divider></md-divider>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">settings_remote</md-icon>
+                        <p>Enabled / Disable ZigBee</p>
+                        <md-switch class="md-secondary" ng-model="config.sensors.zigBee.enabled"></md-switch>
+                    </md-list-item>
+
+                    &lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; GPS &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;
+                    <h3 class="md-subhead md-no-sticky">
+                        <span class="item-title">GPS</span>
+                    </h3>
+                    <md-divider></md-divider>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">gps_fixed</md-icon>
+                        <p>Enabled / Disable GPS</p>
+                        <md-switch class="md-secondary" ng-model="config.sensors.gps.enabled"></md-switch>
+                    </md-list-item>
+
+                    &lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Transmission Rate &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;
+                    <h3 class="md-subhead md-no-sticky">
+                        <span class="item-title">Transmission Rate</span>
+                    </h3>
+                    <md-divider></md-divider>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">compare_arrows</md-icon>
+                        <p>Regular Messages</p>
+                        <md-input-container>
+                            <md-select ng-model="config.settings.regularMsgTransmissionRate"
+                                       aria-label="Regular Messages" convert-to-number>
+                                <md-option value="1">
+                                    Every Second
+                                </md-option>
+                                <md-option value="5">
+                                    Every 5 Seconds
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                    </md-list-item>
+
+                    &lt;!&ndash; &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Additional Settings &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;
+                    <h3 class="md-subhead md-no-sticky">
+                        <span class="item-title">Additional Settings</span>
+                    </h3>
+                    <md-divider></md-divider>
+
+                    <md-list-item>
+                        <md-icon class="material-icons md-light md-48">autorenew</md-icon>
+                        <p>Automatic HR Data upon event occurrence </p>
+                        <md-switch class="md-secondary"
+                                   ng-model="config.settings.autoHrEnabled"></md-switch>
+                    </md-list-item>
+-->
+
+                </md-list>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel('Cancel')">Cancel</md-button>
+            <md-button ng-click="answer('Apply')">Apply</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

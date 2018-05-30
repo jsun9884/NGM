@@ -1,0 +1,22 @@
+<md-dialog aria-label="New Configuration" ng-cloak>
+    <form>
+        <md-toolbar style="min-height: 50px; height: 50px">
+            <div class="md-toolbar-tools">
+                <h2>{{dlgCtrl.dlgCaption}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button"
+                           ng-click="dlgCtrl.cancel()">
+                    <md-icon aria-label="Close dialog">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content style="max-width:450px; min-width:450px;max-height:810px;">
+            <div class="md-dialog-content">
+                {{dlgCtrl.dlgContent}}
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="dlgCtrl.ok()">Ok</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

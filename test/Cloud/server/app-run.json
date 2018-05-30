@@ -1,0 +1,74 @@
+{
+  "apps" : [
+    {
+      "name"       : "api-instance-0",
+      "script"     : "/home/ubuntu/site/ngm-dashboard.com/server/server.js",
+      "instances"  : 1,
+      "exec_mode"  : "fork",
+      "cwd"        : "/home/ubuntu/site/ngm-dashboard.com/server",
+      "error_file" : "/dev/null",
+      "out_file"   : "/dev/null",
+      "watch"      : true,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT"    : 9000
+      },
+      "env_production" : {
+        "NODE_ENV": "production",
+        "PORT"    : 9000
+      },
+      "kill_timeout" : 10000,
+      "restart_delay" : 1000,
+      "log_date_format" : "YYYY-MM-DD HH:mm Z"
+    },
+    {
+      "name"       : "api-instance-1",
+      "script"     : "/home/ubuntu/site/ngm-dashboard.com/server/server.js",
+      "instances"  : 1,
+      "exec_mode"  : "fork",
+      "cwd"        : "/home/ubuntu/site/ngm-dashboard.com/server",
+      "error_file" : "/dev/null",
+      "out_file"   : "/dev/null",
+      "watch"      : true,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT"    : 9010
+      },
+      "env_production" : {
+        "NODE_ENV": "production",
+        "PORT"    : 9010
+      },
+      "kill_timeout" : 10000,
+      "restart_delay" : 1000,
+      "log_date_format" : "YYYY-MM-DD HH:mm Z"
+    },
+    {
+      "name"       : "command-worker",
+      "script"     : "/home/ubuntu/site/ngm-dashboard.com/server/modules/Command/CommandWorker.js",
+      "instances"  : 1,
+      "exec_mode"  : "fork",
+      "watch"      : true,
+      "cwd"        : "/home/ubuntu/site/ngm-dashboard.com/server",
+      "error_file" : "/dev/null",
+      "out_file"   : "/dev/null",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name"       : "presence-monitor",
+      "script"     : "/home/ubuntu/site/ngm-dashboard.com/server/modules/Workers/DevicePresenceMonitor.js",
+      "instances"  : 1,
+      "exec_mode"  : "fork",
+      "watch"      : false,
+      "cwd"        : "/home/ubuntu/site/ngm-dashboard.com/server",
+      "error_file" : "/dev/null",
+      "out_file"   : "/dev/null",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production" : {
+        "NODE_ENV": "production"
+      }
+    }]
+}

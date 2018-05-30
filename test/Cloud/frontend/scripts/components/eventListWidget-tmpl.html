@@ -1,0 +1,86 @@
+<div class="md-padding" layout="column" flex="100" style="padding-right: 0">
+    <ms-widget flippable="true" class="" flex layout="column" style="height: 100%">
+        <ms-widget-front class="" flex layout="column">
+            <md-toolbar md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>Recent Events&nbsp;<span style="display: none" ng-class="{'showed-inline' : $ctrl.frozen}">[ <span class="blink-it make-italic make-bold">Display on hold</span> ]</span></span>
+                    </h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button launch" ng-click="$ctrl.refreshOnlineStatus()">
+                        <md-icon md-colors="{color: 'grey'}">refresh</md-icon>
+                        <md-tooltip md-direction="top">Refresh</md-tooltip>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content flex layout="column"
+                        ng-mouseover="$ctrl.freezePoller(true)"
+                        ng-mouseleave="$ctrl.freezePoller(false)"
+            >
+                <md-list>
+                    <md-list-item class="" ng-repeat="evt in $ctrl.events" ng-class="{'expanded': evt.expanded}">
+                        <div layout="column" layout-column flex>
+                            <div layout="row" layout-row flex ng-click="$ctrl.toggleExpansion(evt)" style="outline: none">
+                                <div layout-column layout="column" flex>
+                                    <div layout-row layout="row" flex>
+                                        <md-icon style="width: 46px; font-size: 40px; text-align: left; margin-left: -4px; margin-right: 4px; color: {{evt.severityColor}}">event</md-icon>
+                                        <div class="md-list-item-text md-2-line" flex>
+                                            <h3>Event : <span class="event-type">{{(evt.eventType == 'OverBounds' ? 'Exceeds limit' : evt.eventType) | dashToUCFirst}}</span></h3>
+                                            <p>Device : {{evt.deviceLogicName}} <span style="float: right; margin-right: 10px">{{evt.eventCreationTime}} (UTC)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div layout-column layout="column">
+                                    <md-button class="md-icon-button md-toggle-icon launch">
+                                        <md-icon>keyboard_arrow_left</md-icon>
+                                        <md-tooltip md-direction="top">Expand</md-tooltip>
+                                    </md-button>
+                                </div>
+                            </div>
+                            <div layout-row flex ng-show="evt.expanded" class="md-padding">
+                                <div layout-row flex class="md-list-item-inner">
+                                    <div layout-row flex class="expanded-visible">
+                                        <div layout-row flex class="layout-row">
+                                            <div layout-column flex="70" class="layout-column" style="line-height: 22px">
+                                                <div><span style="color: #888888">Severity:</span> {{evt.severityTitle}}</div>
+                                                <div><span style="color: #888888">Source:</span> {{evt.eventSource}}</div>
+                                                <div style="font-size: 14px"><span style="color: #888888;">Session Id:</span> {{evt.eventData.sessionIdentifier}}</div>
+
+                                                <div class="over-threshold-event-data" ng-if="evt.eventType == 'OverBounds' || evt.eventType == 'Overvoltage' || evt.eventType == 'Overpower'">
+                                                    <md-divider></md-divider>
+                                                    <div><span style="color: #888888">Parameter:</span> <span style="text-transform: capitalize">{{evt.eventData.parameter | byPhase}}</span></div>
+                                                    <div><span style="color: #888888">Threshold High:</span> {{evt.eventData.thresholdHigh}}</div>
+                                                    <div><span style="color: #888888">Threshold Low:</span> {{evt.eventData.thresholdLow}}</div>
+                                                    <div><span style="color: #888888">Value:</span> {{evt.eventData.value}}</div>
+                                                </div>
+
+                                                <div class="over-threshold-event-data" ng-if="evt.eventType == 'TamperSwitch'">
+                                                    <md-divider></md-divider>
+                                                    <div><span style="color: #888888">Parameter:</span> <span style="text-transform: capitalize">{{evt.eventData.parameter}}</span></div>
+                                                    <div><span style="color: #888888">Value:</span> {{evt.eventData.value}}</div>
+                                                </div>
+                                            </div>
+                                            <div flex layout="column">
+                                                <div flex style="text-align: right">
+                                                    <goto-device-management title="Go to device management" device-thing-name="{{evt.deviceId}}" style="margin-left: auto">{{evt.deviceLogicName}}</goto-device-management>
+                                                    <br />
+                                                    <span style="font-size: 12px; color: #888888">{{evt.deviceId}}</span>
+                                                </div>
+
+                                                <div layout-row flex class="layout-row" ng-if="evt.eventType == 'OverBounds' || evt.eventType == 'Overvoltage' || evt.eventType == 'Overpower'">
+                                                    <hr-download style="margin-left: auto" device-id="{{evt.deviceId}}" event-id="{{evt.eventId}}"></hr-download>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p ng-if="evt.description">{{evt.description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <md-divider></md-divider>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>

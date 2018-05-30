@@ -1,0 +1,46 @@
+{
+  "DeviceShortName": "NGM_GENERIC_ALPHA",
+  "DeviceBaseUUID" : "5763FFF39fc1477197a20727cb56c0a9",
+  "DeviceDataService": {
+    "ServiceUUID": "5763FFF09fc1477197a20727cb56c0a9",
+    "DeviceStatusCh": {
+      "uuid": "5763FFF19fc1477197a20727cb56c0a9",
+      "properties": ["read","notify"]
+    },
+    "DevicePowerDataPhase1Ch": {
+      "uuid": "5763FFF29fc1477197a20727cb56c0a9",
+      "properties": ["read","notify"]
+    },
+    "DevicePowerDataPhase2Ch": {
+      "uuid": "5763FFFA9fc1477197a20727cb56c0a9",
+      "properties": ["read","notify"]
+    },
+    "DevicePowerDataPhase3Ch": {
+      "uuid": "5763FFFB9fc1477197a20727cb56c0a9",
+      "properties": ["read","notify"]
+    },
+    "SeismicDataCh": {
+      "uuid": "5763FFF49fc1477197a20727cb56c0a9",
+      "properties": ["read","notify"]
+    },
+    "TemperatureDataCh": {
+      "uuid": "5763FFF59fc1477197a20727cb56c0a9",
+      "properties": ["read","notify"]
+    },
+    "LocationDataCh": {
+      "uuid": "5763FFF69fc1477197a20727cb56c0a9",
+      "properties": ["read","notify"]
+    },
+    "DiscloseSensorDataCh": {
+      "uuid": "5763FFF99fc1477197a20727cb56c0a9",
+      "properties": ["read","notify"]
+    }
+  },
+  "DeviceControlService" : {
+    "ServiceUUID" : "5763FFF79fc1477197a20727cb56c0a9",
+    "DeviceControlCh": {
+      "uuid": "5763FFF89fc1477197a20727cb56c0a9",
+      "properties": ["read","write","notify"]
+    }
+  }
+}

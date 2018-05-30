@@ -1,0 +1,153 @@
+        <div flex layout-fill layout="row" class="events-page-container md-padding">
+                <md-card layout-column flex md-colors="{color: 'f2-900', background: 'f2-50'}">
+
+                    <md-toolbar class="md-table-toolbar md-default" style="min-height: 70px; height: 70px">
+                        <div class="md-toolbar-tools filter-selects"  style="min-height: 70px">
+                            <div layout="column" flex="30" style="max-width: 230px">
+                                <md-input-container flex-gt-md="15" style="height: 40px;">
+                                    <input mdc-datetime-picker date="true" time="true" type="text" id="dateFrom" short-time="false"
+                                           placeholder="Enter date from"
+                                           min-date="minDate"
+                                           format="HH:mm:ss MM/DD/YYYY"
+                                           ng-model="query.params.dateFrom"
+                                           class="md-input"
+                                    />
+
+                                    <md-button class="md-icon-button" ng-show="query.params.dateFrom" ng-click="query.params.dateFrom = null; " style="position: absolute; right: -16px; top: 0px;">
+                                        <md-icon>close</md-icon>
+                                    </md-button>
+                                </md-input-container>
+                            </div>
+
+                            <div layout="column" flex="30" style="max-width: 230px">
+                                <md-input-container flex-gt-md="15" style="height: 40px; margin-left:20px">
+                                    <input mdc-datetime-picker date="true" time="true" type="text" id="dateTo" short-time="false"
+                                           placeholder="Enter date till"
+                                           min-date="minDate"
+                                           format="HH:mm:ss MM/DD/YYYY"
+                                           ng-model="query.params.dateTo"
+                                           class="md-input"
+                                    />
+
+                                    <md-button class="md-icon-button" ng-show="query.params.dateTo" ng-click="query.params.dateTo = null" style="position: absolute; right: -16px; top: 0px;">
+                                        <md-icon>close</md-icon>
+                                    </md-button>
+                                </md-input-container>
+                            </div>
+
+                            <span flex></span>
+                            <md-button ng-disabled="!query.deviceId || !query.params.dateTo || !query.params.dateFrom"
+                                       class="md-raised md-accent"
+                                       style="color: #ffffff" ng-click="newRequest()">
+                                Submit
+                            </md-button>
+
+<!--
+                            <md-input-container flex-gt-md="25" style="height: 40px; margin-left:20px">
+                                <md-tooltip md-direction="top">Event type</md-tooltip>
+                                <md-select ng-model="query.filter.eventType" aria-label="None" placeholder="Event type">
+                                    <md-option value="">All</md-option>
+                                    <md-option ng-value="eventType" ng-repeat="eventType in eventTypes">{{ eventType }}</md-option>
+                                </md-select>
+                            </md-input-container>
+
+                            <md-input-container flex-gt-md="25" style="height: 40px; margin-left:20px">
+                                <md-tooltip md-direction="top">Event type</md-tooltip>
+                                <md-select ng-model="query.filter.eventSource" aria-label="None" placeholder="Event source">
+                                    <md-option value="">All</md-option>
+                                    <md-option ng-value="eventSource" ng-repeat="eventSource in eventSources">{{ eventSource }}</md-option>
+                                </md-select>
+                            </md-input-container>
+-->
+                        </div>
+                    </md-toolbar>
+                    <md-divider></md-divider>
+
+                    <md-table-container>
+                        <table md-table multiple ng-model="selected" md-progress="promise" md-colors="{color: 'f2-900', background: 'f2-50'}">
+                            <thead md-head>
+                                <tr md-row>
+                                    <th md-column><span>Time</span></th>
+                                    <th md-column><span>Severity</span></th>
+                                    <th md-column><span>Type</span></th>
+                                    <th md-column><span>Source</span></th>
+                                    <th md-column><span>Actions</span></th>
+                                </tr>
+                            </thead>
+                            <tbody md-body>
+                                <tr md-row md-select="event" md-select-id="name" md-auto-select ng-repeat="event in events">
+                                    <td md-cell>{{event.eventCreationTime | amUtc | amDateFormat:'HH:mm:ss MM/DD/YYYY'}}</td>
+                                    <td md-cell style="color: {{event.severityColor}}">{{event.severityTitle}}</td>
+                                    <td md-cell class="event-type">{{(event.eventType == 'OverBounds' ? 'Exceeds limit' : event.eventType) | dashToUCFirst}}</td>
+                                    <td md-cell>{{event.eventSource}}</td>
+                                    <td md-cell>
+                                        <div layout-row flex class="layout-row" ng-if="event.eventType == 'OverBounds' || event.eventType == 'Overvoltage' || event.eventType == 'Overpower'">
+                                            <hr-download style="margin-left: auto" device-id="{{event.deviceId}}" event-id="{{event.eventId}}"></hr-download>
+                                        </div>
+
+<!--
+                                        <md-button class="md-icon-button md-raised md-accent">
+                                            <md-icon>close</md-icon>
+                                        </md-button>
+-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </md-table-container>
+
+                    <div flex></div>
+                    <div class="pagination-box md-table-pagination" layout="row" style="min-height: 56px">
+                        <span flex></span>
+                        <div class="limit-select ng-scope">
+                            <div class="label ng-binding">Rows per page:</div>
+
+                            <md-select
+                                    class="md-table-select ng-pristine ng-valid ng-empty ng-touched"
+                                    ng-model="query.params.limit"
+                                    md-container-class="md-pagination-select"
+                                    ng-disabled="$pagination.disabled" aria-label="Rows: 5"
+                                    placeholder="5" tabindex="0" role="listbox"
+                                    aria-expanded="false" aria-multiselectable="false"
+                                    id="select_4" aria-owns="select_container_5"
+                                    aria-disabled="false" aria-invalid="false" style=""
+                            >
+                                <md-option ng-value="5">5</md-option>
+                                <md-option ng-value="25">25</md-option>
+                                <md-option ng-value="50">50</md-option>
+                            </md-select>
+                        </div>
+
+                        <div class="buttons">
+                            <md-button class="md-icon-button md-button md-ink-ripple"
+                                       ng-disabled="!query.params.max_id || !query.deviceId || !query.params.dateTo || !query.params.dateFrom"
+                                       type="button" ng-click="prevPage()" aria-label="Previous"
+                            >
+                                <md-icon>chevron_left</md-icon>
+                            </md-button>
+
+                            <md-button class="md-icon-button md-button md-ink-ripple"
+                                       ng-disabled="!query.params.since_id || !query.deviceId || !query.params.dateTo || !query.params.dateFrom"
+                                       type="button" ng-click="nextPage()" aria-label="Next"
+                            >
+                                <md-icon>chevron_right</md-icon>
+                            </md-button>
+                        </div>
+                    </div>
+
+
+<!--
+
+                    <md-table-pagination
+                            style="min-height: 56px"
+                            md-limit="query.limit"
+                            md-limit-options="[5, 10, 15]"
+                            md-page="query.page"
+                            md-total="{{events.total}}"
+                            md-on-paginate="getEvents"
+                            md-page-select
+                    ></md-table-pagination>
+
+-->
+                </md-card>
+            </div>

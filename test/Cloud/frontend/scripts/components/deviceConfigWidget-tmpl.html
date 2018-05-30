@@ -1,0 +1,333 @@
+<div class="md-padding" flex layout="column">
+    <ms-widget flippable="true" class="" layout="column" flex="100" >
+        <ms-widget-front class="">
+            <md-toolbar style="min-height:42px;max-height: 42px" md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>Active Configuration</span>
+                    </h2>
+
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+            <md-content class="md-padding" layout="row">
+                <div flex layout="column">
+                    <div layout="row">
+                        <div flex="50" class="md-padding">
+                            <md-list>
+                                <div layout="row">
+                                    <!-- -------------------- Power Meter ------------------------ -->
+                                    <div flex="30" layout="row">
+                                        <div class="config-pair-title" layout="column" flex >Power Meter</div>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div flex>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.PowerMeter.HrData.voltage1.thresholdLow}">
+                                            <md-icon class="material-icons md-light md-48">warning</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.PowerMeter.HrData.voltage1.thresholdLow != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Voltage Threshold Low</strong>
+                                            </p>
+                                            <span flex></span>
+                                            <span class="text-color-grey" style="text-align: right">
+                                                <strong>{{$ctrl.activeDevice.config.PowerMeter.HrData.voltage1.thresholdLow != undefined ? $ctrl.activeDevice.config.PowerMeter.HrData.voltage1.thresholdLow + ' Volt' : 'None'}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.PowerMeter.HrData.voltage1.thresholdHigh}">
+                                            <md-icon class="material-icons md-light md-48">warning</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.PowerMeter.HrData.voltage1.thresholdHigh != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Voltage Threshold Hi</strong>
+                                            </p>
+                                            <span flex></span>
+                                            <span class="text-color-grey" style="text-align: right">
+                                                <strong>{{$ctrl.activeDevice.config.PowerMeter.HrData.voltage1.thresholdHigh != undefined ? $ctrl.activeDevice.config.PowerMeter.HrData.voltage1.thresholdHigh + ' Volt': 'None'}}</strong>
+                                            </span>
+                                        </md-list-item>
+
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.PowerMeter.HrData.current1.thresholdLow}">
+                                            <md-icon class="material-icons md-light md-48">warning</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.PowerMeter.HrData.current1.thresholdLow != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Current Threshold Low</strong>
+                                            </p>
+                                            <span flex></span>
+                                            <span class="text-color-grey" style="text-align: right">
+                                                <strong>{{$ctrl.activeDevice.config.PowerMeter.HrData.current1.thresholdLow != undefined ? $ctrl.activeDevice.config.PowerMeter.HrData.current1.thresholdLow + ' Amp' : 'None'}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.PowerMeter.HrData.current1.thresholdHigh}">
+                                            <md-icon class="material-icons md-light md-48">warning</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.PowerMeter.HrData.current1.thresholdHigh != undefined"  title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Current Threshold Hi</strong>
+                                            </p>
+                                            <span flex></span>
+                                            <span class="text-color-grey" style="text-align: right">
+                                                <strong>{{$ctrl.activeDevice.config.PowerMeter.HrData.current1.thresholdHigh != undefined ? $ctrl.activeDevice.config.PowerMeter.HrData.current1.thresholdHigh + ' Amp' : 'None'}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div layout="row">
+                                    <!-- -------------------- APN Settings ------------------------ -->
+                                    <div flex="30" layout="row">
+                                        <div class="config-pair-title" layout="column" flex >APN Settings</div>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div flex>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.General.GsmApn}">
+                                            <md-icon class="material-icons md-light md-48">network_cell</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.General.GsmApn != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>GSM APN</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{$ctrl.activeDevice.config.General.GsmApn}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.General.GsmNumber}">
+                                            <md-icon class="material-icons md-light md-48">network_cell</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.General.GsmNumber != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>GSM Number</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{$ctrl.activeDevice.config.General.GsmNumber}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.General.GsmUsername}">
+                                            <md-icon class="material-icons md-light md-48">network_cell</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.General.GsmUsername != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>GSM Username</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{$ctrl.activeDevice.config.General.GsmUsername}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.General.GsmPassword}">
+                                            <md-icon class="material-icons md-light md-48">network_cell</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.General.GsmPassword != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>GSM Password</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{$ctrl.activeDevice.config.General.GsmPassword}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                    </div>
+                                </div>
+                            </md-list>
+                        </div>
+                        <md-divider></md-divider>
+                        <div flex class="md-padding">
+                            <md-list>
+                                <div layout="row">
+                                    <!-- -------------------- Data Switch ------------------------ -->
+                                    <div flex="30" layout="row">
+                                        <div class="config-pair-title" layout="column" flex >Data Switch</div>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div flex>
+                                        <md-list-item md-no-ink ng-class="{disabled_option: !$ctrl.activeDevice.config.DataSwitch.PortAEnabled}">
+                                            <md-icon class="material-icons md-light md-48">settings_input_component</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.sensors.dataSwitch.portAOpened != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Data Port A</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{!$ctrl.activeDevice.config.DataSwitch ? 'N/A' : ($ctrl.activeDevice.config.DataSwitch.PortAEnabled ? 'Opened' : 'Closed')}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                        <md-list-item md-no-ink ng-class="{disabled_option: !$ctrl.activeDevice.config.DataSwitch.PortBEnabled}">
+                                            <md-icon class="material-icons md-light md-48">settings_input_component</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.sensors.dataSwitch.portBOpened != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Data Port B</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{!$ctrl.activeDevice.config.DataSwitch ? 'N/A' : ($ctrl.activeDevice.config.DataSwitch.PortBEnabled ? 'Opened' : 'Closed')}}</strong>
+                                            </span>
+                                        </md-list-item>
+
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div layout="row">
+                                    <!-- -------------------- ZigBee ------------------------ -->
+                                    <div flex="30" layout="row">
+                                        <div class="config-pair-title" layout="column" flex >ZigBee</div>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div flex>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.sensors.zigBee.enabled}">
+                                            <md-icon class="material-icons md-light md-48">settings_remote</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.sensors.zigBee.enabled != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>ZigBee Status</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{$ctrl.activeDevice.config.sensors.zigBee.enabled ? 'Enabled' : 'Disabled'}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div layout="row">
+                                    <!-- -------------------- GPS ------------------------ -->
+                                    <div flex="30" layout="row">
+                                        <div class="config-pair-title" layout="column" flex >GPS</div>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div flex>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.General.GpsEnabled}">
+                                            <md-icon class="material-icons md-light md-48">gps_fixed</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.General.GpsEnabled != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>GPS Status</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{$ctrl.activeDevice.config.General.GpsEnabled ? 'Enabled' : 'Disabled'}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div layout="row">
+                                    <!-- -------------------- Events reporting ------------------------ -->
+                                    <div flex="30" layout="row">
+                                        <div class="config-pair-title" layout="column" flex >Events reporting</div>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div flex>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.General.EventsEnabled}">
+                                            <md-icon class="material-icons md-light md-48">event_note</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.General.EventsEnabled != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Events Reporting</strong>
+                                            </p>
+                                            <span class="text-color-grey">
+                                                <strong>{{$ctrl.activeDevice.config.General.EventsEnabled ? 'Enabled' : 'Disabled'}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div layout="row">
+                                    <!-- -------------------- Transmission Rate ------------------------ -->
+                                    <div flex="30" layout="row">
+                                        <div class="config-pair-title" layout="column" flex >Transmission Rate</div>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div flex>
+                                        <md-list-item>
+                                            <md-icon class="material-icons md-light md-48">compare_arrows</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.General.RegularMsgTransmissionRate != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Regular Messages</strong>
+                                            </p>
+                                            <span flex></span>
+                                            <span class="text-color-grey"  style="text-align: right">
+                                                <strong>Every
+                                                        {{$ctrl.preConfig.General.Rate}}
+                                                        {{$ctrl.preConfig.General.Unit == 'sec' ? 'Second' : ($ctrl.preConfig.General.Unit == 'min' ? 'Minute' : 'Hour') }}{{$ctrl.preConfig.General.Rate > 1 ? 's' : ''}}
+                                                </strong>
+                                            </span>
+<!--
+                                            <span class="text-color-grey"  style="text-align: right">
+                                                <strong>Every {{$ctrl.activeDevice.config.General.RegularMsgTransmissionRate}} Second{{$ctrl.activeDevice.config.General.RegularMsgTransmissionRate > 1 ? 's' : ''}}</strong>
+                                            </span>
+-->
+                                        </md-list-item>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div layout="row">
+                                    <!-- -------------------- Additional Settings ------------------------ -->
+                                    <div flex="30" layout="row">
+                                        <div class="config-pair-title" layout="column" flex >Additional Settings</div>
+                                    </div>
+                                    <md-divider></md-divider>
+                                    <div flex>
+                                        <md-list-item ng-class="{disabled_option: !$ctrl.activeDevice.config.General.AutoHrEnabled}">
+
+                                            <md-icon class="material-icons md-light md-48">autorenew</md-icon>
+                                            <span class="config-param-spinner" ng-if="$ctrl.deltaConfig.General.AutoHrEnabled != undefined" title="Waiting for applying">
+                                               <md-progress-circular md-mode="indeterminate" md-diameter="26" class="md-accent md-hue-1 btn-waiting-spinner"></md-progress-circular>
+                                            </span>
+
+                                            <p class="text-color-grey">
+                                                <strong>Automatic HR Data upon event occurrence</strong>
+                                            </p>
+                                            <span class="text-color-grey" style="text-align: right">
+                                                <strong>{{$ctrl.activeDevice.config.General.AutoHrEnabled ? 'Enabled' : 'Disabled'}}</strong>
+                                            </span>
+                                        </md-list-item>
+                                    </div>
+                                </div>
+                            </md-list>
+                        </div>
+                    </div>
+                    <div layout="row">
+                        <div layout="column" flex style="text-align: right">
+                            <md-dialog-actions>
+                                <md-button class="md-raised md-accent" ng-disabled="!$ctrl.activeDevice.online" ng-click="$ctrl.editConfig($event)">Edit</md-button>
+                                <md-button class="md-raised" ng-click="$ctrl.refresh()">Refresh</md-button>
+                            </md-dialog-actions>
+                        </div>
+                    </div>
+                </div>
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>

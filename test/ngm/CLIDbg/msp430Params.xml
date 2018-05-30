@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Device>
+  <Parameter name="regularMsgTransmissionRate" type="Int" value="2" defaultValue="5"></Parameter>
+  <Parameter name="autoHrEnabled" type="Bool" value="false" defaultValue="false"></Parameter>
+  <Register name="regA" type="Word" value="0" defaultValue="0">
+    <Register name="aHi" type="Byte" value="1" defaultValue="2"></Register>
+    <Register name="aLo" type="Byte" value="4" defaultValue="4"></Register>
+  </Register>
+</Device>

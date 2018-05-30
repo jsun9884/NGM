@@ -1,0 +1,6 @@
+<div class="widget-group" layout="row" layout-wrap>
+    <command-widget command="command"
+                    ng-repeat="command in commandsCtrl.getCommandsList()"
+                    ng-hide="command.hidden"
+    ></command-widget>
+</div>

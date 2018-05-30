@@ -1,0 +1,48 @@
+<div class="md-padding" layout="column" flex="100" style="padding-left: 0; padding-top: 0;">
+    <ms-widget flippable="true" class="widget-wrapper" flex layout="column" style="height: 100%" ng-class="{'expanded' : expanded}">
+        <ms-widget-front class="" flex layout="column">
+            <md-toolbar md-colors="{color: 'f2-900', background: 'f2-50'}">
+                <div class="md-toolbar-tools">
+                    <h2>
+                        <span>{{$ctrl.card.title}}</span>
+                    </h2>
+                    <span flex></span>
+                </div>
+            </md-toolbar>
+            <md-content flex layout="column" style="min-height: 200px">
+                <md-list ng-if="$ctrl.data.sensor.length">
+                    <md-list-item class="md-1-line" layout="row">
+                        <span layout="column" flex="50">Quadrant</span>
+                        <span layout="column" flex="20"></span>
+                        <span layout="column" flex="10" style="text-align: center">A</span>
+                        <span layout="column" flex="10" style="text-align: center">B</span>
+                        <span layout="column" flex="10" style="text-align: center">C</span>
+                    </md-list-item>
+
+                    <md-list-item class="md-1-line" layout="row"
+                                  ng-repeat="item in $ctrl.data.sensor"
+                    >
+                        <span layout="column" flex="50" ng-bind-html="item.quadrantTitle"></span>
+                        <span layout="column" flex="20" style="text-transform: capitalize">{{item.signTitle}}</span>
+                        <span layout="column" flex="10">
+                            <md-icon style="color: #e53935">{{item.enabledPhase1 ? 'radio_button_checked' : 'radio_button_unchecked'}}</md-icon>
+                        </span>
+                        <span layout="column" flex="10">
+                            <md-icon style="color: #1e88e5">{{item.enabledPhase2 ? 'radio_button_checked' : 'radio_button_unchecked'}}</md-icon>
+                        </span>
+                        <span layout="column" flex="10">
+                            <md-icon style="color: #2e7d32">{{item.enabledPhase3 ? 'radio_button_checked' : 'radio_button_unchecked'}}</md-icon>
+                        </span>
+
+                    </md-list-item>
+                </md-list>
+
+                <div flex="100" layout="column" ng-if="!$ctrl.data.sensor.length">
+                    <span flex layout="column" style="text-align: center; display: flex; justify-content: center; flex-direction: column;">No data</span>
+                </div>
+
+            </md-content>
+        </ms-widget-front>
+    </ms-widget>
+</div>
+

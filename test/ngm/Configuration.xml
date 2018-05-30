@@ -1,0 +1,140 @@
+<!--
+<Device name="PowerMeter" type="msp430">
+    <Parameter name="HRFrequency">16</Parameter>
+    <Parameter name="HRHistorySec">60</Parameter>
+    <Parameter name="HRPostEventTimeSec">5</Parameter>
+    <Parameter name="DevStatisticsEnabled">true</Parameter>
+    <HRData>
+        <HRParameter name="timestamp" type="QWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="voltage1" type="Double" defaultValue="0" thresholdLow="85" thresholdHigh="300" statisticsEnabled="true" />
+        <HRParameter name="current1" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="active_power1" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="reactive_power1" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="apparent_power1" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="power_factor1" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="frequency1" type="Double" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="consumed_active_power1" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="consumed_reactive_power1" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="voltage2" type="Double" defaultValue="0" thresholdLow="85" thresholdHigh="300" statisticsEnabled="true" />
+        <HRParameter name="current2" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="active_power2" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="reactive_power2" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="apparent_power2" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="power_factor2" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="frequency2" type="Double" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="consumed_active_power2" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="consumed_reactive_power2" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="voltage3" type="Double" defaultValue="0" thresholdLow="85" thresholdHigh="300" statisticsEnabled="true" />
+        <HRParameter name="current3" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="active_power3" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="reactive_power3" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="apparent_power3" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="power_factor3" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="frequency3" type="Double" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="consumed_active_power3" type="Double" defaultValue="0" statisticsEnabled="true" />
+        <HRParameter name="consumed_reactive_power3" type="Double" defaultValue="0" statisticsEnabled="true" />
+    </HRData>
+</Device>
+-->
+<Device name="GPS" type="gps" devPath="/dev/ttyACM0">
+    <Parameter name="HRFrequency">1</Parameter>
+    <Parameter name="HRHistorySec">60</Parameter>
+    <Parameter name="DevStatisticsEnabled">false</Parameter>
+    <HRData>
+        <HRParameter name="timestamp" type="QWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="latitude" type="Double" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="longitude" type="Double" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="altitude" type="Int" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="satelliteNumber" type="Word" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="time" type="QWord" defaultValue="0" statisticsEnabled="false" />
+    </HRData>
+</Device>
+<Device name="AccCore" type="accelerometer" devPath="/dev/spidev0.0">
+    <Parameter name="HRFrequency">208</Parameter>
+    <Parameter name="HRHistorySec">10</Parameter>
+    <Parameter name="HRPostEventTimeSec">5</Parameter>
+    <Parameter name="TriggerOffset" type="Double">0.05</Parameter>
+    <Parameter name="UseCalibrationOffsetX" type="Bool">true</Parameter>
+    <Parameter name="UseCalibrationOffsetY" type="Bool">true</Parameter>
+    <Parameter name="UseCalibrationOffsetZ" type="Bool">true</Parameter>
+    <Register name="CTRL1_XL" type="Byte" address="0x10">0x53</Register>
+    <Register name="CTRL4_C" type="Byte" address="0x13">0xC0</Register>
+    <Register name="CTRL8_XL" type="Byte" address="0x17">0xC4</Register>
+    <Register name="CTRL10_C" type="Byte" address="0x19">0x3C</Register>
+    <HRData>
+        <HRParameter name="accX" type="Double" defaultValue="0" statisticsEnabled="false" thresholdHigh="0.02" thresholdLow="-0.02" />
+        <HRParameter name="accY" type="Double" defaultValue="0" statisticsEnabled="false" thresholdHigh="0.02" thresholdLow="-0.02" />
+        <HRParameter name="accZ" type="Double" defaultValue="0" statisticsEnabled="false" thresholdHigh="0.02" thresholdLow="-0.02" />
+        <HRParameter name="accRawX" type="DWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="accRawY" type="DWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="accRawZ" type="DWord" defaultValue="0" statisticsEnabled="false" />
+    </HRData>
+</Device>
+<Device name="AccPCB" type="accelerometer_inverted" devPath="/dev/spidev2.0">
+    <Parameter name="HRFrequency">208</Parameter>
+    <Parameter name="HRHistorySec">10</Parameter>
+    <Parameter name="HRPostEventTimeSec">5</Parameter>
+    <Parameter name="TriggerOffset" type="Double">0.05</Parameter>
+    <Parameter name="UseCalibrationOffsetX" type="Bool">true</Parameter>
+    <Parameter name="UseCalibrationOffsetY" type="Bool">true</Parameter>
+    <Parameter name="UseCalibrationOffsetZ" type="Bool">true</Parameter>
+    <Register name="CTRL1_XL" type="Byte" address="0x10">0x53</Register>
+    <Register name="CTRL4_C" type="Byte" address="0x13">0xC0</Register>
+    <Register name="CTRL8_XL" type="Byte" address="0x17">0xC4</Register>
+    <Register name="CTRL10_C" type="Byte" address="0x19">0x3C</Register>
+    <HRData>
+        <HRParameter name="accX" type="Double" defaultValue="0" statisticsEnabled="false" thresholdHigh="0.02" thresholdLow="-0.02" />
+        <HRParameter name="accY" type="Double" defaultValue="0" statisticsEnabled="false" thresholdHigh="0.02" thresholdLow="-0.02" />
+        <HRParameter name="accZ" type="Double" defaultValue="0" statisticsEnabled="false" thresholdHigh="0.02" thresholdLow="-0.02" />
+        <HRParameter name="accRawX" type="DWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="accRawY" type="DWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="accRawZ" type="DWord" defaultValue="0" statisticsEnabled="false" />
+    </HRData> 
+</Device>
+<!--
+<Device name="DataSwitch" type="rtl8363">
+    <Parameter name="HRFrequency">2</Parameter>
+    <Parameter name="HRHistorySec">60</Parameter>
+    <Parameter name="PortAEnabled" type="Bool" defaultValue="true">true</Parameter>
+    <Parameter name="PortBEnabled" type="Bool" defaultValue="true">true</Parameter>
+    <Parameter name="rgmiiRxDelay" type="Int" defaultValue="0">7</Parameter>
+    <Parameter name="rgmiiTxDelay" type="Int" defaultValue="0">0</Parameter>
+    <HRData>
+        <HRParameter name="PortA_rx" type="QWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="PortA_tx" type="QWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="PortB_rx" type="QWord" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="PortB_tx" type="QWord" defaultValue="0" statisticsEnabled="false" />
+    </HRData>
+</Device>
+-->
+<Device name="TempPCB" type="temperature">
+    <HRData>
+        <HRParameter name="temperature" type="Double" defaultValue="0" statisticsEnabled="false" />
+    </HRData>
+</Device>
+<Device name="TempCPU" type="cpu_temp">
+    <HRData>
+        <HRParameter name="temperature" type="Double" defaultValue="0" statisticsEnabled="false" />
+    </HRData>
+</Device>
+<Device name="TamperSwitch" type="disclosing_sensor">
+    <!-- You can put registers of Leds chip(LP55231) there -->
+    <HRData>
+        <HRParameter name="closed" type="Bool" defaultValue="true" statisticsEnabled="false" />
+    </HRData>
+</Device>
+<Device name="LteModem" type="lte_modem">
+    <Parameter name="HRFrequency">1</Parameter>
+    <Parameter name="HRHistorySec">10</Parameter>
+    <HRData>
+        <HRParameter name="rx" type="Int" defaultValue="0" statisticsEnabled="false" />
+        <HRParameter name="tx" type="Int" defaultValue="0" statisticsEnabled="false" />
+    </HRData>
+</Device>
+<Device name="General" type="general">
+    <Parameter name="KeepAliveMsgTransmissionRate">10</Parameter>
+    <Parameter name="RegularMsgTransmissionRate">3</Parameter>
+    <Parameter name="AutoHrEnabled">true</Parameter>
+    <Parameter name="GpsEnabled">true</Parameter>
+    <Parameter name="EventsEnabled">true</Parameter>
+</Device>
